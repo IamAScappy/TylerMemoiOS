@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD81DDE0214C854000526054 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DDDF214C854000526054 /* AppDelegate.swift */; };
+		BD81DDE2214C854000526054 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DDE1214C854000526054 /* ViewController.swift */; };
+		BD81DDE5214C854000526054 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD81DDE3214C854000526054 /* Main.storyboard */; };
+		BD81DDE8214C854000526054 /* TyperMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD81DDE6214C854000526054 /* TyperMemo.xcdatamodeld */; };
+		BD81DDEA214C854100526054 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD81DDE9214C854100526054 /* Assets.xcassets */; };
+		BD81DDED214C854100526054 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD81DDEB214C854100526054 /* LaunchScreen.storyboard */; };
+		BD81DDF8214C854100526054 /* TyperMemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DDF7214C854100526054 /* TyperMemoTests.swift */; };
+		BD81DE03214C854200526054 /* TyperMemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DE02214C854200526054 /* TyperMemoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD81DDF4214C854100526054 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD81DDD4214C854000526054 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD81DDDB214C854000526054;
+			remoteInfo = TyperMemo;
+		};
+		BD81DDFF214C854200526054 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD81DDD4214C854000526054 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD81DDDB214C854000526054;
+			remoteInfo = TyperMemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BD81DDDC214C854000526054 /* TyperMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TyperMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD81DDDF214C854000526054 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BD81DDE1214C854000526054 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BD81DDE4214C854000526054 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BD81DDE7214C854000526054 /* TyperMemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TyperMemo.xcdatamodel; sourceTree = "<group>"; };
+		BD81DDE9214C854100526054 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BD81DDEC214C854100526054 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BD81DDEE214C854100526054 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD81DDF3214C854100526054 /* TyperMemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TyperMemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD81DDF7214C854100526054 /* TyperMemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyperMemoTests.swift; sourceTree = "<group>"; };
+		BD81DDF9214C854100526054 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD81DDFE214C854200526054 /* TyperMemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TyperMemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD81DE02214C854200526054 /* TyperMemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyperMemoUITests.swift; sourceTree = "<group>"; };
+		BD81DE04214C854200526054 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD81DDD9214C854000526054 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD81DDF0214C854100526054 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD81DDFB214C854200526054 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BD81DDD3214C854000526054 = {
+			isa = PBXGroup;
+			children = (
+				BD81DDDE214C854000526054 /* TyperMemo */,
+				BD81DDF6214C854100526054 /* TyperMemoTests */,
+				BD81DE01214C854200526054 /* TyperMemoUITests */,
+				BD81DDDD214C854000526054 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BD81DDDD214C854000526054 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD81DDDC214C854000526054 /* TyperMemo.app */,
+				BD81DDF3214C854100526054 /* TyperMemoTests.xctest */,
+				BD81DDFE214C854200526054 /* TyperMemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD81DDDE214C854000526054 /* TyperMemo */ = {
+			isa = PBXGroup;
+			children = (
+				BD81DDDF214C854000526054 /* AppDelegate.swift */,
+				BD81DDE1214C854000526054 /* ViewController.swift */,
+				BD81DDE3214C854000526054 /* Main.storyboard */,
+				BD81DDE9214C854100526054 /* Assets.xcassets */,
+				BD81DDEB214C854100526054 /* LaunchScreen.storyboard */,
+				BD81DDEE214C854100526054 /* Info.plist */,
+				BD81DDE6214C854000526054 /* TyperMemo.xcdatamodeld */,
+			);
+			path = TyperMemo;
+			sourceTree = "<group>";
+		};
+		BD81DDF6214C854100526054 /* TyperMemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD81DDF7214C854100526054 /* TyperMemoTests.swift */,
+				BD81DDF9214C854100526054 /* Info.plist */,
+			);
+			path = TyperMemoTests;
+			sourceTree = "<group>";
+		};
+		BD81DE01214C854200526054 /* TyperMemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BD81DE02214C854200526054 /* TyperMemoUITests.swift */,
+				BD81DE04214C854200526054 /* Info.plist */,
+			);
+			path = TyperMemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BD81DDDB214C854000526054 /* TyperMemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD81DE07214C854200526054 /* Build configuration list for PBXNativeTarget "TyperMemo" */;
+			buildPhases = (
+				BD81DDD8214C854000526054 /* Sources */,
+				BD81DDD9214C854000526054 /* Frameworks */,
+				BD81DDDA214C854000526054 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TyperMemo;
+			productName = TyperMemo;
+			productReference = BD81DDDC214C854000526054 /* TyperMemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BD81DDF2214C854100526054 /* TyperMemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD81DE0A214C854200526054 /* Build configuration list for PBXNativeTarget "TyperMemoTests" */;
+			buildPhases = (
+				BD81DDEF214C854100526054 /* Sources */,
+				BD81DDF0214C854100526054 /* Frameworks */,
+				BD81DDF1214C854100526054 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD81DDF5214C854100526054 /* PBXTargetDependency */,
+			);
+			name = TyperMemoTests;
+			productName = TyperMemoTests;
+			productReference = BD81DDF3214C854100526054 /* TyperMemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BD81DDFD214C854200526054 /* TyperMemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD81DE0D214C854200526054 /* Build configuration list for PBXNativeTarget "TyperMemoUITests" */;
+			buildPhases = (
+				BD81DDFA214C854200526054 /* Sources */,
+				BD81DDFB214C854200526054 /* Frameworks */,
+				BD81DDFC214C854200526054 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD81DE00214C854200526054 /* PBXTargetDependency */,
+			);
+			name = TyperMemoUITests;
+			productName = TyperMemoUITests;
+			productReference = BD81DDFE214C854200526054 /* TyperMemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD81DDD4214C854000526054 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = tskim;
+				TargetAttributes = {
+					BD81DDDB214C854000526054 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					BD81DDF2214C854100526054 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = BD81DDDB214C854000526054;
+					};
+					BD81DDFD214C854200526054 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = BD81DDDB214C854000526054;
+					};
+				};
+			};
+			buildConfigurationList = BD81DDD7214C854000526054 /* Build configuration list for PBXProject "TyperMemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BD81DDD3214C854000526054;
+			productRefGroup = BD81DDDD214C854000526054 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD81DDDB214C854000526054 /* TyperMemo */,
+				BD81DDF2214C854100526054 /* TyperMemoTests */,
+				BD81DDFD214C854200526054 /* TyperMemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD81DDDA214C854000526054 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD81DDED214C854100526054 /* LaunchScreen.storyboard in Resources */,
+				BD81DDEA214C854100526054 /* Assets.xcassets in Resources */,
+				BD81DDE5214C854000526054 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD81DDF1214C854100526054 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD81DDFC214C854200526054 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD81DDD8214C854000526054 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD81DDE2214C854000526054 /* ViewController.swift in Sources */,
+				BD81DDE8214C854000526054 /* TyperMemo.xcdatamodeld in Sources */,
+				BD81DDE0214C854000526054 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD81DDEF214C854100526054 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD81DDF8214C854100526054 /* TyperMemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD81DDFA214C854200526054 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD81DE03214C854200526054 /* TyperMemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD81DDF5214C854100526054 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD81DDDB214C854000526054 /* TyperMemo */;
+			targetProxy = BD81DDF4214C854100526054 /* PBXContainerItemProxy */;
+		};
+		BD81DE00214C854200526054 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD81DDDB214C854000526054 /* TyperMemo */;
+			targetProxy = BD81DDFF214C854200526054 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BD81DDE3214C854000526054 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD81DDE4214C854000526054 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BD81DDEB214C854100526054 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD81DDEC214C854100526054 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BD81DE05214C854200526054 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BD81DE06214C854200526054 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BD81DE08214C854200526054 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SFSNP72DLD;
+				INFOPLIST_FILE = TyperMemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hucet.tyler.TyperMemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BD81DE09214C854200526054 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SFSNP72DLD;
+				INFOPLIST_FILE = TyperMemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hucet.tyler.TyperMemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BD81DE0B214C854200526054 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SFSNP72DLD;
+				INFOPLIST_FILE = TyperMemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hucet.tyler.TyperMemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TyperMemo.app/TyperMemo";
+			};
+			name = Debug;
+		};
+		BD81DE0C214C854200526054 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SFSNP72DLD;
+				INFOPLIST_FILE = TyperMemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hucet.tyler.TyperMemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TyperMemo.app/TyperMemo";
+			};
+			name = Release;
+		};
+		BD81DE0E214C854200526054 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SFSNP72DLD;
+				INFOPLIST_FILE = TyperMemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hucet.tyler.TyperMemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TyperMemo;
+			};
+			name = Debug;
+		};
+		BD81DE0F214C854200526054 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SFSNP72DLD;
+				INFOPLIST_FILE = TyperMemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hucet.tyler.TyperMemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TyperMemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD81DDD7214C854000526054 /* Build configuration list for PBXProject "TyperMemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD81DE05214C854200526054 /* Debug */,
+				BD81DE06214C854200526054 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD81DE07214C854200526054 /* Build configuration list for PBXNativeTarget "TyperMemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD81DE08214C854200526054 /* Debug */,
+				BD81DE09214C854200526054 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD81DE0A214C854200526054 /* Build configuration list for PBXNativeTarget "TyperMemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD81DE0B214C854200526054 /* Debug */,
+				BD81DE0C214C854200526054 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD81DE0D214C854200526054 /* Build configuration list for PBXNativeTarget "TyperMemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD81DE0E214C854200526054 /* Debug */,
+				BD81DE0F214C854200526054 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BD81DDE6214C854000526054 /* TyperMemo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BD81DDE7214C854000526054 /* TyperMemo.xcdatamodel */,
+			);
+			currentVersion = BD81DDE7214C854000526054 /* TyperMemo.xcdatamodel */;
+			path = TyperMemo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BD81DDD4214C854000526054 /* Project object */;
+}
