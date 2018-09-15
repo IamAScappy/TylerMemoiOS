@@ -29,9 +29,42 @@ internal struct ColorName {
   internal let rgbaValue: UInt32
   internal var color: Color { return Color(named: self) }
 
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#42aacc"></span>
-  /// Alpha: 100% <br/> (0x42aaccff)
-  internal static let colorAccent = ColorName(rgbaValue: 0x42aaccff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#2196f3"></span>
+  /// Alpha: 100% <br/> (0x2196f3ff)
+  internal static let themeBlue = ColorName(rgbaValue: 0x2196f3ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#795548"></span>
+  /// Alpha: 100% <br/> (0x795548ff)
+  internal static let themeBrown = ColorName(rgbaValue: 0x795548ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#00bcd4"></span>
+  /// Alpha: 100% <br/> (0x00bcd4ff)
+  internal static let themeCyan = ColorName(rgbaValue: 0x00bcd4ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#9e9e9e"></span>
+  /// Alpha: 100% <br/> (0x9e9e9eff)
+  internal static let themeGray = ColorName(rgbaValue: 0x9e9e9eff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#4caf50"></span>
+  /// Alpha: 100% <br/> (0x4caf50ff)
+  internal static let themeGreen = ColorName(rgbaValue: 0x4caf50ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#3f51b5"></span>
+  /// Alpha: 100% <br/> (0x3f51b5ff)
+  internal static let themeIndigo = ColorName(rgbaValue: 0x3f51b5ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#cddc39"></span>
+  /// Alpha: 100% <br/> (0xcddc39ff)
+  internal static let themeLime = ColorName(rgbaValue: 0xcddc39ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#e91e63"></span>
+  /// Alpha: 100% <br/> (0xe91e63ff)
+  internal static let themePink = ColorName(rgbaValue: 0xe91e63ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#673ab7"></span>
+  /// Alpha: 100% <br/> (0x673ab7ff)
+  internal static let themePurple = ColorName(rgbaValue: 0x673ab7ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#f44336"></span>
+  /// Alpha: 100% <br/> (0xf44336ff)
+  internal static let themeRed = ColorName(rgbaValue: 0xf44336ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#009688"></span>
+  /// Alpha: 100% <br/> (0x009688ff)
+  internal static let themeTeal = ColorName(rgbaValue: 0x009688ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ffeb3b"></span>
+  /// Alpha: 100% <br/> (0xffeb3bff)
+  internal static let themeYellow = ColorName(rgbaValue: 0xffeb3bff)
 }
 // swiftlint:enable identifier_name line_length type_body_length
 

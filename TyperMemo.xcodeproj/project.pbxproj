@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		6A3BDCA4CFB6F1547521DD46 /* Pods_TyperMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA781FEA10E5CCA1B0D7444 /* Pods_TyperMemo.framework */; };
 		7D2F36778946D0BF92C8463A /* Pods_TyperMemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA69393FEE8E1302993682E /* Pods_TyperMemoUITests.framework */; };
+		BD780E20214C9CD300FA9FDF /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD780E1F214C9CD300FA9FDF /* Memo.swift */; };
+		BD780E26214C9F7100FA9FDF /* CheckItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD780E25214C9F7100FA9FDF /* CheckItem.swift */; };
+		BD780E28214CA10200FA9FDF /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD780E27214CA10200FA9FDF /* Label.swift */; };
 		BD81DDE0214C854000526054 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DDDF214C854000526054 /* AppDelegate.swift */; };
 		BD81DDE2214C854000526054 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DDE1214C854000526054 /* ViewController.swift */; };
 		BD81DDE5214C854000526054 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD81DDE3214C854000526054 /* Main.storyboard */; };
@@ -50,6 +53,10 @@
 		3A314C1A929D40263F2969F0 /* Pods-TyperMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TyperMemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TyperMemo/Pods-TyperMemo.debug.xcconfig"; sourceTree = "<group>"; };
 		94A36D3E079F46FF3E7E270E /* Pods-TyperMemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TyperMemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TyperMemoTests/Pods-TyperMemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ABA69393FEE8E1302993682E /* Pods_TyperMemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TyperMemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD780E1F214C9CD300FA9FDF /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		BD780E21214C9DA600FA9FDF /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		BD780E25214C9F7100FA9FDF /* CheckItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckItem.swift; sourceTree = "<group>"; };
+		BD780E27214CA10200FA9FDF /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		BD81DDDC214C854000526054 /* TyperMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TyperMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD81DDDF214C854000526054 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD81DDE1214C854000526054 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,9 +122,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BD780E1E214C9CC000FA9FDF /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				BD780E1F214C9CD300FA9FDF /* Memo.swift */,
+				BD780E25214C9F7100FA9FDF /* CheckItem.swift */,
+				BD780E27214CA10200FA9FDF /* Label.swift */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
 		BD81DDD3214C854000526054 = {
 			isa = PBXGroup;
 			children = (
+				BD780E21214C9DA600FA9FDF /* Realm.framework */,
 				BD81DDDE214C854000526054 /* Source */,
 				BD81DDF6214C854100526054 /* UnitTest */,
 				BD81DE01214C854200526054 /* UITest */,
@@ -140,6 +158,7 @@
 		BD81DDDE214C854000526054 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				BD780E1E214C9CC000FA9FDF /* DataBase */,
 				BD81DE34214C903000526054 /* Generated */,
 				BD81DE10214C857100526054 /* Supporting Files */,
 				BD81DDDF214C854000526054 /* AppDelegate.swift */,
@@ -564,12 +583,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD780E20214C9CD300FA9FDF /* Memo.swift in Sources */,
 				BD81DDE2214C854000526054 /* ViewController.swift in Sources */,
 				BD81DDE8214C854000526054 /* TyperMemo.xcdatamodeld in Sources */,
 				BD81DE38214C903000526054 /* Assets.swift in Sources */,
 				BD81DDE0214C854000526054 /* AppDelegate.swift in Sources */,
+				BD780E28214CA10200FA9FDF /* Label.swift in Sources */,
 				BD81DE39214C903000526054 /* L10n.swift in Sources */,
 				BD81DE3A214C903000526054 /* MyColor.swift in Sources */,
+				BD780E26214C9F7100FA9FDF /* CheckItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -759,6 +781,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SFSNP72DLD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Source/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -778,6 +804,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SFSNP72DLD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Source/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

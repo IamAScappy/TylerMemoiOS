@@ -1,2 +1,13 @@
 # RGBA
-colorAccent: 42aacc
+ThemeRed: F44336
+ThemePink: E91E63
+ThemePurple: 673AB7
+ThemeIndigo: 3F51B5
+ThemeBlue: 2196F3
+ThemeCyan: 00BCD4
+ThemeTeal: 009688
+ThemeGreen: 4CAF50
+ThemeLime: CDDC39
+ThemeYellow: FFEB3B
+ThemeBrown: 795548
+ThemeGray: 9E9E9E
