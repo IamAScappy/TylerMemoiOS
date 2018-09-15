@@ -1,0 +1,12 @@
+github "realm/realm-cocoa"
+
+github "lkzhao/Hero"
+github "SnapKit/SnapKit"
+github "Instagram/IGListKit"
+
+github "ReactiveX/RxSwift"
+github "RxSwiftCommunity/RxDataSources"
+
+github "Alamofire/Alamofire"
+github "Moya/Moya"
+
