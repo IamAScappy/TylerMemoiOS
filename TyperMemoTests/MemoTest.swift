@@ -47,6 +47,16 @@ class MemoTest: RealmSpec {
         expect(label1.ownerMemos.count) == 2
         expect(label2.ownerMemos.count) == 1
       })
+      
+      it("insert a memo with checklist", closure: {
+        let memo = Memo(value: ["text": "1"])
+        let checkList = [CheckItem(name: "1"), CheckItem(name: "2")]
+        memo.checkList.append(objectsIn: checkList)
+        try! realm.write {
+          realm.add(memo)
+        }
+        expect(memo.checkList.count) == 2
+      })
     }
   }
 }

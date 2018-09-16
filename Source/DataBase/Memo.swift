@@ -14,6 +14,7 @@ class Memo: Object, HasId {
   @objc dynamic var attr: MemoAttribute? = MemoAttribute()
   @objc dynamic var createAt = Date()
   let labels = List<Label>()
+  let checkList = List<CheckItem>()
   convenience init(text: String) {
     self.init()
     self.text = text
