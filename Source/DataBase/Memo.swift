@@ -8,9 +8,19 @@
 import Foundation
 import RealmSwift
 
-class Memo: Object {
-  @objc dynamic var attr: MemoAttribute = MemoAttribute()
+class Memo: Object, HasId {
+  @objc dynamic var id: String = UUID().uuidString
+  @objc dynamic var text: String = ""
+  @objc dynamic var attr: MemoAttribute? = MemoAttribute()
   @objc dynamic var createAt = Date()
+  let labels = List<Label>()
+  convenience init(text: String) {
+    self.init()
+    self.text = text
+  }
+  override static func primaryKey() -> String {
+    return "id"
+  }
 }
 
 class MemoAttribute: Object {

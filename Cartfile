@@ -1,5 +1,3 @@
-github "realm/realm-cocoa"
-
 github "lkzhao/Hero"
 github "SnapKit/SnapKit"
 github "Instagram/IGListKit"
