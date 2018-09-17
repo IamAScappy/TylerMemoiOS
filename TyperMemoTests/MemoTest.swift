@@ -20,12 +20,13 @@ class MemoTest: RealmSpec {
       }
       it("insert a memos", closure: {
         let memo = Memo(value: ["text": "1"])
-        let memo2 = Memo(value: ["text": "1"])
+        let memo2 = Memo(value: ["text": "2"])
         try! realm.write {
           realm.add(memo)
           realm.add(memo2)
         }
       })
+      
       it("insert a memo with labels", closure: {
         let memo1 = Memo(value: ["text": "1"])
         let memo2 = Memo(value: ["text": "2"])

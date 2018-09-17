@@ -8,19 +8,22 @@
 import Foundation
 import RealmSwift
 
-class Memo: Object, HasId {
-  @objc dynamic var id: String = UUID().uuidString
+class Memo: Object {
+  // swiftlint:disable:next identifier_name
+  @objc dynamic var memo_id: String = UUID().uuidString
   @objc dynamic var text: String = ""
   @objc dynamic var attr: MemoAttribute? = MemoAttribute()
+  @objc dynamic var colorTheme: ColorTheme?
   @objc dynamic var createAt = Date()
   let labels = List<Label>()
   let checkList = List<CheckItem>()
-  convenience init(text: String) {
+  convenience init(text: String, colorTheme: ColorTheme = ColorThemeTemplate.white) {
     self.init()
     self.text = text
+    self.colorTheme = colorTheme
   }
   override static func primaryKey() -> String {
-    return "id"
+    return "memo_id"
   }
 }
 

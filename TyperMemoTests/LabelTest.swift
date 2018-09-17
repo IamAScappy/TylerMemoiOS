@@ -9,8 +9,8 @@
 import Nimble
 import Quick
 import RealmSwift
-
 @testable import TyperMemo
+
 class LabelTest: RealmSpec {
   override func spec() {
     var realm: Realm!
@@ -28,9 +28,9 @@ class LabelTest: RealmSpec {
           realm.add(memo)
           realm.add(labels)
         }
-        expect(labels[0].isLinkingMemo(memoId: memo.id)) == true
-        expect(labels[1].isLinkingMemo(memoId: memo.id)) == false
-        expect(labels[4].isLinkingMemo(memoId: memo.id)) == false
+        expect(labels[0].isLinkingMemo(memoId: memo.memo_id)) == true
+        expect(labels[1].isLinkingMemo(memoId: memo.memo_id)) == false
+        expect(labels[4].isLinkingMemo(memoId: memo.memo_id)) == false
       })
     }
   }

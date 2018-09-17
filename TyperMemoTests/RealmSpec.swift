@@ -27,6 +27,7 @@ class RealmSpec: QuickSpec {
 extension RealmSpec {
   func useTestDatabase() {
     Realm.Configuration.defaultConfiguration.inMemoryIdentifier = self.name
+    Realm.Configuration.defaultConfiguration.deleteRealmIfMigrationNeeded = true
   }
   
   func clearDatabase() {

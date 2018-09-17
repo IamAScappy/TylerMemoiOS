@@ -11,20 +11,20 @@ target 'TyperMemo' do
   pod 'Then'
   pod 'SwiftGen'
   pod 'ReactorKit'
-  pod 'RealmSwift'
-  target 'TyperMemoTests' do
-    inherit! :search_paths
-    # Pods for testing
+  
+  def testing_pods
     pod 'Quick'
     pod 'Nimble'
-    # Pods for IroboiPhone
+  end
+  target 'TyperMemoTests' do
+    inherit! :search_paths
+    testing_pods
   end
 
   target 'TyperMemoUITests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'Quick'
-    pod 'Nimble'
+    testing_pods
   end
 
 end

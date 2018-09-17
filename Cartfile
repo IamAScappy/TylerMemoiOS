@@ -7,4 +7,5 @@ github "RxSwiftCommunity/RxDataSources"
 
 github "Alamofire/Alamofire"
 github "Moya/Moya"
-
+github "DaveWoodCom/XCGLogger" ~> 6.0.4
+github "realm/realm-cocoa"
