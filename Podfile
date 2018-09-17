@@ -8,10 +8,14 @@ target 'TyperMemo' do
   
   # Pods for TyperMemo 
   pod 'SwiftLint'
-  pod 'Then'
   pod 'SwiftGen'
   pod 'ReactorKit'
-  
+  pod 'Then'
+  pod 'SnapKit'
+  pod 'RxSwift'
+  pod 'XCGLogger'
+  pod 'RealmSwift'
+  pod 'Cuckoo'
   def testing_pods
     pod 'Quick'
     pod 'Nimble'

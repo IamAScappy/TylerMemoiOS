@@ -1,9 +1,3 @@
-//
-//  Memo.swift
-//  TyperMemo
-//
-//  Created by tskim on 2018. 9. 15..
-//
 
 import Foundation
 import RealmSwift
