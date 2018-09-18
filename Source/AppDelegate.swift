@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   // swiftlint:disable:next line_length
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+    printEmulatorInfo()
     initLogger()
 //    let config = Realm.Configuration(
 //      // Get the URL to the bundled file

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6A3BDCA4CFB6F1547521DD46 /* Pods_TyperMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA781FEA10E5CCA1B0D7444 /* Pods_TyperMemo.framework */; };
-		7D2F36778946D0BF92C8463A /* Pods_TyperMemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA69393FEE8E1302993682E /* Pods_TyperMemoUITests.framework */; };
 		BD1C7FA6214E661D00C58B67 /* RealmSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1C7FA5214E661D00C58B67 /* RealmSpec.swift */; };
 		BD1C7FA8214E68E600C58B67 /* MemoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1C7FA7214E68E600C58B67 /* MemoTest.swift */; };
 		BD1C7FB0214E819700C58B67 /* LabelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1C7FAF214E819700C58B67 /* LabelTest.swift */; };
@@ -26,26 +25,17 @@
 		BD81DDEA214C854100526054 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD81DDE9214C854100526054 /* Assets.xcassets */; };
 		BD81DDED214C854100526054 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD81DDEB214C854100526054 /* LaunchScreen.storyboard */; };
 		BD81DDF8214C854100526054 /* TyperMemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DDF7214C854100526054 /* TyperMemoTests.swift */; };
-		BD81DE03214C854200526054 /* TyperMemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DE02214C854200526054 /* TyperMemoUITests.swift */; };
 		BD81DE19214C8E7F00526054 /* color.txt in Resources */ = {isa = PBXBuildFile; fileRef = BD81DE18214C8E7F00526054 /* color.txt */; };
 		BD81DE2F214C900300526054 /* Localizable.strings .strings in Resources */ = {isa = PBXBuildFile; fileRef = BD81DE31214C900300526054 /* Localizable.strings .strings */; };
 		BD81DE38214C903000526054 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DE35214C903000526054 /* Assets.swift */; };
 		BD81DE39214C903000526054 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DE36214C903000526054 /* L10n.swift */; };
 		BD81DE3A214C903000526054 /* MyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DE37214C903000526054 /* MyColor.swift */; };
 		BD9050BC214F581300425C8D /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9050BB214F581300425C8D /* RealmSwift.framework */; };
-		BD9050BD214F584300425C8D /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9050BB214F581300425C8D /* RealmSwift.framework */; };
 		C5C96A95A1714223D68E9E46 /* Pods_TyperMemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BFA87AD059AEEDB7D8E415 /* Pods_TyperMemoTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		BD81DDF4214C854100526054 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BD81DDD4214C854000526054 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BD81DDDB214C854000526054;
-			remoteInfo = TyperMemo;
-		};
-		BD81DDFF214C854200526054 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BD81DDD4214C854000526054 /* Project object */;
 			proxyType = 1;
@@ -83,9 +73,6 @@
 		BD81DDF3214C854100526054 /* TyperMemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TyperMemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD81DDF7214C854100526054 /* TyperMemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyperMemoTests.swift; sourceTree = "<group>"; };
 		BD81DDF9214C854100526054 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BD81DDFE214C854200526054 /* TyperMemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TyperMemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD81DE02214C854200526054 /* TyperMemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyperMemoUITests.swift; sourceTree = "<group>"; };
-		BD81DE04214C854200526054 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD81DE18214C8E7F00526054 /* color.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = color.txt; sourceTree = "<group>"; };
 		BD81DE2D214C8FE900526054 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
 		BD81DE2E214C8FE900526054 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -116,15 +103,6 @@
 			files = (
 				BD9050BC214F581300425C8D /* RealmSwift.framework in Frameworks */,
 				C5C96A95A1714223D68E9E46 /* Pods_TyperMemoTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BD81DDFB214C854200526054 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BD9050BD214F584300425C8D /* RealmSwift.framework in Frameworks */,
-				7D2F36778946D0BF92C8463A /* Pods_TyperMemoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,7 +137,6 @@
 			children = (
 				BD81DDDE214C854000526054 /* Source */,
 				BD81DDF6214C854100526054 /* TyperMemoTests */,
-				BD81DE01214C854200526054 /* TyperMemoUITests */,
 				BD81DDDD214C854000526054 /* Products */,
 				F2DA7943BD69E1932B60FF88 /* Pods */,
 				44DCBEA593D0A2D6E39A8006 /* Frameworks */,
@@ -171,7 +148,6 @@
 			children = (
 				BD81DDDC214C854000526054 /* TyperMemo.app */,
 				BD81DDF3214C854100526054 /* TyperMemoTests.xctest */,
-				BD81DDFE214C854200526054 /* TyperMemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,15 +177,6 @@
 				BD81DDF9214C854100526054 /* Info.plist */,
 			);
 			path = TyperMemoTests;
-			sourceTree = "<group>";
-		};
-		BD81DE01214C854200526054 /* TyperMemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				BD81DE02214C854200526054 /* TyperMemoUITests.swift */,
-				BD81DE04214C854200526054 /* Info.plist */,
-			);
-			path = TyperMemoUITests;
 			sourceTree = "<group>";
 		};
 		BD81DE10214C857100526054 /* Supporting Files */ = {
@@ -298,27 +265,6 @@
 			productReference = BD81DDF3214C854100526054 /* TyperMemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BD81DDFD214C854200526054 /* TyperMemoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BD81DE0D214C854200526054 /* Build configuration list for PBXNativeTarget "TyperMemoUITests" */;
-			buildPhases = (
-				B7A05CEC63BE3FBDAB8E6C8F /* [CP] Check Pods Manifest.lock */,
-				BD81DDFA214C854200526054 /* Sources */,
-				BD81DDFB214C854200526054 /* Frameworks */,
-				BD81DDFC214C854200526054 /* Resources */,
-				4ABA70FB076000AA9DF632CD /* [CP] Embed Pods Frameworks */,
-				2FB644C91F6E5E73EDD5806C /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BD81DE00214C854200526054 /* PBXTargetDependency */,
-			);
-			name = TyperMemoUITests;
-			productName = TyperMemoUITests;
-			productReference = BD81DDFE214C854200526054 /* TyperMemoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -333,10 +279,6 @@
 						CreatedOnToolsVersion = 9.4.1;
 					};
 					BD81DDF2214C854100526054 = {
-						CreatedOnToolsVersion = 9.4.1;
-						TestTargetID = BD81DDDB214C854000526054;
-					};
-					BD81DDFD214C854200526054 = {
 						CreatedOnToolsVersion = 9.4.1;
 						TestTargetID = BD81DDDB214C854000526054;
 					};
@@ -358,7 +300,6 @@
 			targets = (
 				BD81DDDB214C854000526054 /* TyperMemo */,
 				BD81DDF2214C854100526054 /* TyperMemoTests */,
-				BD81DDFD214C854200526054 /* TyperMemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -377,13 +318,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BD81DDF1214C854100526054 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BD81DDFC214C854200526054 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -415,21 +349,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TyperMemo/Pods-TyperMemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2FB644C91F6E5E73EDD5806C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TyperMemoUITests/Pods-TyperMemoUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3237041E6C4A1230EA68D561 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -443,44 +362,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TyperMemoTests/Pods-TyperMemoTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4ABA70FB076000AA9DF632CD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TyperMemoUITests/Pods-TyperMemoUITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TyperMemoUITests/Pods-TyperMemoUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B7A05CEC63BE3FBDAB8E6C8F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TyperMemoUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BA4DFC23B009E0DB02F748D7 /* [CP] Check Pods Manifest.lock */ = {
@@ -550,6 +431,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/XCGLogger.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Cuckoo.framework",
 			);
 			name = "Copy Carthage Resources";
 			outputPaths = (
@@ -673,14 +555,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD81DDFA214C854200526054 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BD81DE03214C854200526054 /* TyperMemoUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -688,11 +562,6 @@
 			isa = PBXTargetDependency;
 			target = BD81DDDB214C854000526054 /* TyperMemo */;
 			targetProxy = BD81DDF4214C854100526054 /* PBXContainerItemProxy */;
-		};
-		BD81DE00214C854200526054 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BD81DDDB214C854000526054 /* TyperMemo */;
-			targetProxy = BD81DDFF214C854200526054 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -945,57 +814,6 @@
 			};
 			name = Release;
 		};
-		BD81DE0E214C854200526054 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E195EA646989D473F3C0C519 /* Pods-TyperMemoUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SFSNP72DLD;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = TyperMemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hucet.tyler.TyperMemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG TEST";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TyperMemo;
-			};
-			name = Debug;
-		};
-		BD81DE0F214C854200526054 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 006F8AE46E189167BAF12D0E /* Pods-TyperMemoUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SFSNP72DLD;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = TyperMemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hucet.tyler.TyperMemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TyperMemo;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1022,15 +840,6 @@
 			buildConfigurations = (
 				BD81DE0B214C854200526054 /* Debug */,
 				BD81DE0C214C854200526054 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BD81DE0D214C854200526054 /* Build configuration list for PBXNativeTarget "TyperMemoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BD81DE0E214C854200526054 /* Debug */,
-				BD81DE0F214C854200526054 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

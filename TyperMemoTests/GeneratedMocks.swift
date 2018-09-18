@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: Source/DataBase/Memo.swift at 2018-09-18 00:43:10 +0000
+// MARK: - Mocks generated from file: Source/DataBase/Memo.swift at 2018-09-18 11:38:19 +0000
 
 
 import Cuckoo
