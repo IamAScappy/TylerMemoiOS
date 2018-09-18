@@ -1,11 +1,5 @@
-// MARK: - Mocks generated from file: Source/DataBase/Memo.swift at 2018-09-17 10:22:47 +0000
+// MARK: - Mocks generated from file: Source/DataBase/Memo.swift at 2018-09-18 00:43:10 +0000
 
-//
-//  Memo.swift
-//  TyperMemo
-//
-//  Created by tskim on 2018. 9. 15..
-//
 
 import Cuckoo
 @testable import TyperMemo
@@ -84,8 +78,8 @@ class MockMemo: Memo, Cuckoo.ClassMock {
         
     }
     
-    // ["name": "createAt", "stubType": "ClassToBeStubbedProperty", "@type": "InstanceVariable", "type": "__UnknownType", "isReadOnly": false, "accessibility": ""]
-     override var createAt: __UnknownType {
+    // ["name": "createAt", "stubType": "ClassToBeStubbedProperty", "@type": "InstanceVariable", "type": "Date", "isReadOnly": false, "accessibility": ""]
+     override var createAt: Date {
         get {
             
             return cuckoo_manager.getter("createAt", superclassCall: super.createAt)
@@ -128,7 +122,7 @@ class MockMemo: Memo, Cuckoo.ClassMock {
 	        return .init(manager: cuckoo_manager, name: "colorTheme")
 	    }
 	    
-	    var createAt: Cuckoo.ClassToBeStubbedProperty<MockMemo, __UnknownType> {
+	    var createAt: Cuckoo.ClassToBeStubbedProperty<MockMemo, Date> {
 	        return .init(manager: cuckoo_manager, name: "createAt")
 	    }
 	    
@@ -163,7 +157,7 @@ class MockMemo: Memo, Cuckoo.ClassMock {
 	        return .init(manager: cuckoo_manager, name: "colorTheme", callMatcher: callMatcher, sourceLocation: sourceLocation)
 	    }
 	    
-	    var createAt: Cuckoo.VerifyProperty<__UnknownType> {
+	    var createAt: Cuckoo.VerifyProperty<Date> {
 	        return .init(manager: cuckoo_manager, name: "createAt", callMatcher: callMatcher, sourceLocation: sourceLocation)
 	    }
 	    
@@ -211,9 +205,9 @@ class MockMemo: Memo, Cuckoo.ClassMock {
         
     }
     
-     override var createAt: __UnknownType {
+     override var createAt: Date {
         get {
-            return DefaultValueRegistry.defaultValue(for: (__UnknownType).self)
+            return DefaultValueRegistry.defaultValue(for: (Date).self)
         }
         
         set { }
@@ -234,8 +228,8 @@ class MockMemoAttribute: MemoAttribute, Cuckoo.ClassMock {
     let cuckoo_manager = Cuckoo.MockManager(hasParent: true)
 
     
-    // ["name": "isPin", "stubType": "ClassToBeStubbedProperty", "@type": "InstanceVariable", "type": "__UnknownType", "isReadOnly": false, "accessibility": ""]
-     override var isPin: __UnknownType {
+    // ["name": "isPin", "stubType": "ClassToBeStubbedProperty", "@type": "InstanceVariable", "type": "Bool", "isReadOnly": false, "accessibility": ""]
+     override var isPin: Bool {
         get {
             
             return cuckoo_manager.getter("isPin", superclassCall: super.isPin)
@@ -262,7 +256,7 @@ class MockMemoAttribute: MemoAttribute, Cuckoo.ClassMock {
 	        self.cuckoo_manager = manager
 	    }
 	    
-	    var isPin: Cuckoo.ClassToBeStubbedProperty<MockMemoAttribute, __UnknownType> {
+	    var isPin: Cuckoo.ClassToBeStubbedProperty<MockMemoAttribute, Bool> {
 	        return .init(manager: cuckoo_manager, name: "isPin")
 	    }
 	    
@@ -281,7 +275,7 @@ class MockMemoAttribute: MemoAttribute, Cuckoo.ClassMock {
 	    }
 	
 	    
-	    var isPin: Cuckoo.VerifyProperty<__UnknownType> {
+	    var isPin: Cuckoo.VerifyProperty<Bool> {
 	        return .init(manager: cuckoo_manager, name: "isPin", callMatcher: callMatcher, sourceLocation: sourceLocation)
 	    }
 	    
@@ -293,9 +287,9 @@ class MockMemoAttribute: MemoAttribute, Cuckoo.ClassMock {
 
  class MemoAttributeStub: MemoAttribute {
     
-     override var isPin: __UnknownType {
+     override var isPin: Bool {
         get {
-            return DefaultValueRegistry.defaultValue(for: (__UnknownType).self)
+            return DefaultValueRegistry.defaultValue(for: (Bool).self)
         }
         
         set { }

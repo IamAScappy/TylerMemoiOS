@@ -19,8 +19,15 @@ class ColorThemeTest: RealmSpec {
         realm = try! Realm()
       }
       it("init data", closure: {
-          let result = realm.objects(ColorTheme.self)
-        print("!!!!!! \(result)")
+        let colorThemeBlue = ColorThemeTemplate.blue
+        let result = realm.objects(ColorTheme.self)
+        result.observe({ (a : RealmCollectionChange<Results<ColorTheme>>) in
+          print("!!!!!!!!! adasd")
+        })
+        try! realm.write {
+          realm.add(colorThemeBlue, update: true)
+        }
+        
       })
     }
   }

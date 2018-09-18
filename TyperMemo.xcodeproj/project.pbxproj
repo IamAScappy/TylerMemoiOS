@@ -12,6 +12,7 @@
 		BD1C7FA6214E661D00C58B67 /* RealmSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1C7FA5214E661D00C58B67 /* RealmSpec.swift */; };
 		BD1C7FA8214E68E600C58B67 /* MemoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1C7FA7214E68E600C58B67 /* MemoTest.swift */; };
 		BD1C7FB0214E819700C58B67 /* LabelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1C7FAF214E819700C58B67 /* LabelTest.swift */; };
+		BD472165215081850015740A /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD472164215081850015740A /* GeneratedMocks.swift */; };
 		BD4723C5214E8FE8002D84D2 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4723C4214E8FE8002D84D2 /* ColorTheme.swift */; };
 		BD4723C7214E90C4002D84D2 /* ColorThemeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4723C6214E90C4002D84D2 /* ColorThemeTest.swift */; };
 		BD4723CF214F2E28002D84D2 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4723CE214F2E28002D84D2 /* UIColor+Hex.swift */; };
@@ -64,6 +65,7 @@
 		BD1C7FA5214E661D00C58B67 /* RealmSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmSpec.swift; sourceTree = "<group>"; };
 		BD1C7FA7214E68E600C58B67 /* MemoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTest.swift; sourceTree = "<group>"; };
 		BD1C7FAF214E819700C58B67 /* LabelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTest.swift; sourceTree = "<group>"; };
+		BD472164215081850015740A /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		BD4723C4214E8FE8002D84D2 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		BD4723C6214E90C4002D84D2 /* ColorThemeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorThemeTest.swift; sourceTree = "<group>"; };
 		BD4723CE214F2E28002D84D2 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 		BD81DDF6214C854100526054 /* TyperMemoTests */ = {
 			isa = PBXGroup;
 			children = (
+				BD472164215081850015740A /* GeneratedMocks.swift */,
 				BD4723C6214E90C4002D84D2 /* ColorThemeTest.swift */,
 				BD1C7FAF214E819700C58B67 /* LabelTest.swift */,
 				BD1C7FA7214E68E600C58B67 /* MemoTest.swift */,
@@ -263,6 +266,7 @@
 				E00C3A8F30CB21DD53EBE5D3 /* [CP] Copy Pods Resources */,
 				BD81DE11214C898800526054 /* Copy Carthage Resources */,
 				BD81DE3B214C91B500526054 /* Run SwiftLint */,
+				BD472160215081440015740A /* Generate Mock */,
 			);
 			buildRules = (
 			);
@@ -511,6 +515,20 @@
 			shellPath = /bin/sh;
 			shellScript = "git=$(sh /etc/profile; which git)\ngit_release_version=$(\"$git\" describe --tags --always --abbrev=0)\nnumber_of_commits=$(\"$git\" rev-list master | wc -l | tr -d ' ')\ntarget_plist=\"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\ndsym_plist=\"$DWARF_DSYM_FOLDER_PATH/$DWARF_DSYM_FILE_NAME/Contents/Info.plist\"\n\nfor plist in \"$target_plist\" \"$dsym_plist\"; do\nif [ -f \"$plist\" ]; then\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $number_of_commits\" \"$plist\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString ${git_release_version#*v}\" \"$plist\"\nfi\ndone\n";
 		};
+		BD472160215081440015740A /* Generate Mock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Mock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "OUTPUT_FILE=\"$PROJECT_DIR/TyperMemoTests/GeneratedMocks.swift\"\necho \"Generated Mocks File = $OUTPUT_FILE\"\n\nINPUT_DIR=\"${PROJECT_DIR}/Source\"\n\n\"Carthage/Checkouts/Cuckoo/run\" generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"$INPUT_DIR/DataBase/Memo.swift\"\n\n\n";
+		};
 		BD81DE11214C898800526054 /* Copy Carthage Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -647,6 +665,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD4723C7214E90C4002D84D2 /* ColorThemeTest.swift in Sources */,
+				BD472165215081850015740A /* GeneratedMocks.swift in Sources */,
 				BD1C7FA6214E661D00C58B67 /* RealmSpec.swift in Sources */,
 				BD81DDF8214C854100526054 /* TyperMemoTests.swift in Sources */,
 				BD1C7FB0214E819700C58B67 /* LabelTest.swift in Sources */,

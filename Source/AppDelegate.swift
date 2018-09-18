@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    )
 //    let realm = try? Realm(configuration: config)
     // log with different importance
+    
     return true
   }
 

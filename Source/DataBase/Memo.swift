@@ -8,7 +8,7 @@ class Memo: Object {
   @objc dynamic var text: String = ""
   @objc dynamic var attr: MemoAttribute? = MemoAttribute()
   @objc dynamic var colorTheme: ColorTheme?
-  @objc dynamic var createAt = Date()
+  @objc dynamic var createAt: Date = Date()
   let labels = List<Label>()
   let checkList = List<CheckItem>()
   convenience init(text: String, colorTheme: ColorTheme = ColorThemeTemplate.white) {
@@ -22,5 +22,5 @@ class Memo: Object {
 }
 
 class MemoAttribute: Object {
-  @objc dynamic var isPin = false
+  @objc dynamic var isPin: Bool = false
 }
