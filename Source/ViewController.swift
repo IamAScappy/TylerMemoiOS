@@ -24,12 +24,7 @@ class ViewController: UIViewController {
 //
 //    result.addNotificationBlock
 //    print("!!!! \(result)")
-    sssss = result?.observe({ (aasd: RealmCollectionChange<Results<ColorTheme>>) in
-      print("!!!!!!!!! RealmCollectionChange \(aasd)")
-    })
-    aaaaaa = realm?.observe { notification, realm in
-      print("!!!!!!! realm.observe")
-    }
+    
     UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100)).then({
       view.addSubview($0)
       $0.addTarget(self, action: #selector(aaa), for: .touchUpInside)
@@ -46,7 +41,9 @@ class ViewController: UIViewController {
 //    print("!commitWrite")
     // Do any additional setup after loading the view, typically from a nib.
   }
-
+  func aa(aa: RealmCollectionChange<AnyRealmCollection<ColorTheme>>) {
+    
+  }
   @objc func aaa() {
     try? realm?.write {
       realm?.add(ColorThemeTemplate.brown)

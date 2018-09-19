@@ -9,7 +9,9 @@ import Nimble
 import Quick
 import RxSwift
 import RealmSwift
+import Cuckoo
 @testable import TyperMemo
+
 
 class ColorThemeTest: RealmSpec {
   override func spec() {
@@ -19,15 +21,16 @@ class ColorThemeTest: RealmSpec {
         realm = try! Realm()
       }
       it("init data", closure: {
-        let colorThemeBlue = ColorThemeTemplate.blue
+        let realmValue = FakeRealmCollectionValue<ColorTheme>()
         let result = realm.objects(ColorTheme.self)
-        let notificationToken = result.observe({ (ob : RealmCollectionChange<Results<ColorTheme>>) in
-          print("!!!!!!!!! adasd")
-        })
+        let notifiToken = result.observe(realmValue.captureObserve)
         try! realm.write {
-          realm.add(colorThemeBlue, update: true)
+          realm.add(ColorThemeTemplate.blue, update: true)
         }
-        
+        try! realm.write {
+          realm.add(ColorThemeTemplate.brown, update: true)
+        }
+        expect(realmValue.count).toEventually(equal(3))
       })
     }
   }
