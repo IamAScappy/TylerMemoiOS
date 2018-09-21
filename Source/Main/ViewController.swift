@@ -11,6 +11,7 @@ import Then
 class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
+    view.accessibilityIdentifier = "main"
   }
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
