@@ -1,81 +1,45 @@
 // Generated using SwiftGen, by O.Halligon — https://github.com/SwiftGen/SwiftGen
 
 #if os(OSX)
-  import AppKit.NSColor
-  internal typealias Color = NSColor
+  import AppKit
+  internal enum ColorName { }
 #elseif os(iOS) || os(tvOS) || os(watchOS)
-  import UIKit.UIColor
-  internal typealias Color = UIColor
+  import UIKit
+  internal enum ColorName { }
 #endif
 
 // swiftlint:disable superfluous_disable_command
 // swiftlint:disable file_length
 
-// swiftlint:disable operator_usage_whitespace
-internal extension Color {
-  convenience init(rgbaValue: UInt32) {
-    let red   = CGFloat((rgbaValue >> 24) & 0xff) / 255.0
-    let green = CGFloat((rgbaValue >> 16) & 0xff) / 255.0
-    let blue  = CGFloat((rgbaValue >>  8) & 0xff) / 255.0
-    let alpha = CGFloat((rgbaValue      ) & 0xff) / 255.0
-
-    self.init(red: red, green: green, blue: blue, alpha: alpha)
-  }
-}
-// swiftlint:enable operator_usage_whitespace
-
 // swiftlint:disable identifier_name line_length type_body_length
-internal struct ColorName {
-  internal let rgbaValue: UInt32
-  internal var color: Color { return Color(named: self) }
-
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#2196f3"></span>
-  /// Alpha: 100% <br/> (0x2196f3ff)
-  internal static let themeBlue = ColorName(rgbaValue: 0x2196f3ff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#795548"></span>
-  /// Alpha: 100% <br/> (0x795548ff)
-  internal static let themeBrown = ColorName(rgbaValue: 0x795548ff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#00bcd4"></span>
-  /// Alpha: 100% <br/> (0x00bcd4ff)
-  internal static let themeCyan = ColorName(rgbaValue: 0x00bcd4ff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#9e9e9e"></span>
-  /// Alpha: 100% <br/> (0x9e9e9eff)
-  internal static let themeGray = ColorName(rgbaValue: 0x9e9e9eff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#4caf50"></span>
-  /// Alpha: 100% <br/> (0x4caf50ff)
-  internal static let themeGreen = ColorName(rgbaValue: 0x4caf50ff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#3f51b5"></span>
-  /// Alpha: 100% <br/> (0x3f51b5ff)
-  internal static let themeIndigo = ColorName(rgbaValue: 0x3f51b5ff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#cddc39"></span>
-  /// Alpha: 100% <br/> (0xcddc39ff)
-  internal static let themeLime = ColorName(rgbaValue: 0xcddc39ff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#e91e63"></span>
-  /// Alpha: 100% <br/> (0xe91e63ff)
-  internal static let themePink = ColorName(rgbaValue: 0xe91e63ff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#673ab7"></span>
-  /// Alpha: 100% <br/> (0x673ab7ff)
-  internal static let themePurple = ColorName(rgbaValue: 0x673ab7ff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#f44336"></span>
-  /// Alpha: 100% <br/> (0xf44336ff)
-  internal static let themeRed = ColorName(rgbaValue: 0xf44336ff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#009688"></span>
-  /// Alpha: 100% <br/> (0x009688ff)
-  internal static let themeTeal = ColorName(rgbaValue: 0x009688ff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ffeb3b"></span>
-  /// Alpha: 100% <br/> (0xffeb3bff)
-  internal static let themeYellow = ColorName(rgbaValue: 0xffeb3bff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ffffff"></span>
-  /// Alpha: 100% <br/> (0xffffffff)
-  internal static let black = ColorName(rgbaValue: 0xffffffff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#000000"></span>
-  /// Alpha: 100% <br/> (0x000000ff)
-  internal static let white = ColorName(rgbaValue: 0x000000ff)
+internal extension ColorName {
+  /// 0x2196f3ff (r: 33, g: 150, b: 243, a: 255)
+  static let themeBlue = #colorLiteral(red: 0.129412, green: 0.588235, blue: 0.952941, alpha: 1.0)
+  /// 0x795548ff (r: 121, g: 85, b: 72, a: 255)
+  static let themeBrown = #colorLiteral(red: 0.47451, green: 0.333333, blue: 0.282353, alpha: 1.0)
+  /// 0x00bcd4ff (r: 0, g: 188, b: 212, a: 255)
+  static let themeCyan = #colorLiteral(red: 0.0, green: 0.737255, blue: 0.831373, alpha: 1.0)
+  /// 0x9e9e9eff (r: 158, g: 158, b: 158, a: 255)
+  static let themeGray = #colorLiteral(red: 0.619608, green: 0.619608, blue: 0.619608, alpha: 1.0)
+  /// 0x4caf50ff (r: 76, g: 175, b: 80, a: 255)
+  static let themeGreen = #colorLiteral(red: 0.298039, green: 0.686275, blue: 0.313726, alpha: 1.0)
+  /// 0x3f51b5ff (r: 63, g: 81, b: 181, a: 255)
+  static let themeIndigo = #colorLiteral(red: 0.247059, green: 0.317647, blue: 0.709804, alpha: 1.0)
+  /// 0xcddc39ff (r: 205, g: 220, b: 57, a: 255)
+  static let themeLime = #colorLiteral(red: 0.803922, green: 0.862745, blue: 0.223529, alpha: 1.0)
+  /// 0xe91e63ff (r: 233, g: 30, b: 99, a: 255)
+  static let themePink = #colorLiteral(red: 0.913725, green: 0.117647, blue: 0.388235, alpha: 1.0)
+  /// 0x673ab7ff (r: 103, g: 58, b: 183, a: 255)
+  static let themePurple = #colorLiteral(red: 0.403922, green: 0.227451, blue: 0.717647, alpha: 1.0)
+  /// 0xf44336ff (r: 244, g: 67, b: 54, a: 255)
+  static let themeRed = #colorLiteral(red: 0.956863, green: 0.262745, blue: 0.211765, alpha: 1.0)
+  /// 0x009688ff (r: 0, g: 150, b: 136, a: 255)
+  static let themeTeal = #colorLiteral(red: 0.0, green: 0.588235, blue: 0.533333, alpha: 1.0)
+  /// 0xffeb3bff (r: 255, g: 235, b: 59, a: 255)
+  static let themeYellow = #colorLiteral(red: 1.0, green: 0.921569, blue: 0.231373, alpha: 1.0)
+  /// 0xffffffff (r: 255, g: 255, b: 255, a: 255)
+  static let black = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+  /// 0x000000ff (r: 0, g: 0, b: 0, a: 255)
+  static let white = #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
 }
 // swiftlint:enable identifier_name line_length type_body_length
-
-internal extension Color {
-  convenience init(named color: ColorName) {
-    self.init(rgbaValue: color.rgbaValue)
-  }
-}

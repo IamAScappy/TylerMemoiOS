@@ -13,5 +13,5 @@ xcassets:
 
 colors:
   paths: color.txt
-  templateName: swift4
+  templateName: literals-swift4
   output: MyColor.swift

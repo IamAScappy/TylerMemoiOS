@@ -20,16 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //  #endif
   // swiftlint:disable:next line_length
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
     printEmulatorInfo()
     initLogger()
-//    let config = Realm.Configuration(
-//      // Get the URL to the bundled file
-//      fileURL: URL(fileURLWithPath: "default.realm", isDirectory: false)
-//    )
-//    let realm = try? Realm(configuration: config)
-    // log with different importance
-    
+    copyDefaultRealm()
     return true
   }
 
@@ -75,17 +68,5 @@ extension AppDelegate {
 //    #else
 //    log.setup(level: .severe, showThreadName: true, showLevel: true, showFileNames: true, showLineNumbers: true)
 //    #endif
-  }
-  func openRealm() {
-    let defaultURL = Realm.Configuration.defaultConfiguration.fileURL!
-    let replaceRealmURL = Bundle.main.url(forResource: "default", withExtension: "realm")
-
-    if !FileManager.default.fileExists(atPath: defaultURL.absoluteString) {
-      do {
-        try FileManager.default.copyItem(at: replaceRealmURL!, to: defaultURL)
-      } catch let error {
-        print("error copying seeds: \(error)")
-      }
-    }
   }
 }

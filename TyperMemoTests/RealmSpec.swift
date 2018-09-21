@@ -9,6 +9,7 @@
 import Quick
 import Nimble
 import RealmSwift
+@testable import TyperMemo
 
 class RealmSpec: QuickSpec {
   override func spec() {
@@ -31,7 +32,7 @@ extension RealmSpec {
   }
   
   func clearDatabase() {
-    let realm = try! Realm()
+    let realm = try! MyRealm.realm()
     try! realm.write {
       realm.deleteAll()
     }

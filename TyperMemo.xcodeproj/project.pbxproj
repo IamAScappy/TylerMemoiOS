@@ -32,6 +32,9 @@
 		BD81DE3A214C903000526054 /* MyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DE37214C903000526054 /* MyColor.swift */; };
 		BD9050BC214F581300425C8D /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9050BB214F581300425C8D /* RealmSwift.framework */; };
 		BDACB9DE21520A6D00AE2C50 /* FakeRealmCollectionValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDACB9DB2152099000AE2C50 /* FakeRealmCollectionValue.swift */; };
+		BDC0E9DF2153BE5400BE8EE3 /* tyler-v1.realm in Resources */ = {isa = PBXBuildFile; fileRef = BDC0E9DE2153BE2200BE8EE3 /* tyler-v1.realm */; };
+		BDC0E9E12153BF1400BE8EE3 /* AppDelegate+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC0E9E02153BF1400BE8EE3 /* AppDelegate+Realm.swift */; };
+		BDC0E9E52153CD6500BE8EE3 /* TestRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC0E9E42153CD6500BE8EE3 /* TestRealm.swift */; };
 		C5C96A95A1714223D68E9E46 /* Pods_TyperMemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BFA87AD059AEEDB7D8E415 /* Pods_TyperMemoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +89,9 @@
 		BD9050B9214F580700425C8D /* RealmSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RealmSwift.framework.dSYM; path = Carthage/Build/iOS/RealmSwift.framework.dSYM; sourceTree = "<group>"; };
 		BD9050BB214F581300425C8D /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		BDACB9DB2152099000AE2C50 /* FakeRealmCollectionValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeRealmCollectionValue.swift; sourceTree = "<group>"; };
+		BDC0E9DE2153BE2200BE8EE3 /* tyler-v1.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tyler-v1.realm"; sourceTree = "<group>"; };
+		BDC0E9E02153BF1400BE8EE3 /* AppDelegate+Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Realm.swift"; sourceTree = "<group>"; };
+		BDC0E9E42153CD6500BE8EE3 /* TestRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRealm.swift; sourceTree = "<group>"; };
 		DDA781FEA10E5CCA1B0D7444 /* Pods_TyperMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TyperMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E195EA646989D473F3C0C519 /* Pods-TyperMemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TyperMemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TyperMemoUITests/Pods-TyperMemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,6 +167,7 @@
 				BD81DE34214C903000526054 /* Generated */,
 				BD81DE10214C857100526054 /* Supporting Files */,
 				BD81DDDF214C854000526054 /* AppDelegate.swift */,
+				BDC0E9E02153BF1400BE8EE3 /* AppDelegate+Realm.swift */,
 				BD81DDE1214C854000526054 /* ViewController.swift */,
 				BD4723CE214F2E28002D84D2 /* UIColor+Hex.swift */,
 			);
@@ -178,6 +185,7 @@
 				BD81DDF7214C854100526054 /* TyperMemoTests.swift */,
 				BD81DDF9214C854100526054 /* Info.plist */,
 				BDACB9DB2152099000AE2C50 /* FakeRealmCollectionValue.swift */,
+				BDC0E9E42153CD6500BE8EE3 /* TestRealm.swift */,
 			);
 			path = TyperMemoTests;
 			sourceTree = "<group>";
@@ -185,6 +193,7 @@
 		BD81DE10214C857100526054 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BDC0E9DE2153BE2200BE8EE3 /* tyler-v1.realm */,
 				BD81DE18214C8E7F00526054 /* color.txt */,
 				BD81DDE6214C854000526054 /* TyperMemo.xcdatamodeld */,
 				BD81DDE3214C854000526054 /* Main.storyboard */,
@@ -316,6 +325,7 @@
 				BD81DDEA214C854100526054 /* Assets.xcassets in Resources */,
 				BD81DE2F214C900300526054 /* Localizable.strings .strings in Resources */,
 				BD81DE19214C8E7F00526054 /* color.txt in Resources */,
+				BDC0E9DF2153BE5400BE8EE3 /* tyler-v1.realm in Resources */,
 				BD81DDE5214C854000526054 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,6 +547,7 @@
 				BD81DE38214C903000526054 /* Assets.swift in Sources */,
 				BD81DDE0214C854000526054 /* AppDelegate.swift in Sources */,
 				BD780E28214CA10200FA9FDF /* Label.swift in Sources */,
+				BDC0E9E12153BF1400BE8EE3 /* AppDelegate+Realm.swift in Sources */,
 				BD81DE39214C903000526054 /* L10n.swift in Sources */,
 				BD81DE3A214C903000526054 /* MyColor.swift in Sources */,
 				BD4723CF214F2E28002D84D2 /* UIColor+Hex.swift in Sources */,
@@ -552,6 +563,7 @@
 				BD4723C7214E90C4002D84D2 /* ColorThemeTest.swift in Sources */,
 				BD472165215081850015740A /* GeneratedMocks.swift in Sources */,
 				BD1C7FA6214E661D00C58B67 /* RealmSpec.swift in Sources */,
+				BDC0E9E52153CD6500BE8EE3 /* TestRealm.swift in Sources */,
 				BDACB9DE21520A6D00AE2C50 /* FakeRealmCollectionValue.swift in Sources */,
 				BD81DDF8214C854100526054 /* TyperMemoTests.swift in Sources */,
 				BD1C7FB0214E819700C58B67 /* LabelTest.swift in Sources */,
