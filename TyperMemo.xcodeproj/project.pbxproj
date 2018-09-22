@@ -16,6 +16,7 @@
 		BD4723C5214E8FE8002D84D2 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4723C4214E8FE8002D84D2 /* ColorTheme.swift */; };
 		BD4723C7214E90C4002D84D2 /* ColorThemeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4723C6214E90C4002D84D2 /* ColorThemeTest.swift */; };
 		BD4723CF214F2E28002D84D2 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4723CE214F2E28002D84D2 /* UIColor+Hex.swift */; };
+		BD5653D521565ABE00F378F0 /* MemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5653D421565ABE00F378F0 /* MemoViewModel.swift */; };
 		BD70173B21559FE900093C55 /* MemoSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD70173A21559FE900093C55 /* MemoSectionController.swift */; };
 		BD780E20214C9CD300FA9FDF /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD780E1F214C9CD300FA9FDF /* Memo.swift */; };
 		BD780E26214C9F7100FA9FDF /* CheckItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD780E25214C9F7100FA9FDF /* CheckItem.swift */; };
@@ -76,6 +77,7 @@
 		BD4723C4214E8FE8002D84D2 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		BD4723C6214E90C4002D84D2 /* ColorThemeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorThemeTest.swift; sourceTree = "<group>"; };
 		BD4723CE214F2E28002D84D2 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		BD5653D421565ABE00F378F0 /* MemoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewModel.swift; sourceTree = "<group>"; };
 		BD70173A21559FE900093C55 /* MemoSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoSectionController.swift; sourceTree = "<group>"; };
 		BD780E1F214C9CD300FA9FDF /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		BD780E25214C9F7100FA9FDF /* CheckItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckItem.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				BD81DDE1214C854000526054 /* MainViewController.swift */,
 				BD70173A21559FE900093C55 /* MemoSectionController.swift */,
 				BDFC8A7A2155AD5E00A042B5 /* MemoViewCell.swift */,
+				BD5653D421565ABE00F378F0 /* MemoViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -696,6 +699,7 @@
 				BD70173B21559FE900093C55 /* MemoSectionController.swift in Sources */,
 				BDC0E9E12153BF1400BE8EE3 /* AppDelegate+Realm.swift in Sources */,
 				BD81DE39214C903000526054 /* L10n.swift in Sources */,
+				BD5653D521565ABE00F378F0 /* MemoViewModel.swift in Sources */,
 				BD81DE3A214C903000526054 /* MyColor.swift in Sources */,
 				BD4723CF214F2E28002D84D2 /* UIColor+Hex.swift in Sources */,
 				BD4723C5214E8FE8002D84D2 /* ColorTheme.swift in Sources */,

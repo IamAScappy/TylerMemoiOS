@@ -11,20 +11,28 @@ import Then
 import IGListKit
 
 class MainViewController: UIViewController, ListAdapterDataSource {
-  @IBOutlet weak private  var memoCollectionView: UICollectionView!
   var data = [ListDiffable]()
   lazy var adapter: ListAdapter = { return ListAdapter(updater: ListAdapterUpdater(), viewController: self) }()
+  let collectionView: UICollectionView = {
+    let layout = UICollectionViewFlowLayout()
+    layout.estimatedItemSize = CGSize(width: 100, height: 40)
+    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+    collectionView.backgroundColor = UIColor(red: 0.831_372_549, green: 0.945_098_039, blue: 0.964_705_882, alpha: 1)
+    return collectionView
+  }()
   override func viewDidLoad() {
     super.viewDidLoad()
+    view.addSubview(collectionView)
     view.accessibilityIdentifier = "main"
-    memoCollectionView.collectionViewLayout = UICollectionViewFlowLayout().then({
-      $0.estimatedItemSize = CGSize(width: 100, height: 40)
-    })
-    data.append(contentsOf: [Memo(text: "abc"), Memo(text: "ddd"), Memo(text: "zzz")])
+    data.append(MemoViewModel(memos: [Memo(text: "abc"), Memo(text: "ddd"), Memo(text: "zzz")]))
     adapter.do {
       $0.dataSource = self
-      $0.collectionView = memoCollectionView
+      $0.collectionView = collectionView
     }
+  }
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    collectionView.frame = view.bounds
   }
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
