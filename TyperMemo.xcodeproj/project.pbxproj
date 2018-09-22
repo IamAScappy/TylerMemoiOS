@@ -16,11 +16,12 @@
 		BD4723C5214E8FE8002D84D2 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4723C4214E8FE8002D84D2 /* ColorTheme.swift */; };
 		BD4723C7214E90C4002D84D2 /* ColorThemeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4723C6214E90C4002D84D2 /* ColorThemeTest.swift */; };
 		BD4723CF214F2E28002D84D2 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4723CE214F2E28002D84D2 /* UIColor+Hex.swift */; };
+		BD70173B21559FE900093C55 /* MemoSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD70173A21559FE900093C55 /* MemoSectionController.swift */; };
 		BD780E20214C9CD300FA9FDF /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD780E1F214C9CD300FA9FDF /* Memo.swift */; };
 		BD780E26214C9F7100FA9FDF /* CheckItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD780E25214C9F7100FA9FDF /* CheckItem.swift */; };
 		BD780E28214CA10200FA9FDF /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD780E27214CA10200FA9FDF /* Label.swift */; };
 		BD81DDE0214C854000526054 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DDDF214C854000526054 /* AppDelegate.swift */; };
-		BD81DDE2214C854000526054 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DDE1214C854000526054 /* ViewController.swift */; };
+		BD81DDE2214C854000526054 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DDE1214C854000526054 /* MainViewController.swift */; };
 		BD81DDE5214C854000526054 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD81DDE3214C854000526054 /* Main.storyboard */; };
 		BD81DDE8214C854000526054 /* TyperMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD81DDE6214C854000526054 /* TyperMemo.xcdatamodeld */; };
 		BD81DDEA214C854100526054 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD81DDE9214C854100526054 /* Assets.xcassets */; };
@@ -37,6 +38,9 @@
 		BDC0E9E12153BF1400BE8EE3 /* AppDelegate+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC0E9E02153BF1400BE8EE3 /* AppDelegate+Realm.swift */; };
 		BDC0E9E52153CD6500BE8EE3 /* TestRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC0E9E42153CD6500BE8EE3 /* TestRealm.swift */; };
 		BDC99AC52155914400662E5A /* TyperMemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC99AC42155914400662E5A /* TyperMemoUITests.swift */; };
+		BDFC8A7B2155AD5E00A042B5 /* MemoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC8A7A2155AD5E00A042B5 /* MemoViewCell.swift */; };
+		BDFC8A7D2155AEE800A042B5 /* StoryboardReuseableIndentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC8A7C2155AEE800A042B5 /* StoryboardReuseableIndentifier.swift */; };
+		BDFC8A802155BBCE00A042B5 /* AppSupports.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC8A7F2155BBCE00A042B5 /* AppSupports.swift */; };
 		C5C96A95A1714223D68E9E46 /* Pods_TyperMemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BFA87AD059AEEDB7D8E415 /* Pods_TyperMemoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,12 +76,13 @@
 		BD4723C4214E8FE8002D84D2 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		BD4723C6214E90C4002D84D2 /* ColorThemeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorThemeTest.swift; sourceTree = "<group>"; };
 		BD4723CE214F2E28002D84D2 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		BD70173A21559FE900093C55 /* MemoSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoSectionController.swift; sourceTree = "<group>"; };
 		BD780E1F214C9CD300FA9FDF /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		BD780E25214C9F7100FA9FDF /* CheckItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckItem.swift; sourceTree = "<group>"; };
 		BD780E27214CA10200FA9FDF /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		BD81DDDC214C854000526054 /* TyperMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TyperMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD81DDDF214C854000526054 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BD81DDE1214C854000526054 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BD81DDE1214C854000526054 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BD81DDE4214C854000526054 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD81DDE7214C854000526054 /* TyperMemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TyperMemo.xcdatamodel; sourceTree = "<group>"; };
 		BD81DDE9214C854100526054 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,6 +109,9 @@
 		BDC99AC22155914300662E5A /* TyperMemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TyperMemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC99AC42155914400662E5A /* TyperMemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyperMemoUITests.swift; sourceTree = "<group>"; };
 		BDC99AC62155914400662E5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDFC8A7A2155AD5E00A042B5 /* MemoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewCell.swift; sourceTree = "<group>"; };
+		BDFC8A7C2155AEE800A042B5 /* StoryboardReuseableIndentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardReuseableIndentifier.swift; sourceTree = "<group>"; };
+		BDFC8A7F2155BBCE00A042B5 /* AppSupports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSupports.swift; sourceTree = "<group>"; };
 		DDA781FEA10E5CCA1B0D7444 /* Pods_TyperMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TyperMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E195EA646989D473F3C0C519 /* Pods-TyperMemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TyperMemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TyperMemoUITests/Pods-TyperMemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,7 +160,9 @@
 		BD6606CE215534820012BC3C /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				BD81DDE1214C854000526054 /* ViewController.swift */,
+				BD81DDE1214C854000526054 /* MainViewController.swift */,
+				BD70173A21559FE900093C55 /* MemoSectionController.swift */,
+				BDFC8A7A2155AD5E00A042B5 /* MemoViewCell.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -161,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				BD4723CE214F2E28002D84D2 /* UIColor+Hex.swift */,
+				BDFC8A7C2155AEE800A042B5 /* StoryboardReuseableIndentifier.swift */,
 			);
 			path = Extensition;
 			sourceTree = "<group>";
@@ -239,6 +250,7 @@
 				BD81DDEB214C854100526054 /* LaunchScreen.storyboard */,
 				BD81DDEE214C854100526054 /* Info.plist */,
 				BD81DE31214C900300526054 /* Localizable.strings .strings */,
+				BDFC8A7F2155BBCE00A042B5 /* AppSupports.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -284,6 +296,7 @@
 			buildPhases = (
 				CF42814D86C14D1202CAD488 /* [CP] Check Pods Manifest.lock */,
 				BD81DE17214C8DFD00526054 /* Run SwiftGen */,
+				BD81DE3B214C91B500526054 /* Run SwiftLint */,
 				BD1C7FA0214E605500C58B67 /* Set version number */,
 				BD81DDD8214C854000526054 /* Sources */,
 				BD81DDD9214C854000526054 /* Frameworks */,
@@ -291,7 +304,6 @@
 				0F9B334298E842693965185B /* [CP] Embed Pods Frameworks */,
 				E00C3A8F30CB21DD53EBE5D3 /* [CP] Copy Pods Resources */,
 				BD81DE11214C898800526054 /* Copy Carthage Resources */,
-				BD81DE3B214C91B500526054 /* Run SwiftLint */,
 				BD472160215081440015740A /* Generate Mock */,
 			);
 			buildRules = (
@@ -675,16 +687,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD780E20214C9CD300FA9FDF /* Memo.swift in Sources */,
-				BD81DDE2214C854000526054 /* ViewController.swift in Sources */,
+				BD81DDE2214C854000526054 /* MainViewController.swift in Sources */,
+				BDFC8A7D2155AEE800A042B5 /* StoryboardReuseableIndentifier.swift in Sources */,
 				BD81DDE8214C854000526054 /* TyperMemo.xcdatamodeld in Sources */,
 				BD81DE38214C903000526054 /* Assets.swift in Sources */,
 				BD81DDE0214C854000526054 /* AppDelegate.swift in Sources */,
 				BD780E28214CA10200FA9FDF /* Label.swift in Sources */,
+				BD70173B21559FE900093C55 /* MemoSectionController.swift in Sources */,
 				BDC0E9E12153BF1400BE8EE3 /* AppDelegate+Realm.swift in Sources */,
 				BD81DE39214C903000526054 /* L10n.swift in Sources */,
 				BD81DE3A214C903000526054 /* MyColor.swift in Sources */,
 				BD4723CF214F2E28002D84D2 /* UIColor+Hex.swift in Sources */,
 				BD4723C5214E8FE8002D84D2 /* ColorTheme.swift in Sources */,
+				BDFC8A802155BBCE00A042B5 /* AppSupports.swift in Sources */,
+				BDFC8A7B2155AD5E00A042B5 /* MemoViewCell.swift in Sources */,
 				BD780E26214C9F7100FA9FDF /* CheckItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
