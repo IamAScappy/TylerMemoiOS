@@ -39,6 +39,8 @@ internal extension ColorName {
   static let themeYellow = #colorLiteral(red: 1.0, green: 0.921569, blue: 0.231373, alpha: 1.0)
   /// 0xffffffff (r: 255, g: 255, b: 255, a: 255)
   static let black = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+  /// 0x9e9e9eff (r: 158, g: 158, b: 158, a: 255)
+  static let colorAccent = #colorLiteral(red: 0.619608, green: 0.619608, blue: 0.619608, alpha: 1.0)
   /// 0x000000ff (r: 0, g: 0, b: 0, a: 255)
   static let white = #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
 }

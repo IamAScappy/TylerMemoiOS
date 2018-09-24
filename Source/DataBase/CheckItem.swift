@@ -13,6 +13,7 @@ class CheckItem: Object {
   @objc dynamic var check_item_id: String = UUID().uuidString
   @objc dynamic var name: String = ""
   @objc dynamic var done: Bool = false
+  
   convenience init(name: String, done: Bool = false) {
     self.init()
     self.name = name

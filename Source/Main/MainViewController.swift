@@ -10,7 +10,7 @@ import SnapKit
 import Then
 import IGListKit
 
-class MainViewController: UIViewController, ListAdapterDataSource {
+class MainViewController: UIViewController {
   var data = [ListDiffable]()
   lazy var adapter: ListAdapter = { return ListAdapter(updater: ListAdapterUpdater(), viewController: self) }()
   let collectionView: UICollectionView = {
@@ -22,6 +22,7 @@ class MainViewController: UIViewController, ListAdapterDataSource {
   }()
   override func viewDidLoad() {
     super.viewDidLoad()
+    performSegue(withIdentifier: "label", sender: self)
     view.addSubview(collectionView)
     view.accessibilityIdentifier = "main"
     data.append(MemoViewModel(memos: [Memo(text: "abc"), Memo(text: "ddd"), Memo(text: "zzz")]))
@@ -38,6 +39,9 @@ class MainViewController: UIViewController, ListAdapterDataSource {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
+}
+
+extension MainViewController: ListAdapterDataSource {
   func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
     return data
   }

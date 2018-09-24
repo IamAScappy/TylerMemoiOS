@@ -7,6 +7,10 @@ import Foundation
 
 // swiftlint:disable explicit_type_interface identifier_name line_length nesting type_body_length type_name
 internal enum L10n {
+  /// '%@'로 만들기
+  internal static func makeToNewLabelCaption(_ p1: String) -> String {
+    return L10n.tr("Localizable", "makeToNewLabelCaption", p1)
+  }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length nesting type_body_length type_name
 

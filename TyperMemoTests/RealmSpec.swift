@@ -32,7 +32,7 @@ extension RealmSpec {
   }
   
   func clearDatabase() {
-    let realm = try! MyRealm.realm()
+    let realm = try! Realm()
     try! realm.write {
       realm.deleteAll()
     }

@@ -13,3 +13,4 @@ ThemeLime: CDDC39
 ThemeYellow: FFEB3B
 ThemeBrown: 795548
 ThemeGray: 9E9E9E
+colorAccent: 9E9E9E

@@ -1,6 +1,11 @@
 input_dir: Source
 output_dir: Source/Generated/
 
+plist:
+  paths: Resources/dimens.plist
+  templateName: inline-swift4
+  output: Dimens.swift
+
 strings:
   paths: Base.lproj/Localizable.strings
   templateName: structured-swift4
@@ -12,6 +17,7 @@ xcassets:
   output: Assets.swift
 
 colors:
-  paths: color.txt
+  paths: Resources/color.txt
   templateName: literals-swift4
   output: MyColor.swift
+
