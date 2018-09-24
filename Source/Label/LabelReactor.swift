@@ -17,9 +17,7 @@ class LabelReactor: Reactor {
   let labelService: LabelServiceType
 
   init(labelService: LabelServiceType) {
-    self.initialState = State(
-      sections: []
-    )
+    self.initialState = State()
     self.labelService = labelService
   }
   enum Action {
@@ -27,9 +25,11 @@ class LabelReactor: Reactor {
   }
   struct State {
     var sections: [Label]?
+    var keyword: String?
   }
   enum Mutation {
     case setSections([Label])
+    case searchQuery(String)
   }
   func mutate(action: Action) -> Observable<Mutation> {
     switch action {
@@ -46,6 +46,8 @@ class LabelReactor: Reactor {
     switch mutation {
     case .setSections(let labels):
       newState.sections = labels
+    case .searchQuery(let keyword):
+      newState.keyword = keyword
     }
     return newState
   }

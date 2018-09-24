@@ -14,26 +14,19 @@ import IGListKit
 import RxOptional
 // TODO Test1: navigation 에 searchController 나오는지
 // TODO Test1: Label 검색 결과가 없을 때 Crete Label 이 생기는지 확인
-class LabelViewController: UIViewController {
+class LabelViewController: UIViewController, StoryboardInitializable {
+  @IBOutlet weak private var collectionView: UICollectionView!
   var disposeBag = DisposeBag()
   private var data: [ListDiffable] = []
   let searchController = UISearchController(searchResultsController: nil)
   lazy var adapter: ListAdapter = { return ListAdapter(updater: ListAdapterUpdater(), viewController: self) }()
-  let collectionView: UICollectionView = {
-    let layout = UICollectionViewFlowLayout()
-    layout.estimatedItemSize = CGSize(width: 100, height: 40)
-    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
-    collectionView.backgroundColor = UIColor(red: 0.831_372_549, green: 0.945_098_039, blue: 0.964_705_882, alpha: 1)
-    return collectionView
-  }()
 
   override func viewDidLoad() {
     super.viewDidLoad()
     self.navigationItem.searchController = searchController
     collectionView.do {
-      view.addSubview($0)
-      $0.snp.makeConstraints({ make in
-        make.edges.equalToSuperview()
+      $0.collectionViewLayout = UICollectionViewFlowLayout().then({
+        $0.estimatedItemSize = CGSize(width: 100, height: 40)
       })
     }
     adapter.do {
@@ -72,14 +65,24 @@ extension LabelViewController: View {
       .disposed(by: disposeBag)
     reactor.state.map { $0.sections }
       .filterNil()
-      .asDriver(onErrorJustReturn: [])
-      .drive(onNext: { [weak self] data in
+      .withLatestFrom(reactor.state.map({ $0.keyword })
+        .asDriver(onErrorJustReturn: "").filterNil(), resultSelector: { data, keyword in
+        return (data, keyword)
+      })
+      .asDriver(onErrorJustReturn: ([], ""))
+      .drive(onNext: { [weak self] data, keyword in
         if data.isEmpty {
-          self?.data.append(NewLabelModel(title: "asd"))
+          self?.data.append(NewLabelModel(title: keyword))
         } else {
           self?.data = data
         }
       })
       .disposed(by: disposeBag)
+  }
+}
+
+extension LabelViewController {
+  static func makeLabelViewController() -> LabelViewController {
+    return LabelViewController.initFromStoryboard(name: "Label")
   }
 }

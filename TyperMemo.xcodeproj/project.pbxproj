@@ -16,6 +16,7 @@
 		BD1C7FA6214E661D00C58B67 /* RealmSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1C7FA5214E661D00C58B67 /* RealmSpec.swift */; };
 		BD1C7FA8214E68E600C58B67 /* MemoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1C7FA7214E68E600C58B67 /* MemoTest.swift */; };
 		BD1C7FB0214E819700C58B67 /* LabelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1C7FAF214E819700C58B67 /* LabelTest.swift */; };
+		BD1FDFBE21594FF70064A8D8 /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FDFBD21594FF70064A8D8 /* StoryboardInitializable.swift */; };
 		BD472165215081850015740A /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD472164215081850015740A /* GeneratedMocks.swift */; };
 		BD4723C5214E8FE8002D84D2 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4723C4214E8FE8002D84D2 /* ColorTheme.swift */; };
 		BD4723C7214E90C4002D84D2 /* ColorThemeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4723C6214E90C4002D84D2 /* ColorThemeTest.swift */; };
@@ -94,6 +95,7 @@
 		BD1C7FA5214E661D00C58B67 /* RealmSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmSpec.swift; sourceTree = "<group>"; };
 		BD1C7FA7214E68E600C58B67 /* MemoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTest.swift; sourceTree = "<group>"; };
 		BD1C7FAF214E819700C58B67 /* LabelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTest.swift; sourceTree = "<group>"; };
+		BD1FDFBD21594FF70064A8D8 /* StoryboardInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitializable.swift; sourceTree = "<group>"; };
 		BD472164215081850015740A /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		BD4723C4214E8FE8002D84D2 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		BD4723C6214E90C4002D84D2 /* ColorThemeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorThemeTest.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 				BD6606CE215534820012BC3C /* Main */,
 				BD6606CF215534A90012BC3C /* Extension */,
 				BD4BBB032158E0D400ED00C3 /* RxListAdapterDataSource.swift */,
+				BD1FDFBD21594FF70064A8D8 /* StoryboardInitializable.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -809,6 +812,7 @@
 				BD4BBB172158F92C00ED00C3 /* NewLabelModel.swift in Sources */,
 				BD4723CF214F2E28002D84D2 /* UIColor+Hex.swift in Sources */,
 				BDBF37062158DA7F00953C77 /* ExistLabelCell.swift in Sources */,
+				BD1FDFBE21594FF70064A8D8 /* StoryboardInitializable.swift in Sources */,
 				BD4723C5214E8FE8002D84D2 /* ColorTheme.swift in Sources */,
 				BDFC8A802155BBCE00A042B5 /* AppSupports.swift in Sources */,
 				BDFC8A7B2155AD5E00A042B5 /* MemoViewCell.swift in Sources */,

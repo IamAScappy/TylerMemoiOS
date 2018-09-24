@@ -12,19 +12,31 @@ import IGListKit
 
 class MainViewController: UIViewController {
   var data = [ListDiffable]()
+  private let disposeBag = DisposeBag()
+  @IBOutlet weak private var addMemoView: UIButton!
+  @IBOutlet weak private var collectionView: UICollectionView!
   lazy var adapter: ListAdapter = { return ListAdapter(updater: ListAdapterUpdater(), viewController: self) }()
-  let collectionView: UICollectionView = {
-    let layout = UICollectionViewFlowLayout()
-    layout.estimatedItemSize = CGSize(width: 100, height: 40)
-    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-    collectionView.backgroundColor = UIColor(red: 0.831_372_549, green: 0.945_098_039, blue: 0.964_705_882, alpha: 1)
-    return collectionView
-  }()
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.addSubview(collectionView)
     view.accessibilityIdentifier = "main"
     data.append(MemoViewModel(memos: [Memo(text: "abc"), Memo(text: "ddd"), Memo(text: "zzz")]))
+    collectionView.do {
+      $0.collectionViewLayout = UICollectionViewFlowLayout().then({
+        $0.estimatedItemSize = CGSize(width: 100, height: 40)
+      })
+    }
+    addMemoView.do { view in
+      if let data = NSDataAsset(name: "add_memo_svg")?.data {
+        let svgLayer = CALayer(SVGData: data, completion: { svgLayer in
+          svgLayer.fillColor = ColorName.colorAccent.cgColor
+          svgLayer.resizeToFit(view.bounds)
+        })
+        view.layer.addSublayer(svgLayer)
+      }
+      view.rx.tap.asDriver().drive(onNext: { [weak self] _ in
+        self?.show(LabelViewController.makeLabelViewController(), sender: self)
+      }).disposed(by: disposeBag)
+    }
     adapter.do {
       $0.dataSource = self
       $0.collectionView = collectionView
