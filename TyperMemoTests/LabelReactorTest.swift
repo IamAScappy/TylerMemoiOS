@@ -11,25 +11,45 @@ import Quick
 import RxTest
 import RxSwift
 import RxCocoa
+import RxBlocking
+import Cuckoo
+import ReactiveSwift
 @testable import TyperMemo
 
 class LabelReactorTest: QuickSpec {
   override func spec() {
     describe("LabelReactor") {
-      let disposeBag = DisposeBag()
-      let scheduler = TestScheduler(initialClock: 0)
-      let viewDidLaod = scheduler.createHotObservable([next(50, ())])
-      var mockProvider = MockServiceProviderType()
-      var reactor = LabelReactor(provider: mockProvider)
+      var scheduler = TestScheduler(initialClock: 0)
+      var reactor: LabelReactor!
+      var mockLabelService: MockLabelService!
+      beforeEach {
+        scheduler = TestScheduler(initialClock: 0)
+        mockLabelService = MockLabelService()
+        reactor = LabelReactor(labelService: mockLabelService)
+      }
+
       it("fetch labels when calling viewDidLoad ", closure: {
+        let expectLabels = [Label(title: "asd"), Label(title: "zxc")]
+        stub(mockLabelService, block: { (mock) in
+          when(mock.searchLabels(keyword: any())).thenReturn(expectLabels)
+        })
+        let viewDidLaod = scheduler.createHotObservable([next(50, ())])
         viewDidLaod
           .map { _ in LabelReactor.Action.searchQuery(memoId: "", "") }
           .bind(to: reactor.action)
-          .disposed(by: disposeBag)
+
+        scheduler.start()
         
-        reactor.state.map({ $0.sections }).asDriver(onErrorJustReturn: []).drive(onNext: { result in
-          
-        }).disposed(by: disposeBag)
+        let result = reactor.state.map({ $0.sections })
+          .take(1)
+          .toBlocking()
+          .materialize()
+        
+        switch result {
+        case .completed(let element):
+          expect(element.first) == expectLabels
+        default: fail()
+        }
       })
     }
   }

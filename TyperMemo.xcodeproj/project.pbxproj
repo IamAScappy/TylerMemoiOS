@@ -22,11 +22,10 @@
 		BD4723CF214F2E28002D84D2 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4723CE214F2E28002D84D2 /* UIColor+Hex.swift */; };
 		BD4BBB042158E0D400ED00C3 /* RxListAdapterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BBB032158E0D400ED00C3 /* RxListAdapterDataSource.swift */; };
 		BD4BBB062158E11D00ED00C3 /* UIScrollView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BBB052158E11D00ED00C3 /* UIScrollView+Rx.swift */; };
-		BD4BBB102158E7AB00ED00C3 /* IGListKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4BBB0F2158E7AB00ED00C3 /* IGListKit.framework */; };
-		BD4BBB122158E7E000ED00C3 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4BBB112158E7E000ED00C3 /* RxSwift.framework */; };
 		BD4BBB172158F92C00ED00C3 /* NewLabelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BBB162158F92C00ED00C3 /* NewLabelModel.swift */; };
 		BD4BBB232159050F00ED00C3 /* color.txt in Resources */ = {isa = PBXBuildFile; fileRef = BD4BBB222159050F00ED00C3 /* color.txt */; };
 		BD4BBB27215907F300ED00C3 /* Dimens.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BBB26215907F300ED00C3 /* Dimens.swift */; };
+		BD4BBB2D2159240E00ED00C3 /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4BBB2C2159240E00ED00C3 /* ReactorKit.framework */; };
 		BD5653D521565ABE00F378F0 /* MemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5653D421565ABE00F378F0 /* MemoViewModel.swift */; };
 		BD70173B21559FE900093C55 /* MemoSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD70173A21559FE900093C55 /* MemoSectionController.swift */; };
 		BD780E20214C9CD300FA9FDF /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD780E1F214C9CD300FA9FDF /* Memo.swift */; };
@@ -106,6 +105,9 @@
 		BD4BBB162158F92C00ED00C3 /* NewLabelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLabelModel.swift; sourceTree = "<group>"; };
 		BD4BBB222159050F00ED00C3 /* color.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = color.txt; sourceTree = "<group>"; };
 		BD4BBB26215907F300ED00C3 /* Dimens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimens.swift; sourceTree = "<group>"; };
+		BD4BBB28215922A000ED00C3 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		BD4BBB2A215923EC00ED00C3 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD4BBB2C2159240E00ED00C3 /* ReactorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReactorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD5653D421565ABE00F378F0 /* MemoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewModel.swift; sourceTree = "<group>"; };
 		BD5653D721565CFA00F378F0 /* LabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelViewController.swift; sourceTree = "<group>"; };
 		BD5653EB2156642B00F378F0 /* LabelReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelReactor.swift; sourceTree = "<group>"; };
@@ -159,8 +161,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD4BBB122158E7E000ED00C3 /* RxSwift.framework in Frameworks */,
-				BD4BBB102158E7AB00ED00C3 /* IGListKit.framework in Frameworks */,
 				6A3BDCA4CFB6F1547521DD46 /* Pods_TyperMemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD4BBB2D2159240E00ED00C3 /* ReactorKit.framework in Frameworks */,
 				BD9050BC214F581300425C8D /* RealmSwift.framework in Frameworks */,
 				C5C96A95A1714223D68E9E46 /* Pods_TyperMemoTests.framework in Frameworks */,
 			);
@@ -188,6 +189,9 @@
 		44DCBEA593D0A2D6E39A8006 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD4BBB2C2159240E00ED00C3 /* ReactorKit.framework */,
+				BD4BBB2A215923EC00ED00C3 /* RxSwift.framework */,
+				BD4BBB28215922A000ED00C3 /* RxCocoa.framework */,
 				BD4BBB112158E7E000ED00C3 /* RxSwift.framework */,
 				BD4BBB0F2158E7AB00ED00C3 /* IGListKit.framework */,
 				BDF97B942158BAB700696102 /* SwiftSVG.framework */,
@@ -652,7 +656,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "OUTPUT_FILE=\"$PROJECT_DIR/TyperMemoTests/GeneratedMocks.swift\"\necho \"Generated Mocks File = $OUTPUT_FILE\"\n\nINPUT_DIR=\"${PROJECT_DIR}/Source\"\n\n\n\"Carthage/Checkouts/Cuckoo/run\" generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"$INPUT_DIR/Services/ServiceProvider.swift\" \n\n\n\n";
+			shellScript = "OUTPUT_FILE=\"$PROJECT_DIR/TyperMemoTests/GeneratedMocks.swift\"\necho \"Generated Mocks File = $OUTPUT_FILE\"\n\nINPUT_DIR=\"${PROJECT_DIR}/Source\"\n\n\n\"Carthage/Checkouts/Cuckoo/run\" generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"$INPUT_DIR/Services/ServiceProvider.swift\" \\\n\"$INPUT_DIR/Services/LabelServiceType.swift\" \\\n\"$INPUT_DIR/Services/MemoServiceType.swift\" \\\n\n\n\n";
 		};
 		BD81DE11214C898800526054 /* Copy Carthage Resources */ = {
 			isa = PBXShellScriptBuildPhase;

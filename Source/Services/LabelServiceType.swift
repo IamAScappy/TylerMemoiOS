@@ -10,12 +10,12 @@ import Foundation
 import RealmSwift
 import Then
 protocol LabelServiceType {
-  func liveSearchLabels(keyword: String) -> Results<Label>?
+  func searchLabels(keyword: String) -> [Label]?
 }
 
-final class LabelService: LabelServiceType {
-  func liveSearchLabels(keyword: String) -> Results<Label>? {
+class LabelService: LabelServiceType {
+  func searchLabels(keyword: String) -> [Label]? {
     let realm = try? Realm()
-    return realm?.objects(Label.self).filter("title Like '*\(keyword)*'")
+    return realm?.objects(Label.self).filter("title Like '*\(keyword)*'").toArray()
   }
 }

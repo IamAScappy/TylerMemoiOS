@@ -22,7 +22,6 @@ class MainViewController: UIViewController {
   }()
   override func viewDidLoad() {
     super.viewDidLoad()
-    performSegue(withIdentifier: "label", sender: self)
     view.addSubview(collectionView)
     view.accessibilityIdentifier = "main"
     data.append(MemoViewModel(memos: [Memo(text: "abc"), Memo(text: "ddd"), Memo(text: "zzz")]))

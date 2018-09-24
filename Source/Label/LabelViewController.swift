@@ -73,11 +73,11 @@ extension LabelViewController: View {
     reactor.state.map { $0.sections }
       .filterNil()
       .asDriver(onErrorJustReturn: [])
-      .drive(onNext: {
-        if $0.isEmpty {
-          self.data.append(NewLabelModel(title: "asd"))
+      .drive(onNext: { [weak self] data in
+        if data.isEmpty {
+          self?.data.append(NewLabelModel(title: "asd"))
         } else {
-          self.data = $0
+          self?.data = data
         }
       })
       .disposed(by: disposeBag)

@@ -11,5 +11,5 @@ import Foundation
 protocol MemoServiceType {
 }
 
-final class MemoService: MemoServiceType {
+class MemoService: MemoServiceType {
 }

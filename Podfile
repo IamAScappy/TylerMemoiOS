@@ -10,8 +10,6 @@ target 'TyperMemo' do
   pod 'SwiftLint'
   pod 'SwiftGen'
   pod 'ReactorKit'
-  pod 'RxSwift'
-  pod 'RxCocoa'
   pod 'Then'
   def testing_pods
     pod 'Quick'
