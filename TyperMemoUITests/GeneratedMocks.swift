@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: Source/Services/LabelServiceType.swift at 2018-09-24 18:14:54 +0000
+// MARK: - Mocks generated from file: Source/Services/LabelServiceType.swift at 2018-09-24 18:33:58 +0000
 
 //
 //  LabelServiceType.swift
@@ -166,7 +166,7 @@ class MockLabelService: LabelService, Cuckoo.ClassMock {
 }
 
 
-// MARK: - Mocks generated from file: Source/Services/MemoServiceType.swift at 2018-09-24 18:14:54 +0000
+// MARK: - Mocks generated from file: Source/Services/MemoServiceType.swift at 2018-09-24 18:33:58 +0000
 
 //
 //  MemoServiceType.swift
@@ -278,7 +278,7 @@ class MockMemoService: MemoService, Cuckoo.ClassMock {
 }
 
 
-// MARK: - Mocks generated from file: Source/Services/ServiceProvider.swift at 2018-09-24 18:14:54 +0000
+// MARK: - Mocks generated from file: Source/Services/ServiceProvider.swift at 2018-09-24 18:33:58 +0000
 
 //
 //  ServiceProvider.swift

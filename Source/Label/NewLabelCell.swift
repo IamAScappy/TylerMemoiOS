@@ -11,20 +11,16 @@ import IGListKit
 import SwiftSVG
 
 class NewLabelCell: UICollectionViewCell {
-  private let addImageView: UIView = UIView()
   private let makeLabelTitleView: UILabel = UILabel()
 
   override init(frame: CGRect) {
     super.init(frame: frame)
-    addImageView.do { imageView in
+    let addImageView = UIView(SVGNamed: "ic_add_svg") { svgLayer in
+      svgLayer.fillColor = ColorName.colorAccent.cgColor
+      svgLayer.resizeToFit(self.bounds)
+    }.then({ imageView in
       self.addSubview(imageView)
-      if let data = NSDataAsset(name: "ic_add_svg")?.data {
-        let svgLayer = CALayer(SVGData: data, completion: { svgLayer in
-          svgLayer.fillColor = ColorName.colorAccent.cgColor
-          svgLayer.resizeToFit(imageView.bounds)
-        })
-        imageView.layer.addSublayer(svgLayer)
-      }
+      imageView.contentMode = .scaleAspectFit
       imageView.snp.makeConstraints({ make in
         let width = Dimens.labelHeight.rawValue - 2
         let ratio = 1
@@ -33,7 +29,8 @@ class NewLabelCell: UICollectionViewCell {
         make.width.equalTo(width)
         make.height.equalTo(imageView.snp.width).multipliedBy(ratio)
       })
-    }
+    })
+    addImageView.setNeedsLayout()
     makeLabelTitleView.do {
       self.addSubview($0)
       $0.snp.makeConstraints { make in

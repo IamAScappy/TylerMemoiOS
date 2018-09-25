@@ -8,6 +8,6 @@
 
 import Foundation
 
-enum Dimens: Float {
+enum Dimens: Float, RawRepresentable {
   case labelHeight = 40
 }

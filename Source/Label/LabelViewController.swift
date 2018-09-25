@@ -24,6 +24,8 @@ class LabelViewController: UIViewController, StoryboardInitializable {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.navigationItem.searchController = searchController
+    self.navigationItem.hidesSearchBarWhenScrolling = false
+    self.searchController.dimsBackgroundDuringPresentation = false
     collectionView.do {
       $0.collectionViewLayout = UICollectionViewFlowLayout().then({
         $0.estimatedItemSize = CGSize(width: 100, height: 40)
@@ -53,28 +55,37 @@ extension LabelViewController: ListAdapterDataSource {
 }
 extension LabelViewController: View {
   func bind(reactor: LabelReactor) {
+    let searchKeywordChange = searchController.searchBar.rx.text
+      .orEmpty
+      .throttle(0.5, latest: true, scheduler: MainScheduler.asyncInstance)
     self.rx.viewDidLoad
       .map { Reactor.Action.searchQuery(memoId: "", "") }
       .bind(to: reactor.action)
       .disposed(by: self.disposeBag)
-    searchController.searchBar.rx.text
-      .orEmpty
-      .throttle(0.3, scheduler: MainScheduler.instance)
+    searchKeywordChange
       .map { Reactor.Action.searchQuery(memoId: "", $0) }
       .bind(to: reactor.action)
       .disposed(by: disposeBag)
     reactor.state.map { $0.sections }
       .filterNil()
-      .withLatestFrom(reactor.state.map({ $0.keyword })
-        .asDriver(onErrorJustReturn: "").filterNil(), resultSelector: { data, keyword in
-        return (data, keyword)
-      })
+      .withLatestFrom(
+        reactor.state.map({ $0.keyword })
+          .filterNil()
+          .filterEmpty()
+          .asDriver(onErrorJustReturn: ""),
+        resultSelector: { data, keyword in
+          return (data, keyword)
+        })
       .asDriver(onErrorJustReturn: ([], ""))
       .drive(onNext: { [weak self] data, keyword in
+        guard let `self` = self else { return }
         if data.isEmpty {
-          self?.data.append(NewLabelModel(title: keyword))
+          self.data.removeAll()
+          let newLabel = NewLabelModel(title: keyword)
+          self.data.append(newLabel)
+          self.adapter.performUpdates(animated: true)
         } else {
-          self?.data = data
+          self.data = data
         }
       })
       .disposed(by: disposeBag)

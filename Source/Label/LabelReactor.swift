@@ -29,16 +29,16 @@ class LabelReactor: Reactor {
   }
   enum Mutation {
     case setSections([Label])
-    case searchQuery(String)
+    case updateQuery(String)
   }
   func mutate(action: Action) -> Observable<Mutation> {
     switch action {
     case let .searchQuery(memoId, keyword):
-      if let labels = self.labelService.searchLabels(keyword: keyword) {
-        return .just(.setSections(labels))
-      } else {
-        return .empty()
-      }
+      return Observable.concat([
+        Observable.just(Mutation.updateQuery(keyword)),
+        Observable.just(Mutation.setSections(self.labelService.searchLabels(keyword: keyword)))
+        ])
+
     }
   }
   func reduce(state: State, mutation: Mutation) -> State {
@@ -46,7 +46,7 @@ class LabelReactor: Reactor {
     switch mutation {
     case .setSections(let labels):
       newState.sections = labels
-    case .searchQuery(let keyword):
+    case .updateQuery(let keyword):
       newState.keyword = keyword
     }
     return newState

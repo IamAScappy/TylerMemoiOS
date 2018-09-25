@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5FE2B94737FF072CB2693528 /* Pods_TyperMemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA69393FEE8E1302993682E /* Pods_TyperMemoUITests.framework */; };
 		6A3BDCA4CFB6F1547521DD46 /* Pods_TyperMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA781FEA10E5CCA1B0D7444 /* Pods_TyperMemo.framework */; };
 		BD0FD0F02158966C00EAE5E0 /* LabelSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0FD0EF2158966C00EAE5E0 /* LabelSectionController.swift */; };
 		BD0FD0F82158979700EAE5E0 /* Label.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD0FD0F62158979700EAE5E0 /* Label.storyboard */; };
@@ -17,6 +16,10 @@
 		BD1C7FA8214E68E600C58B67 /* MemoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1C7FA7214E68E600C58B67 /* MemoTest.swift */; };
 		BD1C7FB0214E819700C58B67 /* LabelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1C7FAF214E819700C58B67 /* LabelTest.swift */; };
 		BD1FDFBE21594FF70064A8D8 /* StoryboardInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FDFBD21594FF70064A8D8 /* StoryboardInitializable.swift */; };
+		BD1FDFF8215966F80064A8D8 /* UITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FDFF7215966F80064A8D8 /* UITestCase.swift */; };
+		BD1FDFFB215967290064A8D8 /* LabelViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FDFF9215967220064A8D8 /* LabelViewControllerTest.swift */; };
+		BD1FDFFD215968FD0064A8D8 /* AccIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FDFFC215968FD0064A8D8 /* AccIdentifier.swift */; };
+		BD1FDFFE215969A80064A8D8 /* AccIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FDFFC215968FD0064A8D8 /* AccIdentifier.swift */; };
 		BD472165215081850015740A /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD472164215081850015740A /* GeneratedMocks.swift */; };
 		BD4723C5214E8FE8002D84D2 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4723C4214E8FE8002D84D2 /* ColorTheme.swift */; };
 		BD4723C7214E90C4002D84D2 /* ColorThemeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4723C6214E90C4002D84D2 /* ColorThemeTest.swift */; };
@@ -47,7 +50,6 @@
 		BDBF37062158DA7F00953C77 /* ExistLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF37052158DA7F00953C77 /* ExistLabelCell.swift */; };
 		BDC0E9DF2153BE5400BE8EE3 /* tyler-v1.realm in Resources */ = {isa = PBXBuildFile; fileRef = BDC0E9DE2153BE2200BE8EE3 /* tyler-v1.realm */; };
 		BDC0E9E12153BF1400BE8EE3 /* AppDelegate+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC0E9E02153BF1400BE8EE3 /* AppDelegate+Realm.swift */; };
-		BDC99AC52155914400662E5A /* TyperMemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC99AC42155914400662E5A /* TyperMemoUITests.swift */; };
 		BDE111CD2156A8440010FBD9 /* SwinjectStoryboard+setUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE111CC2156A8440010FBD9 /* SwinjectStoryboard+setUp.swift */; };
 		BDE111CE2156A95D0010FBD9 /* LabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5653D721565CFA00F378F0 /* LabelViewController.swift */; };
 		BDE111CF2156A95D0010FBD9 /* LabelReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5653EB2156642B00F378F0 /* LabelReactor.swift */; };
@@ -64,14 +66,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BD81DDF4214C854100526054 /* PBXContainerItemProxy */ = {
+		BD1FDFF2215966E80064A8D8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BD81DDD4214C854000526054 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = BD81DDDB214C854000526054;
 			remoteInfo = TyperMemo;
 		};
-		BDC99AC72155914400662E5A /* PBXContainerItemProxy */ = {
+		BD81DDF4214C854100526054 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BD81DDD4214C854000526054 /* Project object */;
 			proxyType = 1;
@@ -96,6 +98,13 @@
 		BD1C7FA7214E68E600C58B67 /* MemoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTest.swift; sourceTree = "<group>"; };
 		BD1C7FAF214E819700C58B67 /* LabelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTest.swift; sourceTree = "<group>"; };
 		BD1FDFBD21594FF70064A8D8 /* StoryboardInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInitializable.swift; sourceTree = "<group>"; };
+		BD1FDFC2215959DC0064A8D8 /* ReactorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReactorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD1FDFCB215961850064A8D8 /* ReactorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReactorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD1FDFED215966E80064A8D8 /* TyperMemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TyperMemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD1FDFF1215966E80064A8D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD1FDFF7215966F80064A8D8 /* UITestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestCase.swift; sourceTree = "<group>"; };
+		BD1FDFF9215967220064A8D8 /* LabelViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LabelViewControllerTest.swift; path = TyperMemoUITests/LabelViewControllerTest.swift; sourceTree = SOURCE_ROOT; };
+		BD1FDFFC215968FD0064A8D8 /* AccIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccIdentifier.swift; sourceTree = "<group>"; };
 		BD472164215081850015740A /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		BD4723C4214E8FE8002D84D2 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		BD4723C6214E90C4002D84D2 /* ColorThemeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorThemeTest.swift; sourceTree = "<group>"; };
@@ -139,9 +148,6 @@
 		BDBF37052158DA7F00953C77 /* ExistLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExistLabelCell.swift; sourceTree = "<group>"; };
 		BDC0E9DE2153BE2200BE8EE3 /* tyler-v1.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tyler-v1.realm"; sourceTree = "<group>"; };
 		BDC0E9E02153BF1400BE8EE3 /* AppDelegate+Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Realm.swift"; sourceTree = "<group>"; };
-		BDC99AC22155914300662E5A /* TyperMemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TyperMemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDC99AC42155914400662E5A /* TyperMemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyperMemoUITests.swift; sourceTree = "<group>"; };
-		BDC99AC62155914400662E5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDE111CC2156A8440010FBD9 /* SwinjectStoryboard+setUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+setUp.swift"; sourceTree = "<group>"; };
 		BDE111D12156ADE30010FBD9 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		BDE111D32156AE200010FBD9 /* MemoServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoServiceType.swift; sourceTree = "<group>"; };
@@ -159,6 +165,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BD1FDFEA215966E80064A8D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BD81DDD9214C854000526054 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -177,20 +190,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BDC99ABF2155914300662E5A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5FE2B94737FF072CB2693528 /* Pods_TyperMemoUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		44DCBEA593D0A2D6E39A8006 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD1FDFCB215961850064A8D8 /* ReactorKit.framework */,
+				BD1FDFC2215959DC0064A8D8 /* ReactorKit.framework */,
 				BD4BBB2C2159240E00ED00C3 /* ReactorKit.framework */,
 				BD4BBB2A215923EC00ED00C3 /* RxSwift.framework */,
 				BD4BBB28215922A000ED00C3 /* RxCocoa.framework */,
@@ -206,11 +213,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BD1FDFEE215966E80064A8D8 /* TyperMemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BD1FDFF9215967220064A8D8 /* LabelViewControllerTest.swift */,
+				BD1FDFF7215966F80064A8D8 /* UITestCase.swift */,
+				BD1FDFF1215966E80064A8D8 /* Info.plist */,
+			);
+			path = TyperMemoUITests;
+			sourceTree = "<group>";
+		};
 		BD4BBB21215904FD00ED00C3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				BD4BBB222159050F00ED00C3 /* color.txt */,
 				BD4BBB26215907F300ED00C3 /* Dimens.swift */,
+				BD1FDFFC215968FD0064A8D8 /* AccIdentifier.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -269,7 +287,7 @@
 				BDE111D92156B5560010FBD9 /* Realm+Config.swift */,
 				BD81DDDE214C854000526054 /* Source */,
 				BD81DDF6214C854100526054 /* TyperMemoTests */,
-				BDC99AC32155914400662E5A /* TyperMemoUITests */,
+				BD1FDFEE215966E80064A8D8 /* TyperMemoUITests */,
 				BD81DDDD214C854000526054 /* Products */,
 				F2DA7943BD69E1932B60FF88 /* Pods */,
 				44DCBEA593D0A2D6E39A8006 /* Frameworks */,
@@ -281,7 +299,7 @@
 			children = (
 				BD81DDDC214C854000526054 /* TyperMemo.app */,
 				BD81DDF3214C854100526054 /* TyperMemoTests.xctest */,
-				BDC99AC22155914300662E5A /* TyperMemoUITests.xctest */,
+				BD1FDFED215966E80064A8D8 /* TyperMemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -309,15 +327,15 @@
 		BD81DDF6214C854100526054 /* TyperMemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				BDE111DF2157382B0010FBD9 /* LabelReactorTest.swift */,
 				BD472164215081850015740A /* GeneratedMocks.swift */,
+				BDACB9DB2152099000AE2C50 /* FakeRealmCollectionValue.swift */,
+				BD81DDF9214C854100526054 /* Info.plist */,
+				BDE111DF2157382B0010FBD9 /* LabelReactorTest.swift */,
 				BD4723C6214E90C4002D84D2 /* ColorThemeTest.swift */,
 				BD1C7FAF214E819700C58B67 /* LabelTest.swift */,
 				BD1C7FA7214E68E600C58B67 /* MemoTest.swift */,
 				BD1C7FA5214E661D00C58B67 /* RealmSpec.swift */,
 				BD81DDF7214C854100526054 /* TyperMemoTests.swift */,
-				BD81DDF9214C854100526054 /* Info.plist */,
-				BDACB9DB2152099000AE2C50 /* FakeRealmCollectionValue.swift */,
 			);
 			path = TyperMemoTests;
 			sourceTree = "<group>";
@@ -347,15 +365,6 @@
 			path = Generated;
 			sourceTree = "<group>";
 		};
-		BDC99AC32155914400662E5A /* TyperMemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				BDC99AC42155914400662E5A /* TyperMemoUITests.swift */,
-				BDC99AC62155914400662E5A /* Info.plist */,
-			);
-			path = TyperMemoUITests;
-			sourceTree = "<group>";
-		};
 		BDE111D02156ADD80010FBD9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +391,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BD1FDFEC215966E80064A8D8 /* TyperMemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD1FDFF4215966E80064A8D8 /* Build configuration list for PBXNativeTarget "TyperMemoUITests" */;
+			buildPhases = (
+				BD1FDFE9215966E80064A8D8 /* Sources */,
+				BD1FDFEA215966E80064A8D8 /* Frameworks */,
+				BD1FDFEB215966E80064A8D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD1FDFF3215966E80064A8D8 /* PBXTargetDependency */,
+			);
+			name = TyperMemoUITests;
+			productName = TyperMemoUITests;
+			productReference = BD1FDFED215966E80064A8D8 /* TyperMemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		BD81DDDB214C854000526054 /* TyperMemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD81DE07214C854200526054 /* Build configuration list for PBXNativeTarget "TyperMemo" */;
@@ -428,27 +455,6 @@
 			productReference = BD81DDF3214C854100526054 /* TyperMemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BDC99AC12155914300662E5A /* TyperMemoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BDC99AC92155914400662E5A /* Build configuration list for PBXNativeTarget "TyperMemoUITests" */;
-			buildPhases = (
-				6BCE664461508DC8CB7F01FD /* [CP] Check Pods Manifest.lock */,
-				BDC99ABE2155914300662E5A /* Sources */,
-				BDC99ABF2155914300662E5A /* Frameworks */,
-				BDC99AC02155914300662E5A /* Resources */,
-				2F6B66426E91455F21AB11EF /* [CP] Embed Pods Frameworks */,
-				607E8AAFC1A0B7301E108FAE /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BDC99AC82155914400662E5A /* PBXTargetDependency */,
-			);
-			name = TyperMemoUITests;
-			productName = TyperMemoUITests;
-			productReference = BDC99AC22155914300662E5A /* TyperMemoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -459,14 +465,14 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = tskim;
 				TargetAttributes = {
+					BD1FDFEC215966E80064A8D8 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = BD81DDDB214C854000526054;
+					};
 					BD81DDDB214C854000526054 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 					BD81DDF2214C854100526054 = {
-						CreatedOnToolsVersion = 9.4.1;
-						TestTargetID = BD81DDDB214C854000526054;
-					};
-					BDC99AC12155914300662E5A = {
 						CreatedOnToolsVersion = 9.4.1;
 						TestTargetID = BD81DDDB214C854000526054;
 					};
@@ -488,12 +494,19 @@
 			targets = (
 				BD81DDDB214C854000526054 /* TyperMemo */,
 				BD81DDF2214C854100526054 /* TyperMemoTests */,
-				BDC99AC12155914300662E5A /* TyperMemoUITests */,
+				BD1FDFEC215966E80064A8D8 /* TyperMemoUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BD1FDFEB215966E80064A8D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BD81DDDA214C854000526054 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -509,13 +522,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BD81DDF1214C854100526054 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BDC99AC02155914300662E5A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -547,26 +553,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TyperMemo/Pods-TyperMemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2F6B66426E91455F21AB11EF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TyperMemoUITests/Pods-TyperMemoUITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TyperMemoUITests/Pods-TyperMemoUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3237041E6C4A1230EA68D561 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -580,39 +566,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TyperMemoTests/Pods-TyperMemoTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		607E8AAFC1A0B7301E108FAE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TyperMemoUITests/Pods-TyperMemoUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6BCE664461508DC8CB7F01FD /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TyperMemoUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BA4DFC23B009E0DB02F748D7 /* [CP] Check Pods Manifest.lock */ = {
@@ -656,10 +609,12 @@
 			);
 			name = "Generate Mock";
 			outputPaths = (
+				"",
+				$PROJECT_DIR/TyperMemoUITests/GeneratedMocks.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "OUTPUT_FILE=\"$PROJECT_DIR/TyperMemoTests/GeneratedMocks.swift\"\necho \"Generated Mocks File = $OUTPUT_FILE\"\n\nINPUT_DIR=\"${PROJECT_DIR}/Source\"\n\n\n\"Carthage/Checkouts/Cuckoo/run\" generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"$INPUT_DIR/Services/ServiceProvider.swift\" \\\n\"$INPUT_DIR/Services/LabelServiceType.swift\" \\\n\"$INPUT_DIR/Services/MemoServiceType.swift\" \\\n\n\n\n";
+			shellScript = "OUTPUT_FILE=\"$PROJECT_DIR/TyperMemoTests/GeneratedMocks.swift\"\nOUTPUT_UI_FILE=\"$PROJECT_DIR/TyperMemoUITests/GeneratedMocks.swift\"\n\necho \"Generated Mocks File = $OUTPUT_FILE\"\n\nINPUT_DIR=\"${PROJECT_DIR}/Source\"\n\n\"Carthage/Checkouts/Cuckoo/run\" generate --testable \"$PROJECT_NAME\" \\\n--output \"$OUTPUT_FILE\" --output \"$OUTPUT_UI_FILE\" \\\n\"$INPUT_DIR/Services/ServiceProvider.swift\" \\\n\"$INPUT_DIR/Services/LabelServiceType.swift\" \\\n\"$INPUT_DIR/Services/MemoServiceType.swift\" \\\n\n\n";
 		};
 		BD81DE11214C898800526054 /* Copy Carthage Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -782,10 +737,21 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BD1FDFE9215966E80064A8D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD1FDFFD215968FD0064A8D8 /* AccIdentifier.swift in Sources */,
+				BD1FDFFB215967290064A8D8 /* LabelViewControllerTest.swift in Sources */,
+				BD1FDFF8215966F80064A8D8 /* UITestCase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BD81DDD8214C854000526054 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD1FDFFE215969A80064A8D8 /* AccIdentifier.swift in Sources */,
 				BDE111CE2156A95D0010FBD9 /* LabelViewController.swift in Sources */,
 				BDE111CF2156A95D0010FBD9 /* LabelReactor.swift in Sources */,
 				BD780E20214C9CD300FA9FDF /* Memo.swift in Sources */,
@@ -837,26 +803,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BDC99ABE2155914300662E5A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BDC99AC52155914400662E5A /* TyperMemoUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		BD1FDFF3215966E80064A8D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD81DDDB214C854000526054 /* TyperMemo */;
+			targetProxy = BD1FDFF2215966E80064A8D8 /* PBXContainerItemProxy */;
+		};
 		BD81DDF5214C854100526054 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BD81DDDB214C854000526054 /* TyperMemo */;
 			targetProxy = BD81DDF4214C854100526054 /* PBXContainerItemProxy */;
-		};
-		BDC99AC82155914400662E5A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BD81DDDB214C854000526054 /* TyperMemo */;
-			targetProxy = BDC99AC72155914400662E5A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -898,6 +856,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		BD1FDFF5215966E80064A8D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SFSNP72DLD;
+				INFOPLIST_FILE = TyperMemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hucet.tyler.TyperMemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TyperMemo;
+			};
+			name = Debug;
+		};
+		BD1FDFF6215966E80064A8D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SFSNP72DLD;
+				INFOPLIST_FILE = TyperMemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hucet.tyler.TyperMemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TyperMemo;
+			};
+			name = Release;
+		};
 		BD81DE05214C854200526054 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1115,49 +1111,18 @@
 			};
 			name = Release;
 		};
-		BDC99ACA2155914400662E5A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E195EA646989D473F3C0C519 /* Pods-TyperMemoUITests.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SFSNP72DLD;
-				INFOPLIST_FILE = TyperMemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hucet.tyler.TyperMemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TyperMemo;
-			};
-			name = Debug;
-		};
-		BDC99ACB2155914400662E5A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 006F8AE46E189167BAF12D0E /* Pods-TyperMemoUITests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SFSNP72DLD;
-				INFOPLIST_FILE = TyperMemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hucet.tyler.TyperMemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TyperMemo;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BD1FDFF4215966E80064A8D8 /* Build configuration list for PBXNativeTarget "TyperMemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD1FDFF5215966E80064A8D8 /* Debug */,
+				BD1FDFF6215966E80064A8D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BD81DDD7214C854000526054 /* Build configuration list for PBXProject "TyperMemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1181,15 +1146,6 @@
 			buildConfigurations = (
 				BD81DE0B214C854200526054 /* Debug */,
 				BD81DE0C214C854200526054 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BDC99AC92155914400662E5A /* Build configuration list for PBXNativeTarget "TyperMemoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BDC99ACA2155914400662E5A /* Debug */,
-				BDC99ACB2155914400662E5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

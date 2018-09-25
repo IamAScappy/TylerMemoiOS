@@ -33,6 +33,7 @@ class MainViewController: UIViewController {
         })
         view.layer.addSublayer(svgLayer)
       }
+      view.accessibilityIdentifier = AccIdentifier.addMemoButton.rawValue
       view.rx.tap.asDriver().drive(onNext: { [weak self] _ in
         self?.show(LabelViewController.makeLabelViewController(), sender: self)
       }).disposed(by: disposeBag)
@@ -60,7 +61,6 @@ extension MainViewController: ListAdapterDataSource {
     return MemoSectionController()
   }
   func emptyView(for listAdapter: ListAdapter) -> UIView? {
-    //TODO: implement emptyview
     return nil
   }
 }
