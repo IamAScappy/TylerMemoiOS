@@ -14,43 +14,71 @@ import RxCocoa
 import RxBlocking
 import Cuckoo
 import ReactiveSwift
+import Result
+
 @testable import TyperMemo
 
 class LabelReactorTest: QuickSpec {
   override func spec() {
+
+    var scheduler = TestScheduler(initialClock: 0)
+    var reactor: LabelReactor!
+    var mockLabelService: MockLabelService!
+    let expectLabels = [Label(title: "asd"), Label(title: "zxc")]
+    beforeEach {
+      scheduler = TestScheduler(initialClock: 0)
+      mockLabelService = MockLabelService()
+      reactor = LabelReactor(labelService: mockLabelService)
+    }
+    func action(_ actions: [Recorded<Event<() -> LabelReactor.Action>>]) -> MaterializedSequenceResult<[Label]?> {
+      let actions = scheduler.createHotObservable(actions)
+
+      actions
+        .map { $0() }
+        .bind(to: reactor.action)
+
+      scheduler.start()
+
+      return reactor.state.map({ $0.sections })
+        .take(0.1, scheduler: MainScheduler.instance)
+        .toBlocking()
+        .materialize()
+    }
     describe("LabelReactor") {
-      var scheduler = TestScheduler(initialClock: 0)
-      var reactor: LabelReactor!
-      var mockLabelService: MockLabelService!
       beforeEach {
-        scheduler = TestScheduler(initialClock: 0)
-        mockLabelService = MockLabelService()
-        reactor = LabelReactor(labelService: mockLabelService)
+        stub(mockLabelService, block: { (mock) in
+          when(mock.searchLabels(keyword: any())).thenReturn(Result.success(Observable.just(expectLabels)))
+          when(mock.searchLabels(keyword: "error")).thenReturn(Result.failure(TestError()))
+        })
       }
 
       it("fetch labels when calling viewDidLoad ", closure: {
-        let expectLabels = [Label(title: "asd"), Label(title: "zxc")]
-        stub(mockLabelService, block: { (mock) in
-          when(mock.searchLabels(keyword: any())).thenReturn(expectLabels)
-        })
-        let viewDidLaod = scheduler.createHotObservable([next(50, ())])
-        viewDidLaod
-          .map { _ in LabelReactor.Action.searchQuery(memoId: "", "") }
-          .bind(to: reactor.action)
-
-        scheduler.start()
-        
-        let result = reactor.state.map({ $0.sections })
-          .take(1)
-          .toBlocking()
-          .materialize()
-        
+        let result = action([
+          next(50, { LabelReactor.Action.searchQuery(memoId: "", "") }), // viewDidLoad
+          ])
         switch result {
         case .completed(let element):
           expect(element.first) == expectLabels
         default: fail()
         }
       })
-    }
+      it("fail to fetch when calling viewDidLoad ", closure: {
+        action([
+          next(50, { LabelReactor.Action.searchQuery(memoId: "", "error") }), // viewDidLoad
+          ])
+
+        let result = try! reactor.state.map({ $0.error })
+          .take(0.1, scheduler: MainScheduler.instance)
+          .toBlocking()
+          .materialize()
+        
+        switch result {
+        case .completed(let element):
+          expect(element.count) == 1
+          expect(type(of: element.last)) is TestError
+        default: fail()
+        }
+      })
   }
+}
 }

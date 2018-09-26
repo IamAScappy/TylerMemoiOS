@@ -9,8 +9,7 @@
 import Foundation
 import IGListKit
 
-class LabelSectionController: ListBindingSectionController<Label>, ListBindingSectionControllerDataSource {
-
+class LabelSectionController: ListBindingSectionController<Label>, ListBindingSectionControllerDataSource, NewLabelCellDelegate {
   override init() {
     super.init()
     inset = UIEdgeInsets(top: 0, left: 0, bottom: 40, right: 0)
@@ -50,6 +49,9 @@ class LabelSectionController: ListBindingSectionController<Label>, ListBindingSe
     guard let cell = collectionContext?.dequeueReusableCell(of: cellClass, for: self, at: index)
     as? UICollectionViewCell & ListBindable
       else { fatalError("can't dequeueReusableCell identifier: [\(cellClass)] index: \(index)") }
+    if let cell = cell as? NewLabelCell {
+      cell.delegate = self
+    }
     return cell
   }
   func sectionController(
@@ -62,5 +64,7 @@ class LabelSectionController: ListBindingSectionController<Label>, ListBindingSe
     case is LabelViewModel, is NewLabelModel: return CGSize(width: width, height: CGFloat(Dimens.labelHeight.rawValue))
     default: return CGSize(width: width, height: height)
     }
+  }
+  func makeNewLabel(_ cell: NewLabelCell) {
   }
 }

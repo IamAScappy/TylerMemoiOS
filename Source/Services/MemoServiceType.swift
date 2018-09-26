@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol MemoServiceType {
+protocol MemoServiceType: RealmServiceType {
 }
 
 class MemoService: MemoServiceType {

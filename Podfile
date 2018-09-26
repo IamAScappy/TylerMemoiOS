@@ -11,6 +11,7 @@ target 'TyperMemo' do
   pod 'SwiftGen'
   pod 'ReactorKit'
   pod 'Then'
+  pod 'Result', '~> 4.0.0'
   def testing_pods
     pod 'Quick'
     pod 'Nimble'

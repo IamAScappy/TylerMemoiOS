@@ -9,12 +9,21 @@
 import UIKit
 import IGListKit
 import SwiftSVG
+import RxSwift
+
+protocol NewLabelCellDelegate: class {
+  func makeNewLabel(_ cell: NewLabelCell)
+}
 
 class NewLabelCell: UICollectionViewCell {
   private let makeLabelTitleView: UILabel = UILabel()
-
+  private let taps = UITapGestureRecognizer()
+  private let disposeBag = DisposeBag()
+  weak var delegate: NewLabelCellDelegate?
+  
   override init(frame: CGRect) {
     super.init(frame: frame)
+    self.addGestureRecognizer(taps)
     let addImageView = UIView(SVGNamed: "ic_add_svg") { svgLayer in
       svgLayer.fillColor = ColorName.colorAccent.cgColor
       svgLayer.resizeToFit(self.bounds)
@@ -38,6 +47,10 @@ class NewLabelCell: UICollectionViewCell {
         make.centerY.equalTo(self)
       }
     }
+    taps.rx.event.subscribe(onNext: { [weak self] _ in
+      guard let `self` = self else { return }
+      self.delegate?.makeNewLabel(self)
+    }).disposed(by: disposeBag)
   }
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
