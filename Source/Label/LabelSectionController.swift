@@ -9,7 +9,12 @@
 import Foundation
 import IGListKit
 
+protocol NewLabelSectionDelegate: class {
+  func newLabelSection(index: Int)
+}
 class LabelSectionController: ListBindingSectionController<Label>, ListBindingSectionControllerDataSource, NewLabelCellDelegate {
+  weak var newLabelSectionDelegate: NewLabelSectionDelegate?
+  
   override init() {
     super.init()
     inset = UIEdgeInsets(top: 0, left: 0, bottom: 40, right: 0)
@@ -66,5 +71,8 @@ class LabelSectionController: ListBindingSectionController<Label>, ListBindingSe
     }
   }
   func makeNewLabel(_ cell: NewLabelCell) {
+    if let index = self.collectionContext?.index(for: cell, sectionController: self) {
+      newLabelSectionDelegate?.newLabelSection(index: index)
+    }
   }
 }

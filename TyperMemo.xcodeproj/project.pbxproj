@@ -40,6 +40,8 @@
 		BD7F9179215B2249001DE5E0 /* LabelReactorWithRealmTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7F9178215B2249001DE5E0 /* LabelReactorWithRealmTest.swift */; };
 		BD7F917D215B2EF1001DE5E0 /* RealmServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7F917C215B2EF1001DE5E0 /* RealmServiceType.swift */; };
 		BD7F917F215BA0FA001DE5E0 /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7F917E215BA0FA001DE5E0 /* TestError.swift */; };
+		BD7F9183215BD86E001DE5E0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7F9182215BD86E001DE5E0 /* Logger.swift */; };
+		BD7F9185215BD99D001DE5E0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7F9182215BD86E001DE5E0 /* Logger.swift */; };
 		BD81DDE0214C854000526054 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DDDF214C854000526054 /* AppDelegate.swift */; };
 		BD81DDE2214C854000526054 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DDE1214C854000526054 /* MainViewController.swift */; };
 		BD81DDE5214C854000526054 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD81DDE3214C854000526054 /* Main.storyboard */; };
@@ -135,6 +137,7 @@
 		BD7F9178215B2249001DE5E0 /* LabelReactorWithRealmTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelReactorWithRealmTest.swift; sourceTree = "<group>"; };
 		BD7F917C215B2EF1001DE5E0 /* RealmServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServiceType.swift; sourceTree = "<group>"; };
 		BD7F917E215BA0FA001DE5E0 /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
+		BD7F9182215BD86E001DE5E0 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		BD81DDDC214C854000526054 /* TyperMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TyperMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD81DDDF214C854000526054 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD81DDE1214C854000526054 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -331,6 +334,7 @@
 				BD6606CF215534A90012BC3C /* Extension */,
 				BD4BBB032158E0D400ED00C3 /* RxListAdapterDataSource.swift */,
 				BD1FDFBD21594FF70064A8D8 /* StoryboardInitializable.swift */,
+				BD7F9182215BD86E001DE5E0 /* Logger.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -663,7 +667,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxRealm.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftSVG.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/PocketSVG.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxOptional.framework",
 			);
 			name = "Copy Carthage Resources";
@@ -825,6 +828,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD7F9185215BD99D001DE5E0 /* Logger.swift in Sources */,
 				BD1FDFFE215969A80064A8D8 /* AccIdentifier.swift in Sources */,
 				BDE111CE2156A95D0010FBD9 /* LabelViewController.swift in Sources */,
 				BDE111CF2156A95D0010FBD9 /* LabelReactor.swift in Sources */,
@@ -868,6 +872,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD4723C7214E90C4002D84D2 /* ColorThemeTest.swift in Sources */,
+				BD7F9183215BD86E001DE5E0 /* Logger.swift in Sources */,
 				BD472165215081850015740A /* GeneratedMocks.swift in Sources */,
 				BD1C7FA6214E661D00C58B67 /* RealmSpec.swift in Sources */,
 				BDE111E02157382B0010FBD9 /* LabelReactorTest.swift in Sources */,

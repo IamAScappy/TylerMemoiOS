@@ -49,6 +49,7 @@ class LabelReactorTest: QuickSpec {
         stub(mockLabelService, block: { (mock) in
           when(mock.searchLabels(keyword: any())).thenReturn(Result.success(Observable.just(expectLabels)))
           when(mock.searchLabels(keyword: "error")).thenReturn(Result.failure(TestError()))
+          when(mock.insertLabel(label: any())).thenReturn(Result.success("test id"))
         })
       }
 
@@ -71,7 +72,7 @@ class LabelReactorTest: QuickSpec {
           .take(0.1, scheduler: MainScheduler.instance)
           .toBlocking()
           .materialize()
-        
+
         switch result {
         case .completed(let element):
           expect(element.count) == 1
@@ -79,6 +80,6 @@ class LabelReactorTest: QuickSpec {
         default: fail()
         }
       })
+    }
   }
-}
 }

@@ -12,6 +12,7 @@ import ReactorKit
 import RxSwift
 import IGListKit
 import RxOptional
+import RxCocoa
 // TODO Test1: navigation 에 searchController 나오는지
 // TODO Test1: Label 검색 결과가 없을 때 Crete Label 이 생기는지 확인
 class LabelViewController: UIViewController, StoryboardInitializable {
@@ -20,12 +21,17 @@ class LabelViewController: UIViewController, StoryboardInitializable {
   private var data: [ListDiffable] = []
   let searchController = UISearchController(searchResultsController: nil)
   lazy var adapter: ListAdapter = { return ListAdapter(updater: ListAdapterUpdater(), viewController: self) }()
+  private let newLabelSelectedPublisher = PublishSubject<Int>()
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.navigationItem.searchController = searchController
-    self.navigationItem.hidesSearchBarWhenScrolling = false
-    self.searchController.dimsBackgroundDuringPresentation = false
+    self.navigationItem.do {
+      $0.searchController = searchController
+      $0.hidesSearchBarWhenScrolling = false
+    }
+    self.searchController.do {
+      $0.dimsBackgroundDuringPresentation = false
+    }
     collectionView.do {
       $0.collectionViewLayout = UICollectionViewFlowLayout().then({
         $0.estimatedItemSize = CGSize(width: 100, height: 40)
@@ -42,12 +48,17 @@ class LabelViewController: UIViewController, StoryboardInitializable {
   }
 }
 
-extension LabelViewController: ListAdapterDataSource {
+extension LabelViewController: ListAdapterDataSource, NewLabelSectionDelegate {
+  func newLabelSection(index: Int) {
+    newLabelSelectedPublisher.onNext(index)
+  }
   func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
     return data
   }
   func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-    return LabelSectionController()
+    return LabelSectionController().then({
+      $0.newLabelSectionDelegate = self
+    })
   }
   func emptyView(for listAdapter: ListAdapter) -> UIView? {
     return nil
@@ -55,6 +66,7 @@ extension LabelViewController: ListAdapterDataSource {
 }
 extension LabelViewController: View {
   func bind(reactor: LabelReactor) {
+//    In bind
     let searchKeywordChange = searchController.searchBar.rx.text
       .orEmpty
       .throttle(0.5, latest: true, scheduler: MainScheduler.asyncInstance)
@@ -66,6 +78,11 @@ extension LabelViewController: View {
       .map { Reactor.Action.searchQuery(memoId: "", $0) }
       .bind(to: reactor.action)
       .disposed(by: disposeBag)
+    newLabelSelectedPublisher
+      .map({ Reactor.Action.createLabel($0) })
+      .bind(to: reactor.action)
+      .disposed(by: disposeBag)
+//    Out bind
     reactor.state.map { $0.sections }
       .filterNil()
       .withLatestFrom(

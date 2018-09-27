@@ -13,11 +13,6 @@ import Swinject
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
-  #if DEBUG
-  let log = XCGLogger.default
-  #else
-  let log = XCGLogger(identifier: "productLogger", includeDefaultDestinations: false)
-  #endif
   // swiftlint:disable:next line_length
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     printEmulatorInfo()
@@ -61,12 +56,5 @@ extension AppDelegate {
   func printEmulatorInfo() {
     log.debug("Library: \(FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).first!.path)")
     log.debug("Realm: \(String(describing: Realm.Configuration.defaultConfiguration.fileURL))")
-  }
-  func initLogger() {
-    #if DEBUG
-    log.setup(level: .debug, showThreadName: true, showLevel: true, showFileNames: true, showLineNumbers: true)
-    #else
-    log.setup(level: .severe, showThreadName: true, showLevel: true, showFileNames: true, showLineNumbers: true)
-    #endif
   }
 }

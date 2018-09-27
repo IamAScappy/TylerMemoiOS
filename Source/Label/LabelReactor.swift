@@ -22,7 +22,7 @@ class LabelReactor: Reactor {
   }
   enum Action {
     case searchQuery(memoId: String, String)
-    case newLabel(Label)
+    case createLabel(Int)
   }
   struct State {
     var sections: [Label]?
@@ -36,6 +36,7 @@ class LabelReactor: Reactor {
     case error(Error)
   }
   func mutate(action: Action) -> Observable<Mutation> {
+    log.debug("mutate action: \(action)")
     switch action {
     case let .searchQuery(memoId, keyword):
       return Observable.concat([
@@ -47,19 +48,16 @@ class LabelReactor: Reactor {
             return value.map { Mutation.setSections($0) }
           case .failure(let error):
             return Observable.just(Mutation.error(error))
-          }})
+          } })
         ])
-    case .newLabel(let label):
-      let result = self.labelService.insertLabel(label: label)
-      switch result {
-      case .success(let labelId):
-        return Observable.just(Mutation.createdLabel(labelId))
-      case .failure(let error):
-        return Observable.just(Mutation.error(error))
-      }
+    case .createLabel(let index):
+      print("!!!!!!!!!! createLabel \(index)")
+      return Observable.just(Mutation.createdLabel("asd"))
+
     }
   }
   func reduce(state: State, mutation: Mutation) -> State {
+    log.debug("reduce state: \(state) mutation: \(mutation)")
     var newState = state
     switch mutation {
     case .setSections(let labels):
