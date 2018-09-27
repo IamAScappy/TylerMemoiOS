@@ -13,7 +13,6 @@ import RxSwift
 import RxCocoa
 import RxBlocking
 import Cuckoo
-import ReactiveSwift
 import Result
 
 @testable import TyperMemo

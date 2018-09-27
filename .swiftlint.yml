@@ -5,6 +5,9 @@ included:
 analyzer_rules:
   - unused_import
   - unused_private_declaration
+disabled_rules:
+  - identifier_name
+  - todo
 opt_in_rules:
   - anyobject_protocol
   - array_init

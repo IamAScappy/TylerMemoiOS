@@ -31,9 +31,9 @@ class LabelReactorWithRealmTest: RealmSpec {
         
         let expectLabels = [Label(title: "test 1"), Label(title: "test 2")]
         let actions = scheduler.createHotObservable([
-          next(50, { LabelReactor.Action.searchQuery(memoId: "", "123") }),
-          next(55, { LabelReactor.Action.newLabelItemSelected(0) }),
-          next(60, { LabelReactor.Action.newLabelItemSelected(1) }),
+          next(50, { LabelReactor.Action.searchQuery(memoId: "", "123") })
+//          next(55, { LabelReactor.Action.newLabelItemSelected(0) }),
+//          next(60, { LabelReactor.Action.newLabelItemSelected(1) }),
           ])
         
         actions

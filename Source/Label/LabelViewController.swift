@@ -79,31 +79,34 @@ extension LabelViewController: View {
       .bind(to: reactor.action)
       .disposed(by: disposeBag)
     newLabelSelectedPublisher
-      .map({ Reactor.Action.createLabel($0) })
+      .withLatestFrom(searchKeywordChange)
+      .map({ Reactor.Action.createLabel(Label(title: $0)) })
       .bind(to: reactor.action)
       .disposed(by: disposeBag)
 //    Out bind
     reactor.state.map { $0.sections }
       .filterNil()
-      .withLatestFrom(
-        reactor.state.map({ $0.keyword })
-          .filterNil()
-          .filterEmpty()
-          .asDriver(onErrorJustReturn: ""),
-        resultSelector: { data, keyword in
-          return (data, keyword)
-        })
-      .asDriver(onErrorJustReturn: ([], ""))
-      .drive(onNext: { [weak self] data, keyword in
+      .asDriver(onErrorJustReturn: ([]))
+      .drive(onNext: { [weak self] data in
         guard let `self` = self else { return }
-        if data.isEmpty {
-          self.data.removeAll()
-          let newLabel = NewLabelModel(title: keyword)
-          self.data.append(newLabel)
-          self.adapter.performUpdates(animated: true)
-        } else {
-          self.data = data
-        }
+        self.data = data
+        self.adapter.performUpdates(animated: true)
+      })
+      .disposed(by: disposeBag)
+
+    reactor.state.map { $0.isEmpty }
+      .filterNil()
+      .asDriver(onErrorJustReturn: false)
+      .filter { $0 }
+      .map({ [weak self] _ in
+        return self?.searchController.searchBar.text ?? ""
+      })
+      .filterEmpty()
+      .drive(onNext: { [weak self] keyword in
+        guard let `self` = self else { return }
+        let newLabel = NewLabelModel(title: keyword)
+        self.data.append(newLabel)
+        self.adapter.performUpdates(animated: true)
       })
       .disposed(by: disposeBag)
   }

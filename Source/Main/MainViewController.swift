@@ -26,13 +26,7 @@ class MainViewController: UIViewController {
       })
     }
     addMemoView.do { view in
-      if let data = NSDataAsset(name: "add_memo_svg")?.data {
-        let svgLayer = CALayer(SVGData: data, completion: { svgLayer in
-          svgLayer.fillColor = ColorName.colorAccent.cgColor
-          svgLayer.resizeToFit(view.bounds)
-        })
-        view.layer.addSublayer(svgLayer)
-      }
+      view.setImage(Asset.icEditView.image, for: .normal)
       view.accessibilityIdentifier = AccIdentifier.addMemoButton.rawValue
       view.rx.tap.asDriver().drive(onNext: { [weak self] _ in
         self?.show(LabelViewController.makeLabelViewController(), sender: self)

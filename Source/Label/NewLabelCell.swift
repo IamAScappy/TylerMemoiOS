@@ -24,10 +24,7 @@ class NewLabelCell: UICollectionViewCell {
   override init(frame: CGRect) {
     super.init(frame: frame)
     self.addGestureRecognizer(taps)
-    let addImageView = UIView(SVGNamed: "ic_add_svg") { svgLayer in
-      svgLayer.fillColor = ColorName.colorAccent.cgColor
-      svgLayer.resizeToFit(self.bounds)
-    }.then({ imageView in
+    let addImageView = UIImageView(image: Asset.icAdd.image).then({ imageView in
       self.addSubview(imageView)
       imageView.contentMode = .scaleAspectFit
       imageView.snp.makeConstraints({ make in
