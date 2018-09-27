@@ -13,8 +13,8 @@ target 'TyperMemo' do
   pod 'Then'
   pod 'Result', '~> 4.0.0'
   def testing_pods
-    pod 'Quick'
-    pod 'Nimble'
+    pod 'Quick', '~> 1.3'
+    pod 'Nimble', '~> 7.3'
   end
   target 'TyperMemoTests' do
     inherit! :search_paths
