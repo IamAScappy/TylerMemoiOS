@@ -53,7 +53,7 @@
 		BDBF37022158D86300953C77 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDBF37002158D86300953C77 /* Localizable.strings */; };
 		BDBF37062158DA7F00953C77 /* ExistLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF37052158DA7F00953C77 /* ExistLabelCell.swift */; };
 		BDC0E9DF2153BE5400BE8EE3 /* tyler-v1.realm in Resources */ = {isa = PBXBuildFile; fileRef = BDC0E9DE2153BE2200BE8EE3 /* tyler-v1.realm */; };
-		BDC0E9E12153BF1400BE8EE3 /* AppDelegate+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC0E9E02153BF1400BE8EE3 /* AppDelegate+Realm.swift */; };
+		BDC0E9E12153BF1400BE8EE3 /* RealmMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC0E9E02153BF1400BE8EE3 /* RealmMigration.swift */; };
 		BDE111CD2156A8440010FBD9 /* SwinjectStoryboard+setUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE111CC2156A8440010FBD9 /* SwinjectStoryboard+setUp.swift */; };
 		BDE111CE2156A95D0010FBD9 /* LabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5653D721565CFA00F378F0 /* LabelViewController.swift */; };
 		BDE111CF2156A95D0010FBD9 /* LabelReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5653EB2156642B00F378F0 /* LabelReactor.swift */; };
@@ -62,8 +62,6 @@
 		BDE111D82156B3770010FBD9 /* LabelServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE111D72156B3770010FBD9 /* LabelServiceType.swift */; };
 		BDE111DA2156B5560010FBD9 /* Realm+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE111D92156B5560010FBD9 /* Realm+Config.swift */; };
 		BDE111E02157382B0010FBD9 /* LabelReactorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE111DF2157382B0010FBD9 /* LabelReactorTest.swift */; };
-		BDF2C0CE215E61CE00845AD5 /* ColorThemeInitDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF2C0CD215E61CE00845AD5 /* ColorThemeInitDataTest.swift */; };
-		BDF2C0D1215E62C900845AD5 /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF2C0D0215E62C900845AD5 /* ReactorKit.framework */; };
 		BDF2C10A215E699500845AD5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9050BB214F581300425C8D /* RealmSwift.framework */; };
 		BDF97B8A2158B71C00696102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDF97B892158B71C00696102 /* Assets.xcassets */; };
 		BDFC8A7B2155AD5E00A042B5 /* MemoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC8A7A2155AD5E00A042B5 /* MemoViewCell.swift */; };
@@ -158,15 +156,15 @@
 		BDBF37012158D86300953C77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BDBF37052158DA7F00953C77 /* ExistLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExistLabelCell.swift; sourceTree = "<group>"; };
 		BDC0E9DE2153BE2200BE8EE3 /* tyler-v1.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tyler-v1.realm"; sourceTree = "<group>"; };
-		BDC0E9E02153BF1400BE8EE3 /* AppDelegate+Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Realm.swift"; sourceTree = "<group>"; };
+		BDC0E9E02153BF1400BE8EE3 /* RealmMigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmMigration.swift; sourceTree = "<group>"; };
 		BDE111CC2156A8440010FBD9 /* SwinjectStoryboard+setUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+setUp.swift"; sourceTree = "<group>"; };
 		BDE111D12156ADE30010FBD9 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		BDE111D32156AE200010FBD9 /* MemoServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoServiceType.swift; sourceTree = "<group>"; };
 		BDE111D72156B3770010FBD9 /* LabelServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelServiceType.swift; sourceTree = "<group>"; };
 		BDE111D92156B5560010FBD9 /* Realm+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Config.swift"; sourceTree = "<group>"; };
 		BDE111DF2157382B0010FBD9 /* LabelReactorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelReactorTest.swift; sourceTree = "<group>"; };
-		BDF2C0CD215E61CE00845AD5 /* ColorThemeInitDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorThemeInitDataTest.swift; sourceTree = "<group>"; };
 		BDF2C0D0215E62C900845AD5 /* ReactorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReactorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDF2C10D215E6F7900845AD5 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		BDF97B892158B71C00696102 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDF97B8B2158B9A700696102 /* SVG.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SVG.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BDF97B942158BAB700696102 /* SwiftSVG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftSVG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,7 +180,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDF2C0D1215E62C900845AD5 /* ReactorKit.framework in Frameworks */,
 				6BCAA545D8B90187674BCD3F /* Pods_TyperMemoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,6 +208,7 @@
 		44DCBEA593D0A2D6E39A8006 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BDF2C10D215E6F7900845AD5 /* Realm.framework */,
 				BDF2C0D0215E62C900845AD5 /* ReactorKit.framework */,
 				BD1FDFCB215961850064A8D8 /* ReactorKit.framework */,
 				BD1FDFC2215959DC0064A8D8 /* ReactorKit.framework */,
@@ -234,7 +232,6 @@
 			children = (
 				BD7F9174215B1980001DE5E0 /* GeneratedMocks.swift */,
 				BD1FDFF9215967220064A8D8 /* LabelViewControllerTest.swift */,
-				BDF2C0CD215E61CE00845AD5 /* ColorThemeInitDataTest.swift */,
 				BD1FDFF7215966F80064A8D8 /* UITestCase.swift */,
 				BD1FDFF1215966E80064A8D8 /* Info.plist */,
 			);
@@ -331,7 +328,7 @@
 				BD81DE34214C903000526054 /* Generated */,
 				BD81DE10214C857100526054 /* Supporting Files */,
 				BD81DDDF214C854000526054 /* AppDelegate.swift */,
-				BDC0E9E02153BF1400BE8EE3 /* AppDelegate+Realm.swift */,
+				BDC0E9E02153BF1400BE8EE3 /* RealmMigration.swift */,
 				BDE111CC2156A8440010FBD9 /* SwinjectStoryboard+setUp.swift */,
 				BD5653D621565C9D00F378F0 /* Label */,
 				BD6606CE215534820012BC3C /* Main */,
@@ -422,6 +419,7 @@
 				BD1FDFEB215966E80064A8D8 /* Resources */,
 				DE7B794C685EF61EAF16B1C1 /* [CP] Embed Pods Frameworks */,
 				C4010E4A2752D01F085AAA46 /* [CP] Copy Pods Resources */,
+				BDF2C110215E719400845AD5 /* Copy Carthage Resources */,
 			);
 			buildRules = (
 			);
@@ -728,6 +726,26 @@
 			shellPath = /bin/sh;
 			shellScript = "KEYWORDS=\"TODO|FIXME|\\?\\?\\?:|\\!\\!\\!:\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | \\\nxargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | \\\nperl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
 		};
+		BDF2C110215E719400845AD5 /* Copy Carthage Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			name = "Copy Carthage Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
 		BEED0EB54C9709F9EC7442F5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -845,7 +863,6 @@
 				BD1FDFFB215967290064A8D8 /* LabelViewControllerTest.swift in Sources */,
 				BD1FDFF8215966F80064A8D8 /* UITestCase.swift in Sources */,
 				BD7F9175215B1980001DE5E0 /* GeneratedMocks.swift in Sources */,
-				BDF2C0CE215E61CE00845AD5 /* ColorThemeInitDataTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -867,7 +884,7 @@
 				BDE111D42156AE200010FBD9 /* MemoServiceType.swift in Sources */,
 				BDE111D22156ADE30010FBD9 /* ServiceProvider.swift in Sources */,
 				BD0FD1062158A60800EAE5E0 /* LabelViewModel.swift in Sources */,
-				BDC0E9E12153BF1400BE8EE3 /* AppDelegate+Realm.swift in Sources */,
+				BDC0E9E12153BF1400BE8EE3 /* RealmMigration.swift in Sources */,
 				BD4BBB042158E0D400ED00C3 /* RxListAdapterDataSource.swift in Sources */,
 				BD7F917D215B2EF1001DE5E0 /* RealmServiceType.swift in Sources */,
 				BD81DE39214C903000526054 /* L10n.swift in Sources */,
@@ -980,6 +997,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hucet.tyler.TyperMemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG TEST";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = TyperMemo;

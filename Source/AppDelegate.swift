@@ -21,9 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   // swiftlint:disable:next line_length
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    RealmMigration.migrationRealm()
     printEmulatorInfo()
     initLogger()
-    copyDefaultRealm()
     return true
   }
 

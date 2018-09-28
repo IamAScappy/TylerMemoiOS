@@ -12,20 +12,21 @@ import RealmSwift
 import Cuckoo
 @testable import TyperMemo
 
-
-class ColorThemeTest: RealmSpec {
+class ColorThemeTest: QuickSpec {
   override func spec() {
+    beforeSuite {
+      try! FileManager.default.removeItem(at: Realm.Configuration.defaultConfiguration.fileURL!)
+      RealmMigration.migrationRealm()
+    }
     describe("ColorTheme") {
       var realm: Realm!
-      
       beforeEach {
         realm = try! Realm()
       }
-      it("init data ", closure: {
+      it("초기 데이터가 존재해야함 ", closure: {
         expect(realm.objects(ColorTheme.self).count) == ColorThemeTemplate.all.count
       })
     }
   }
 }
-
 
