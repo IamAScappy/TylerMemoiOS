@@ -9,6 +9,12 @@ import RealmSwift
 import XCGLogger
 import Swinject
 
+#if DEBUG
+let log = XCGLogger.default
+#else
+let log = XCGLogger(identifier: "productLogger", includeDefaultDestinations: false)
+#endif
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
@@ -54,7 +60,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
   func printEmulatorInfo() {
+    log.logAppDetails()
     log.debug("Library: \(FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).first!.path)")
     log.debug("Realm: \(String(describing: Realm.Configuration.defaultConfiguration.fileURL))")
+  }
+  func initLogger() {
+    #if DEBUG
+    log.setup(level: .debug, showThreadName: true, showLevel: true, showFileNames: true, showLineNumbers: true)
+    #else
+    log.setup(level: .severe, showThreadName: true, showLevel: true, showFileNames: true, showLineNumbers: true)
+    #endif
+    let emojiLogFormatter = PrePostFixLogFormatter()
+    emojiLogFormatter.apply(prefix: "🗯 ", postfix: " 🗯", to: .verbose)
+    emojiLogFormatter.apply(prefix: "🔹 ", postfix: " 🔹", to: .debug)
+    emojiLogFormatter.apply(prefix: "ℹ️ ", postfix: " ℹ️", to: .info)
+    emojiLogFormatter.apply(prefix: "⚠️ ", postfix: " ⚠️", to: .warning)
+    emojiLogFormatter.apply(prefix: "‼️ ", postfix: " ‼️", to: .error)
+    emojiLogFormatter.apply(prefix: "💣 ", postfix: " 💣", to: .severe)
+    log.formatters = [emojiLogFormatter]
   }
 }

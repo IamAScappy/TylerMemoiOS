@@ -62,7 +62,7 @@ class LabelReactor: Reactor {
     }
   }
   func reduce(state: State, mutation: Mutation) -> State {
-    log.debug("reduece mutation: \(mutation)\n")
+    log.info("reduece mutation: \(state)\n")
     var newState = state
     switch mutation {
     case .setSections(let labels):
@@ -74,7 +74,6 @@ class LabelReactor: Reactor {
     case .error(let error):
       newState.error = error
     }
-    log.debug("reduce state: \(newState)")
     return newState
   }
 }

@@ -40,8 +40,6 @@
 		BD7F9179215B2249001DE5E0 /* LabelReactorWithRealmTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7F9178215B2249001DE5E0 /* LabelReactorWithRealmTest.swift */; };
 		BD7F917D215B2EF1001DE5E0 /* RealmServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7F917C215B2EF1001DE5E0 /* RealmServiceType.swift */; };
 		BD7F917F215BA0FA001DE5E0 /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7F917E215BA0FA001DE5E0 /* TestError.swift */; };
-		BD7F9183215BD86E001DE5E0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7F9182215BD86E001DE5E0 /* Logger.swift */; };
-		BD7F9185215BD99D001DE5E0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7F9182215BD86E001DE5E0 /* Logger.swift */; };
 		BD81DDE0214C854000526054 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DDDF214C854000526054 /* AppDelegate.swift */; };
 		BD81DDE2214C854000526054 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DDE1214C854000526054 /* MainViewController.swift */; };
 		BD81DDE5214C854000526054 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD81DDE3214C854000526054 /* Main.storyboard */; };
@@ -51,7 +49,6 @@
 		BD81DE38214C903000526054 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DE35214C903000526054 /* Assets.swift */; };
 		BD81DE39214C903000526054 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DE36214C903000526054 /* L10n.swift */; };
 		BD81DE3A214C903000526054 /* MyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DE37214C903000526054 /* MyColor.swift */; };
-		BD9050BC214F581300425C8D /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9050BB214F581300425C8D /* RealmSwift.framework */; };
 		BDACB9DE21520A6D00AE2C50 /* FakeRealmCollectionValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDACB9DB2152099000AE2C50 /* FakeRealmCollectionValue.swift */; };
 		BDBF37022158D86300953C77 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDBF37002158D86300953C77 /* Localizable.strings */; };
 		BDBF37062158DA7F00953C77 /* ExistLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF37052158DA7F00953C77 /* ExistLabelCell.swift */; };
@@ -66,8 +63,8 @@
 		BDE111DA2156B5560010FBD9 /* Realm+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE111D92156B5560010FBD9 /* Realm+Config.swift */; };
 		BDE111E02157382B0010FBD9 /* LabelReactorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE111DF2157382B0010FBD9 /* LabelReactorTest.swift */; };
 		BDF2C0CE215E61CE00845AD5 /* ColorThemeInitDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF2C0CD215E61CE00845AD5 /* ColorThemeInitDataTest.swift */; };
-		BDF2C0CF215E626800845AD5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9050BB214F581300425C8D /* RealmSwift.framework */; };
 		BDF2C0D1215E62C900845AD5 /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF2C0D0215E62C900845AD5 /* ReactorKit.framework */; };
+		BDF2C10A215E699500845AD5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9050BB214F581300425C8D /* RealmSwift.framework */; };
 		BDF97B8A2158B71C00696102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDF97B892158B71C00696102 /* Assets.xcassets */; };
 		BDFC8A7B2155AD5E00A042B5 /* MemoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC8A7A2155AD5E00A042B5 /* MemoViewCell.swift */; };
 		BDFC8A802155BBCE00A042B5 /* AppSupports.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC8A7F2155BBCE00A042B5 /* AppSupports.swift */; };
@@ -140,7 +137,6 @@
 		BD7F9178215B2249001DE5E0 /* LabelReactorWithRealmTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelReactorWithRealmTest.swift; sourceTree = "<group>"; };
 		BD7F917C215B2EF1001DE5E0 /* RealmServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServiceType.swift; sourceTree = "<group>"; };
 		BD7F917E215BA0FA001DE5E0 /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
-		BD7F9182215BD86E001DE5E0 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		BD81DDDC214C854000526054 /* TyperMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TyperMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD81DDDF214C854000526054 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD81DDE1214C854000526054 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -187,7 +183,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDF2C0D1215E62C900845AD5 /* ReactorKit.framework in Frameworks */,
-				BDF2C0CF215E626800845AD5 /* RealmSwift.framework in Frameworks */,
 				6BCAA545D8B90187674BCD3F /* Pods_TyperMemoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,8 +199,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDF2C10A215E699500845AD5 /* RealmSwift.framework in Frameworks */,
 				BD4BBB2D2159240E00ED00C3 /* ReactorKit.framework in Frameworks */,
-				BD9050BC214F581300425C8D /* RealmSwift.framework in Frameworks */,
 				C5C96A95A1714223D68E9E46 /* Pods_TyperMemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,7 +338,6 @@
 				BD6606CF215534A90012BC3C /* Extension */,
 				BD4BBB032158E0D400ED00C3 /* RxListAdapterDataSource.swift */,
 				BD1FDFBD21594FF70064A8D8 /* StoryboardInitializable.swift */,
-				BD7F9182215BD86E001DE5E0 /* Logger.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -859,7 +853,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD7F9185215BD99D001DE5E0 /* Logger.swift in Sources */,
 				BD1FDFFE215969A80064A8D8 /* AccIdentifier.swift in Sources */,
 				BDE111CE2156A95D0010FBD9 /* LabelViewController.swift in Sources */,
 				BDE111CF2156A95D0010FBD9 /* LabelReactor.swift in Sources */,
@@ -903,7 +896,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD4723C7214E90C4002D84D2 /* ColorThemeTest.swift in Sources */,
-				BD7F9183215BD86E001DE5E0 /* Logger.swift in Sources */,
 				BD472165215081850015740A /* GeneratedMocks.swift in Sources */,
 				BD1C7FA6214E661D00C58B67 /* RealmSpec.swift in Sources */,
 				BDE111E02157382B0010FBD9 /* LabelReactorTest.swift in Sources */,
@@ -975,6 +967,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SFSNP72DLD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TyperMemoUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -996,6 +992,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SFSNP72DLD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TyperMemoUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
