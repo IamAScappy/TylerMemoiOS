@@ -30,7 +30,7 @@ class NewLabelCell: UICollectionViewCell {
       imageView.snp.makeConstraints({ make in
         let width = Dimens.labelHeight.rawValue - 2
         let ratio = 1
-        make.leading.equalTo(self).offset(10)
+        make.leading.equalTo(self)
         make.centerY.equalTo(self)
         make.width.equalTo(width)
         make.height.equalTo(imageView.snp.width).multipliedBy(ratio)
@@ -40,7 +40,7 @@ class NewLabelCell: UICollectionViewCell {
     makeLabelTitleView.do {
       self.addSubview($0)
       $0.snp.makeConstraints { make in
-        make.leading.equalTo(addImageView.snp.trailing).offset(15)
+        make.leading.equalTo(addImageView.snp.trailing)
         make.centerY.equalTo(self)
       }
     }

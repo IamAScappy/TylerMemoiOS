@@ -17,18 +17,15 @@ class ColorThemeTest: RealmSpec {
   override func spec() {
     describe("ColorTheme") {
       var realm: Realm!
+      
       beforeEach {
         realm = try! Realm()
       }
       it("init data ", closure: {
-        let realmValue = FakeRealmCollectionValue<ColorTheme>()
-        let result = realm.objects(ColorTheme.self)
-        try! realm.write {
-          realm.add(ColorThemeTemplate.brown, update: true)
-        }
-//        expect(realmValue.count).toEventually(equal(3))
+        expect(realm.objects(ColorTheme.self).count) == ColorThemeTemplate.all.count
       })
     }
   }
 }
+
 

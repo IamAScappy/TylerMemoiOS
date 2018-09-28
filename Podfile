@@ -12,6 +12,16 @@ target 'TyperMemo' do
   pod 'ReactorKit'
   pod 'Then'
   pod 'Result', '~> 4.0.0'
+  pod 'UICheckbox.Swift'
+  post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      if ['UICheckbox.Swift'].include? target.name
+        target.build_configurations.each do |config|
+          config.build_settings['SWIFT_VERSION'] = '4'
+        end
+      end
+    end
+  end
   def testing_pods
     pod 'Quick', '~> 1.3'
     pod 'Nimble', '~> 7.3'

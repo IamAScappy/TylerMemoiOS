@@ -17,7 +17,7 @@ class LabelSectionController: ListBindingSectionController<Label>, ListBindingSe
   
   override init() {
     super.init()
-    inset = UIEdgeInsets(top: 0, left: 0, bottom: 40, right: 0)
+    inset = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
     minimumLineSpacing = 4
     minimumInteritemSpacing = 4
     dataSource = self
@@ -66,7 +66,7 @@ class LabelSectionController: ListBindingSectionController<Label>, ListBindingSe
     guard let width = collectionContext?.containerSize.width else { return .zero }
     guard let height = collectionContext?.containerSize.height else { return .zero }
     switch viewModel {
-    case is LabelViewModel, is NewLabelModel: return CGSize(width: width, height: CGFloat(Dimens.labelHeight.rawValue))
+    case is LabelViewModel, is NewLabelModel: return CGSize(width: width - (inset.left + inset.right), height: CGFloat(Dimens.labelHeight.rawValue))
     default: return CGSize(width: width, height: height)
     }
   }

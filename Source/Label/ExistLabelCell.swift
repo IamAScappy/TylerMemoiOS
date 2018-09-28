@@ -10,26 +10,25 @@ import UIKit
 import IGListKit
 class ExistLabelCell: UICollectionViewCell {
   private let label = UILabel()
-  private let checkbox = UIView()
+  private let checkbox = UILabel()
 
   override init(frame: CGRect) {
     super.init(frame: frame)
     label.do {
       self.addSubview($0)
       $0.snp.makeConstraints({ make in
-        make.leading.equalToSuperview().offset(10)
+        make.leading.equalToSuperview()
         make.centerY.equalToSuperview()
       })
     }
     checkbox.do {
       self.addSubview($0)
-      $0.backgroundColor = UIColor.black
       $0.snp.makeConstraints({ make in
-        let width = Dimens.labelHeight.rawValue
-        make.trailing.equalToSuperview().offset(10)
+//        let width = Dimens.labelHeight.rawValue
+        make.trailing.equalToSuperview()
         make.centerY.equalToSuperview()
-        make.width.equalTo(width)
-        make.height.equalTo(width)
+//        make.width.equalTo(width)
+//        make.height.equalTo(width)
       })
     }
   }
