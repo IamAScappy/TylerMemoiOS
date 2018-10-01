@@ -3,12 +3,12 @@
 //
 //
 
-import UIKit
-import RxSwift
+import IGListKit
 import RealmSwift
+import RxSwift
 import SnapKit
 import Then
-import IGListKit
+import UIKit
 
 class MainViewController: UIViewController {
   var data = [ListDiffable]()
@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
   @IBOutlet weak private var addMemoView: UIButton!
   @IBOutlet weak private var collectionView: UICollectionView!
   lazy var adapter: ListAdapter = { return ListAdapter(updater: ListAdapterUpdater(), viewController: self) }()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     view.accessibilityIdentifier = "main"

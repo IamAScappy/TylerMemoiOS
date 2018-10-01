@@ -6,8 +6,9 @@
 //  Copyright © 2018년 tskim. All rights reserved.
 //
 
-import UIKit
 import IGListKit
+import UIKit
+
 class ExistLabelCell: UICollectionViewCell {
   private let label = UILabel()
   private let checkbox = UILabel()

@@ -3,13 +3,12 @@
 //  TyperMemo
 //
 //  Created by tskim on 2018. 9. 24..
-//  Copyright © 2018년 tskim. All rights reserved.
 //
 
 import Foundation
-import RxSwift
 import IGListKit
 import RxCocoa
+import RxSwift
 
 protocol RxListAdapterDataSource {
   associatedtype Element

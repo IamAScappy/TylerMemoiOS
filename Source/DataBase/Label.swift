@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import RealmSwift
 import IGListKit
+import RealmSwift
 
 class Label: Object {
   // swiftlint:disable:next identifier_name

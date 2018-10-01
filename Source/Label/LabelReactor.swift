@@ -8,10 +8,11 @@
 
 import Foundation
 import ReactorKit
-import RxSwift
-import RxRealm
 import RealmSwift
 import Result
+import RxRealm
+import RxSwift
+
 class LabelReactor: Reactor {
   let initialState: State
   let labelService: LabelServiceType
@@ -39,7 +40,7 @@ class LabelReactor: Reactor {
   func mutate(action: Action) -> Observable<Mutation> {
     log.debug("mutate action: \(action)")
     switch action {
-    case let .searchQuery(memoId, keyword):
+    case let .searchQuery(_, keyword):
       return Observable.concat([
         Observable.just(Mutation.updateQuery(keyword)),
         Observable.deferred({ () -> Observable<Mutation> in

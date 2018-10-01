@@ -1,18 +1,15 @@
 github "lkzhao/Hero"
-github "SnapKit/SnapKit"
-github "Instagram/IGListKit"
-
-
 github "Alamofire/Alamofire"
 github "Moya/Moya"
+github "SnapKit/SnapKit"
+github "Instagram/IGListKit"
 github "DaveWoodCom/XCGLogger"
-github "realm/realm-cocoa"
+github "realm/realm-cocoa" == 3.9.0
 github "SwiftKit/Cuckoo"
 github "Swinject/Swinject"
 github "Swinject/SwinjectStoryboard"
-
+github "ReactiveX/RxSwift" ~> 4.0
 github "RxSwiftCommunity/RxDataSources"
 github "RxSwiftCommunity/RxRealm"
 github "RxSwiftCommunity/RxOptional"
-
 github "mchoe/SwiftSVG" ~> 2.0

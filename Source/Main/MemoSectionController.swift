@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import UIKit
 import IGListKit
+import UIKit
 
 class MemoSectionController: ListSectionController {
   private var model: MemoViewModel!
@@ -40,4 +40,3 @@ class MemoSectionController: ListSectionController {
     self.model = object as? MemoViewModel
   }
 }
-

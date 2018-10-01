@@ -16,6 +16,7 @@ enum MemoViewModelType: Int {
 class MemoViewModel: NSObject {
   let memos: [Memo]
   let type: MemoViewModelType
+  
   public init(memos: [Memo], type: MemoViewModelType = .none) {
     self.memos = memos
     self.type = type

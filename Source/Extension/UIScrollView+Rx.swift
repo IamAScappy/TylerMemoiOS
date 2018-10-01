@@ -7,9 +7,9 @@
 //
 
 import Foundation
-import UIKit
-import RxSwift
 import RxCocoa
+import RxSwift
+import UIKit
 
 extension Reactive where Base: UIScrollView {
   var reachedBottom: ControlEvent<Void> {

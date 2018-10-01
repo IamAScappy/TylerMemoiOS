@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jiA-Dz-Of6">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Memo View Controller-->
+        <scene sceneID="10L-aq-P9o">
+            <objects>
+                <viewController storyboardIdentifier="AddMemoViewController" id="jiA-Dz-Of6" customClass="AddMemoViewController" customModule="TyperMemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G8f-OA-JiT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ClL-8i-bq1">
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pg6-g3-6Pl">
+                                <rect key="frame" x="324" y="648" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ClL-8i-bq1" firstAttribute="leading" secondItem="YIT-rL-yoY" secondAttribute="leading" id="Ij7-UW-WGd"/>
+                            <constraint firstItem="ClL-8i-bq1" firstAttribute="centerY" secondItem="YIT-rL-yoY" secondAttribute="centerY" id="KBp-qY-TOl"/>
+                            <constraint firstItem="YIT-rL-yoY" firstAttribute="bottom" secondItem="Pg6-g3-6Pl" secondAttribute="bottom" constant="58" id="XZ7-29-MmA"/>
+                            <constraint firstItem="YIT-rL-yoY" firstAttribute="trailing" secondItem="Pg6-g3-6Pl" secondAttribute="trailing" constant="44" id="avW-7j-2Ez"/>
+                            <constraint firstItem="ClL-8i-bq1" firstAttribute="top" secondItem="YIT-rL-yoY" secondAttribute="top" id="cfm-N6-Pcf"/>
+                            <constraint firstItem="ClL-8i-bq1" firstAttribute="centerX" secondItem="YIT-rL-yoY" secondAttribute="centerX" id="gk9-E8-e31"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YIT-rL-yoY"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="Pg6-g3-6Pl" id="HsB-oB-FUY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OPK-sS-3gu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-280" y="7"/>
+        </scene>
+    </scenes>
+</document>

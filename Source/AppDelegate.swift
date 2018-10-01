@@ -4,10 +4,10 @@
 //  Created by tskim on 2018. 9. 15..
 //
 
-import UIKit
 import RealmSwift
-import XCGLogger
 import Swinject
+import UIKit
+import XCGLogger
 
 #if DEBUG
 let log = XCGLogger.default

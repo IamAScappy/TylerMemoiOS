@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: Source/Services/LabelServiceType.swift at 2018-09-28 14:49:45 +0000
+// MARK: - Mocks generated from file: Source/Services/LabelServiceType.swift at 2018-10-01 11:40:14 +0000
 
 //
 //  LabelServiceType.swift
@@ -28,7 +28,7 @@ class MockLabelServiceType: LabelServiceType, Cuckoo.ProtocolMock {
     
 
     
-    // ["name": "searchLabels", "returnSignature": " -> Result<Observable<[Label]>, NSError>", "fullyQualifiedName": "searchLabels(keyword: String) -> Result<Observable<[Label]>, NSError>", "parameterSignature": "keyword: String", "parameterSignatureWithoutNames": "keyword: String", "inputTypes": "String", "isThrowing": false, "isInit": false, "isOverriding": false, "hasClosureParams": false, "@type": "ProtocolMethod", "accessibility": "", "parameterNames": "keyword", "call": "keyword: keyword", "parameters": [CuckooGeneratorFramework.MethodParameter(label: Optional("keyword"), name: "keyword", type: "String", range: CountableRange(300..<315), nameRange: CountableRange(300..<307))], "returnType": "Result<Observable<[Label]>, NSError>", "isOptional": false, "stubFunction": "Cuckoo.ProtocolStubFunction"]
+    // ["name": "searchLabels", "returnSignature": " -> Result<Observable<[Label]>, NSError>", "fullyQualifiedName": "searchLabels(keyword: String) -> Result<Observable<[Label]>, NSError>", "parameterSignature": "keyword: String", "parameterSignatureWithoutNames": "keyword: String", "inputTypes": "String", "isThrowing": false, "isInit": false, "isOverriding": false, "hasClosureParams": false, "@type": "ProtocolMethod", "accessibility": "", "parameterNames": "keyword", "call": "keyword: keyword", "parameters": [CuckooGeneratorFramework.MethodParameter(label: Optional("keyword"), name: "keyword", type: "String", range: CountableRange(301..<316), nameRange: CountableRange(301..<308))], "returnType": "Result<Observable<[Label]>, NSError>", "isOptional": false, "stubFunction": "Cuckoo.ProtocolStubFunction"]
      func searchLabels(keyword: String)  -> Result<Observable<[Label]>, NSError> {
         
             return cuckoo_manager.call("searchLabels(keyword: String) -> Result<Observable<[Label]>, NSError>",
@@ -40,7 +40,7 @@ class MockLabelServiceType: LabelServiceType, Cuckoo.ProtocolMock {
         
     }
     
-    // ["name": "insertLabel", "returnSignature": " -> Result<String, NSError>", "fullyQualifiedName": "insertLabel(label: Label) -> Result<String, NSError>", "parameterSignature": "label: Label", "parameterSignatureWithoutNames": "label: Label", "inputTypes": "Label", "isThrowing": false, "isInit": false, "isOverriding": false, "hasClosureParams": false, "@type": "ProtocolMethod", "accessibility": "", "parameterNames": "label", "call": "label: label", "parameters": [CuckooGeneratorFramework.MethodParameter(label: Optional("label"), name: "label", type: "Label", range: CountableRange(376..<388), nameRange: CountableRange(376..<381))], "returnType": "Result<String, NSError>", "isOptional": false, "stubFunction": "Cuckoo.ProtocolStubFunction"]
+    // ["name": "insertLabel", "returnSignature": " -> Result<String, NSError>", "fullyQualifiedName": "insertLabel(label: Label) -> Result<String, NSError>", "parameterSignature": "label: Label", "parameterSignatureWithoutNames": "label: Label", "inputTypes": "Label", "isThrowing": false, "isInit": false, "isOverriding": false, "hasClosureParams": false, "@type": "ProtocolMethod", "accessibility": "", "parameterNames": "label", "call": "label: label", "parameters": [CuckooGeneratorFramework.MethodParameter(label: Optional("label"), name: "label", type: "Label", range: CountableRange(377..<389), nameRange: CountableRange(377..<382))], "returnType": "Result<String, NSError>", "isOptional": false, "stubFunction": "Cuckoo.ProtocolStubFunction"]
      func insertLabel(label: Label)  -> Result<String, NSError> {
         
             return cuckoo_manager.call("insertLabel(label: Label) -> Result<String, NSError>",
@@ -131,7 +131,7 @@ class MockLabelService: LabelService, Cuckoo.ClassMock {
     
 
     
-    // ["name": "insertLabel", "returnSignature": " -> Result<String, NSError>", "fullyQualifiedName": "insertLabel(label: Label) -> Result<String, NSError>", "parameterSignature": "label: Label", "parameterSignatureWithoutNames": "label: Label", "inputTypes": "Label", "isThrowing": false, "isInit": false, "isOverriding": true, "hasClosureParams": false, "@type": "ClassMethod", "accessibility": "", "parameterNames": "label", "call": "label: label", "parameters": [CuckooGeneratorFramework.MethodParameter(label: Optional("label"), name: "label", type: "Label", range: CountableRange(478..<490), nameRange: CountableRange(478..<483))], "returnType": "Result<String, NSError>", "isOptional": false, "stubFunction": "Cuckoo.ClassStubFunction"]
+    // ["name": "insertLabel", "returnSignature": " -> Result<String, NSError>", "fullyQualifiedName": "insertLabel(label: Label) -> Result<String, NSError>", "parameterSignature": "label: Label", "parameterSignatureWithoutNames": "label: Label", "inputTypes": "Label", "isThrowing": false, "isInit": false, "isOverriding": true, "hasClosureParams": false, "@type": "ClassMethod", "accessibility": "", "parameterNames": "label", "call": "label: label", "parameters": [CuckooGeneratorFramework.MethodParameter(label: Optional("label"), name: "label", type: "Label", range: CountableRange(479..<491), nameRange: CountableRange(479..<484))], "returnType": "Result<String, NSError>", "isOptional": false, "stubFunction": "Cuckoo.ClassStubFunction"]
      override func insertLabel(label: Label)  -> Result<String, NSError> {
         
             return cuckoo_manager.call("insertLabel(label: Label) -> Result<String, NSError>",
@@ -143,7 +143,7 @@ class MockLabelService: LabelService, Cuckoo.ClassMock {
         
     }
     
-    // ["name": "searchLabels", "returnSignature": " -> Result<Observable<[Label]>, NSError>", "fullyQualifiedName": "searchLabels(keyword: String) -> Result<Observable<[Label]>, NSError>", "parameterSignature": "keyword: String", "parameterSignatureWithoutNames": "keyword: String", "inputTypes": "String", "isThrowing": false, "isInit": false, "isOverriding": true, "hasClosureParams": false, "@type": "ClassMethod", "accessibility": "", "parameterNames": "keyword", "call": "keyword: keyword", "parameters": [CuckooGeneratorFramework.MethodParameter(label: Optional("keyword"), name: "keyword", type: "String", range: CountableRange(690..<705), nameRange: CountableRange(690..<697))], "returnType": "Result<Observable<[Label]>, NSError>", "isOptional": false, "stubFunction": "Cuckoo.ClassStubFunction"]
+    // ["name": "searchLabels", "returnSignature": " -> Result<Observable<[Label]>, NSError>", "fullyQualifiedName": "searchLabels(keyword: String) -> Result<Observable<[Label]>, NSError>", "parameterSignature": "keyword: String", "parameterSignatureWithoutNames": "keyword: String", "inputTypes": "String", "isThrowing": false, "isInit": false, "isOverriding": true, "hasClosureParams": false, "@type": "ClassMethod", "accessibility": "", "parameterNames": "keyword", "call": "keyword: keyword", "parameters": [CuckooGeneratorFramework.MethodParameter(label: Optional("keyword"), name: "keyword", type: "String", range: CountableRange(691..<706), nameRange: CountableRange(691..<698))], "returnType": "Result<Observable<[Label]>, NSError>", "isOptional": false, "stubFunction": "Cuckoo.ClassStubFunction"]
      override func searchLabels(keyword: String)  -> Result<Observable<[Label]>, NSError> {
         
             return cuckoo_manager.call("searchLabels(keyword: String) -> Result<Observable<[Label]>, NSError>",
@@ -223,7 +223,7 @@ class MockLabelService: LabelService, Cuckoo.ClassMock {
 }
 
 
-// MARK: - Mocks generated from file: Source/Services/MemoServiceType.swift at 2018-09-28 14:49:45 +0000
+// MARK: - Mocks generated from file: Source/Services/MemoServiceType.swift at 2018-10-01 11:40:14 +0000
 
 //
 //  MemoServiceType.swift
@@ -335,7 +335,7 @@ class MockMemoService: MemoService, Cuckoo.ClassMock {
 }
 
 
-// MARK: - Mocks generated from file: Source/Services/ServiceProvider.swift at 2018-09-28 14:49:45 +0000
+// MARK: - Mocks generated from file: Source/Services/ServiceProvider.swift at 2018-10-01 11:40:14 +0000
 
 //
 //  ServiceProvider.swift

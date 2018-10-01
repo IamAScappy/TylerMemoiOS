@@ -15,6 +15,7 @@ extension StoryboardInitializable where Self: UIViewController {
   static var storyboardIdentifier: String {
     return String(describing: Self.self)
   }
+
   static func initFromStoryboard(name: String = "Main") -> Self {
     let storyboard = UIStoryboard(name: name, bundle: Bundle.main)
     // swiftlint:disable:next force_cast

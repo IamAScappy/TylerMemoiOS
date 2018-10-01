@@ -6,10 +6,10 @@
 //  Copyright © 2018년 tskim. All rights reserved.
 //
 
-import UIKit
 import IGListKit
-import SwiftSVG
 import RxSwift
+import SwiftSVG
+import UIKit
 
 protocol NewLabelCellDelegate: class {
   func makeNewLabel(_ cell: NewLabelCell)

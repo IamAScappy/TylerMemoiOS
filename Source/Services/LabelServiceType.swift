@@ -8,10 +8,11 @@
 
 import Foundation
 import RealmSwift
-import Then
+import Result
 import RxRealm
 import RxSwift
-import Result
+import Then
+
 protocol LabelServiceType: RealmServiceType {
   func searchLabels(keyword: String) -> Result<Observable<[Label]>, NSError>
   func insertLabel(label: Label) -> Result<String, NSError>

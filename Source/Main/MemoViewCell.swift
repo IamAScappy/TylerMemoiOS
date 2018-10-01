@@ -7,9 +7,9 @@
 //
 
 import Foundation
-import UIKit
 import IGListKit
 import SnapKit
+import UIKit
 
 class MemoViewCell: UICollectionViewCell {
   let preview: UILabel = {

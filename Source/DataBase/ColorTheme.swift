@@ -4,8 +4,8 @@
 //
 //  Created by tskim on 2018. 9. 16..
 //
-import RealmSwift
 import Foundation
+import RealmSwift
 
 class ColorTheme: Object {
   // swiftlint:disable:next identifier_name
