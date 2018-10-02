@@ -4,23 +4,25 @@
 //  Created by tskim on 2018. 9. 15..
 //
 
+import DeallocationChecker
 import RealmSwift
 import Swinject
 import UIKit
 import XCGLogger
 
 #if DEBUG
-let log = XCGLogger.default
+  let log = XCGLogger.default
 #else
-let log = XCGLogger(identifier: "productLogger", includeDefaultDestinations: false)
+  let log = XCGLogger(identifier: "productLogger", includeDefaultDestinations: false)
 #endif
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-  
+
   var window: UIWindow?
   // swiftlint:disable:next line_length
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    checkDeallocation()
     RealmMigration.migrationRealm()
     printEmulatorInfo()
     initLogger()
@@ -66,9 +68,9 @@ extension AppDelegate {
   }
   func initLogger() {
     #if DEBUG
-    log.setup(level: .debug, showThreadName: true, showLevel: true, showFileNames: true, showLineNumbers: true)
+      log.setup(level: .debug, showThreadName: true, showLevel: true, showFileNames: true, showLineNumbers: true)
     #else
-    log.setup(level: .severe, showThreadName: true, showLevel: true, showFileNames: true, showLineNumbers: true)
+      log.setup(level: .severe, showThreadName: true, showLevel: true, showFileNames: true, showLineNumbers: true)
     #endif
     let emojiLogFormatter = PrePostFixLogFormatter()
     emojiLogFormatter.apply(prefix: "🗯 ", postfix: " 🗯", to: .verbose)

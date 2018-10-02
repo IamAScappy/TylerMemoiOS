@@ -10,15 +10,16 @@ import SnapKit
 import Then
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, DeallocationView {
   var data = [ListDiffable]()
-  private let disposeBag = DisposeBag()
+  var disposeBag = DisposeBag()
   @IBOutlet weak private var addMemoView: UIButton!
   @IBOutlet weak private var collectionView: UICollectionView!
   lazy var adapter: ListAdapter = { return ListAdapter(updater: ListAdapterUpdater(), viewController: self) }()
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    enableMemoryLeakCheck(disposeBag)
     view.accessibilityIdentifier = "main"
     data.append(MemoViewModel(memos: [Memo(text: "abc"), Memo(text: "ddd"), Memo(text: "zzz")]))
     collectionView.do {

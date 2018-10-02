@@ -42,7 +42,6 @@ class ColorThemeContainer: UIView {
 extension ColorThemeContainer {
   static var dataSource = RxCollectionViewSectionedAnimatedDataSource<ColorThemeModel>(
     configureCell: { dataSource, collectionView, indexPath, row in
-      print("!!!!!!!!!!!!!!!!!! assads")
       guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ColorThemeCollectionCell.cellIdentifier, for: indexPath)
       as? ColorThemeCollectionCell
         else { fatalError("can't dequeueReusableCell identifier: [\(ColorThemeCollectionCell.cellIdentifier)] index: \(indexPath)") }

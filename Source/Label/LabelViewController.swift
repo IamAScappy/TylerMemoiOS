@@ -13,9 +13,10 @@ import RxCocoa
 import RxOptional
 import RxSwift
 import UIKit
+
 // TODO Test1: navigation 에 searchController 나오는지
 // TODO Test1: Label 검색 결과가 없을 때 Crete Label 이 생기는지 확인
-class LabelViewController: UIViewController, StoryboardInitializable {
+class LabelViewController: UIViewController, StoryboardInitializable, DeallocationView {
   @IBOutlet weak private var collectionView: UICollectionView!
   var disposeBag = DisposeBag()
   private var data: [ListDiffable] = []
@@ -25,6 +26,7 @@ class LabelViewController: UIViewController, StoryboardInitializable {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    enableMemoryLeakCheck(disposeBag)
     self.navigationItem.do {
       $0.searchController = searchController
       $0.hidesSearchBarWhenScrolling = false

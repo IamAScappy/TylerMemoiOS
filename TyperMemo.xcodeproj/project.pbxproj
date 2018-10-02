@@ -49,11 +49,20 @@
 		BD81DE38214C903000526054 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DE35214C903000526054 /* Assets.swift */; };
 		BD81DE39214C903000526054 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DE36214C903000526054 /* L10n.swift */; };
 		BD81DE3A214C903000526054 /* MyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DE37214C903000526054 /* MyColor.swift */; };
+		BDA7F32021637FD8002D9F3B /* DisposeBagAcceptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA7F31F21637FD8002D9F3B /* DisposeBagAcceptable.swift */; };
+		BDA7F32321638400002D9F3B /* AssociatedObjectStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA7F32221638400002D9F3B /* AssociatedObjectStore.swift */; };
 		BDACB9DE21520A6D00AE2C50 /* FakeRealmCollectionValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDACB9DB2152099000AE2C50 /* FakeRealmCollectionValue.swift */; };
+		BDB5514221633B6D001B0138 /* DeallocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB5514121633B6D001B0138 /* DeallocationView.swift */; };
+		BDB5514421633B84001B0138 /* AppDelegate+Deallocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB5514321633B84001B0138 /* AppDelegate+Deallocation.swift */; };
 		BDBF37022158D86300953C77 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDBF37002158D86300953C77 /* Localizable.strings */; };
 		BDBF37062158DA7F00953C77 /* ExistLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF37052158DA7F00953C77 /* ExistLabelCell.swift */; };
 		BDC0E9DF2153BE5400BE8EE3 /* tyler-v1.realm in Resources */ = {isa = PBXBuildFile; fileRef = BDC0E9DE2153BE2200BE8EE3 /* tyler-v1.realm */; };
 		BDC0E9E12153BF1400BE8EE3 /* RealmMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC0E9E02153BF1400BE8EE3 /* RealmMigration.swift */; };
+		BDC4D8AD216317A200ED5404 /* ColorThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4D8A9216317A200ED5404 /* ColorThemeModel.swift */; };
+		BDC4D8AE216317A200ED5404 /* ColorThemeContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4D8AA216317A200ED5404 /* ColorThemeContainer.swift */; };
+		BDC4D8AF216317A200ED5404 /* ColorThemeReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4D8AB216317A200ED5404 /* ColorThemeReactor.swift */; };
+		BDC4D8B0216317A200ED5404 /* ColorThemeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4D8AC216317A200ED5404 /* ColorThemeCollectionCell.swift */; };
+		BDC4D8B2216317B500ED5404 /* ColorThemeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4D8B1216317B400ED5404 /* ColorThemeType.swift */; };
 		BDE111CD2156A8440010FBD9 /* SwinjectStoryboard+setUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE111CC2156A8440010FBD9 /* SwinjectStoryboard+setUp.swift */; };
 		BDE111CE2156A95D0010FBD9 /* LabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5653D721565CFA00F378F0 /* LabelViewController.swift */; };
 		BDE111CF2156A95D0010FBD9 /* LabelReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5653EB2156642B00F378F0 /* LabelReactor.swift */; };
@@ -152,11 +161,20 @@
 		BD81DE37214C903000526054 /* MyColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyColor.swift; sourceTree = "<group>"; };
 		BD9050B9214F580700425C8D /* RealmSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RealmSwift.framework.dSYM; path = Carthage/Build/iOS/RealmSwift.framework.dSYM; sourceTree = "<group>"; };
 		BD9050BB214F581300425C8D /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		BDA7F31F21637FD8002D9F3B /* DisposeBagAcceptable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposeBagAcceptable.swift; sourceTree = "<group>"; };
+		BDA7F32221638400002D9F3B /* AssociatedObjectStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociatedObjectStore.swift; sourceTree = "<group>"; };
 		BDACB9DB2152099000AE2C50 /* FakeRealmCollectionValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeRealmCollectionValue.swift; sourceTree = "<group>"; };
+		BDB5514121633B6D001B0138 /* DeallocationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeallocationView.swift; sourceTree = "<group>"; };
+		BDB5514321633B84001B0138 /* AppDelegate+Deallocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Deallocation.swift"; sourceTree = "<group>"; };
 		BDBF37012158D86300953C77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BDBF37052158DA7F00953C77 /* ExistLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExistLabelCell.swift; sourceTree = "<group>"; };
 		BDC0E9DE2153BE2200BE8EE3 /* tyler-v1.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tyler-v1.realm"; sourceTree = "<group>"; };
 		BDC0E9E02153BF1400BE8EE3 /* RealmMigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmMigration.swift; sourceTree = "<group>"; };
+		BDC4D8A9216317A200ED5404 /* ColorThemeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorThemeModel.swift; sourceTree = "<group>"; };
+		BDC4D8AA216317A200ED5404 /* ColorThemeContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorThemeContainer.swift; sourceTree = "<group>"; };
+		BDC4D8AB216317A200ED5404 /* ColorThemeReactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorThemeReactor.swift; sourceTree = "<group>"; };
+		BDC4D8AC216317A200ED5404 /* ColorThemeCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorThemeCollectionCell.swift; sourceTree = "<group>"; };
+		BDC4D8B1216317B400ED5404 /* ColorThemeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorThemeType.swift; sourceTree = "<group>"; };
 		BDE111CC2156A8440010FBD9 /* SwinjectStoryboard+setUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+setUp.swift"; sourceTree = "<group>"; };
 		BDE111D12156ADE30010FBD9 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		BDE111D32156AE200010FBD9 /* MemoServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoServiceType.swift; sourceTree = "<group>"; };
@@ -328,13 +346,15 @@
 				BD81DE34214C903000526054 /* Generated */,
 				BD81DE10214C857100526054 /* Supporting Files */,
 				BD81DDDF214C854000526054 /* AppDelegate.swift */,
+				BDB5514321633B84001B0138 /* AppDelegate+Deallocation.swift */,
 				BDC0E9E02153BF1400BE8EE3 /* RealmMigration.swift */,
 				BDE111CC2156A8440010FBD9 /* SwinjectStoryboard+setUp.swift */,
+				BDA7F32121638007002D9F3B /* Common */,
+				BDC4D8A7216317A200ED5404 /* Components */,
 				BD5653D621565C9D00F378F0 /* Label */,
 				BD6606CE215534820012BC3C /* Main */,
 				BD6606CF215534A90012BC3C /* Extension */,
 				BD4BBB032158E0D400ED00C3 /* RxListAdapterDataSource.swift */,
-				BD1FDFBD21594FF70064A8D8 /* StoryboardInitializable.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -382,9 +402,41 @@
 			path = Generated;
 			sourceTree = "<group>";
 		};
+		BDA7F32121638007002D9F3B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BD1FDFBD21594FF70064A8D8 /* StoryboardInitializable.swift */,
+				BDB5514121633B6D001B0138 /* DeallocationView.swift */,
+				BDA7F31F21637FD8002D9F3B /* DisposeBagAcceptable.swift */,
+				BDA7F32221638400002D9F3B /* AssociatedObjectStore.swift */,
+			);
+			name = Common;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		BDC4D8A7216317A200ED5404 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BDC4D8A8216317A200ED5404 /* ColorTheme */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		BDC4D8A8216317A200ED5404 /* ColorTheme */ = {
+			isa = PBXGroup;
+			children = (
+				BDC4D8A9216317A200ED5404 /* ColorThemeModel.swift */,
+				BDC4D8AA216317A200ED5404 /* ColorThemeContainer.swift */,
+				BDC4D8AB216317A200ED5404 /* ColorThemeReactor.swift */,
+				BDC4D8AC216317A200ED5404 /* ColorThemeCollectionCell.swift */,
+			);
+			path = ColorTheme;
+			sourceTree = "<group>";
+		};
 		BDE111D02156ADD80010FBD9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				BDC4D8B1216317B400ED5404 /* ColorThemeType.swift */,
 				BDE111D12156ADE30010FBD9 /* ServiceProvider.swift */,
 				BDE111D32156AE200010FBD9 /* MemoServiceType.swift */,
 				BDE111D72156B3770010FBD9 /* LabelServiceType.swift */,
@@ -446,7 +498,7 @@
 				E00C3A8F30CB21DD53EBE5D3 /* [CP] Copy Pods Resources */,
 				BD81DE11214C898800526054 /* Copy Carthage Resources */,
 				BD472160215081440015740A /* Generate Mock */,
-				BDC43F3F215CFC9A00D59412 /* Mark */,
+				BD88A2632163D9F3004AFCBE /* show mark */,
 			);
 			buildRules = (
 			);
@@ -671,6 +723,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftSVG.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxOptional.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Differentiator.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/DeallocationChecker.framework",
 			);
 			name = "Copy Carthage Resources";
 			outputPaths = (
@@ -707,7 +761,7 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
-		BDC43F3F215CFC9A00D59412 /* Mark */ = {
+		BD88A2632163D9F3004AFCBE /* show mark */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -716,14 +770,14 @@
 			);
 			inputPaths = (
 			);
-			name = Mark;
+			name = "show mark";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "KEYWORDS=\"TODO|FIXME|\\?\\?\\?:|\\!\\!\\!:\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | \\\nxargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | \\\nperl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
+			shellScript = "KEYWORDS=\"TODO|FIXME|\\?\\?\\?:|\\!\\!\\!:\"\nfind \"$PROJECT_DIR/Source\" \\( -name \"*.swift\" \\) -print0 | \\\nxargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | \\\nperl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
 		};
 		BDF2C110215E719400845AD5 /* Copy Carthage Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -870,6 +924,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD1FDFFE215969A80064A8D8 /* AccIdentifier.swift in Sources */,
+				BDA7F32021637FD8002D9F3B /* DisposeBagAcceptable.swift in Sources */,
 				BDE111CE2156A95D0010FBD9 /* LabelViewController.swift in Sources */,
 				BDE111CF2156A95D0010FBD9 /* LabelReactor.swift in Sources */,
 				BD780E20214C9CD300FA9FDF /* Memo.swift in Sources */,
@@ -880,6 +935,7 @@
 				BD4BBB27215907F300ED00C3 /* Dimens.swift in Sources */,
 				BD780E28214CA10200FA9FDF /* Label.swift in Sources */,
 				BD70173B21559FE900093C55 /* MemoSectionController.swift in Sources */,
+				BDC4D8B0216317A200ED5404 /* ColorThemeCollectionCell.swift in Sources */,
 				BDE111D42156AE200010FBD9 /* MemoServiceType.swift in Sources */,
 				BDE111D22156ADE30010FBD9 /* ServiceProvider.swift in Sources */,
 				BD0FD1062158A60800EAE5E0 /* LabelViewModel.swift in Sources */,
@@ -887,16 +943,22 @@
 				BD4BBB042158E0D400ED00C3 /* RxListAdapterDataSource.swift in Sources */,
 				BD7F917D215B2EF1001DE5E0 /* RealmServiceType.swift in Sources */,
 				BD81DE39214C903000526054 /* L10n.swift in Sources */,
+				BDC4D8B2216317B500ED5404 /* ColorThemeType.swift in Sources */,
+				BDC4D8AF216317A200ED5404 /* ColorThemeReactor.swift in Sources */,
 				BD4BBB062158E11D00ED00C3 /* UIScrollView+Rx.swift in Sources */,
 				BD0FD10121589BFD00EAE5E0 /* NewLabelCell.swift in Sources */,
 				BDFCBA0C21566BF2008B935E /* UIViewController+Rx.swift in Sources */,
 				BD5653D521565ABE00F378F0 /* MemoViewModel.swift in Sources */,
+				BDB5514421633B84001B0138 /* AppDelegate+Deallocation.swift in Sources */,
 				BDE111DA2156B5560010FBD9 /* Realm+Config.swift in Sources */,
 				BDE111CD2156A8440010FBD9 /* SwinjectStoryboard+setUp.swift in Sources */,
 				BD81DE3A214C903000526054 /* MyColor.swift in Sources */,
+				BDA7F32321638400002D9F3B /* AssociatedObjectStore.swift in Sources */,
 				BD4BBB172158F92C00ED00C3 /* NewLabelModel.swift in Sources */,
 				BD4723CF214F2E28002D84D2 /* UIColor+Hex.swift in Sources */,
+				BDB5514221633B6D001B0138 /* DeallocationView.swift in Sources */,
 				BDBF37062158DA7F00953C77 /* ExistLabelCell.swift in Sources */,
+				BDC4D8AE216317A200ED5404 /* ColorThemeContainer.swift in Sources */,
 				BD1FDFBE21594FF70064A8D8 /* StoryboardInitializable.swift in Sources */,
 				BD4723C5214E8FE8002D84D2 /* ColorTheme.swift in Sources */,
 				BDFC8A802155BBCE00A042B5 /* AppSupports.swift in Sources */,
@@ -904,6 +966,7 @@
 				BD0FD0F02158966C00EAE5E0 /* LabelSectionController.swift in Sources */,
 				BDE111D82156B3770010FBD9 /* LabelServiceType.swift in Sources */,
 				BD780E26214C9F7100FA9FDF /* CheckItem.swift in Sources */,
+				BDC4D8AD216317A200ED5404 /* ColorThemeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

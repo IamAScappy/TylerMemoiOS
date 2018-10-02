@@ -5,8 +5,7 @@ inhibit_all_warnings!
 target 'TyperMemo' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  
-  # Pods for TyperMemo 
+  # Pods for TyperMemo
   pod 'SwiftLint'
   pod 'SwiftGen'
   pod 'ReactorKit'

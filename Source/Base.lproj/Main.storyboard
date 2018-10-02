@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GBP-dW-XOR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GBP-dW-XOR">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,6 +29,13 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <view contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="7OE-6R-clX" customClass="ColorThemeContainer" customModule="TyperMemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="32" width="375" height="603"/>
+                                <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Bgh-oh-f7H"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="603" translatesAutoresizingMaskIntoConstraints="NO" id="vxv-NI-UFR" customClass="UIButton">
                                 <rect key="frame" x="20" y="607" width="40" height="40"/>
                                 <color key="backgroundColor" red="0.25882352939999997" green="0.85490196080000003" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -41,7 +47,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="7OE-6R-clX" firstAttribute="centerX" secondItem="CpM-6V-mJb" secondAttribute="centerX" id="0c6-GJ-q6Q"/>
                             <constraint firstItem="vxv-NI-UFR" firstAttribute="leading" secondItem="CpM-6V-mJb" secondAttribute="leading" constant="20" id="6T6-xb-37K"/>
+                            <constraint firstItem="7OE-6R-clX" firstAttribute="leading" secondItem="CpM-6V-mJb" secondAttribute="leading" id="84r-sz-ivf"/>
                             <constraint firstItem="aa4-zY-H0S" firstAttribute="top" secondItem="CpM-6V-mJb" secondAttribute="top" id="KEB-gh-Ihi"/>
                             <constraint firstItem="aa4-zY-H0S" firstAttribute="centerY" secondItem="CpM-6V-mJb" secondAttribute="centerY" id="Mxx-kW-hL7"/>
                             <constraint firstItem="aa4-zY-H0S" firstAttribute="centerX" secondItem="CpM-6V-mJb" secondAttribute="centerX" id="VZu-LW-6KX"/>
