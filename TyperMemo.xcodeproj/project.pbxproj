@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6A3BDCA4CFB6F1547521DD46 /* Pods_TyperMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA781FEA10E5CCA1B0D7444 /* Pods_TyperMemo.framework */; };
 		6BCAA545D8B90187674BCD3F /* Pods_TyperMemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA69393FEE8E1302993682E /* Pods_TyperMemoUITests.framework */; };
+		BD05CA812164535E00D9DEE0 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05CA802164535E00D9DEE0 /* String+.swift */; };
+		BD05CA8321645A0700D9DEE0 /* UIColor+HexTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD05CA8221645A0700D9DEE0 /* UIColor+HexTest.swift */; };
 		BD0FD0F02158966C00EAE5E0 /* LabelSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0FD0EF2158966C00EAE5E0 /* LabelSectionController.swift */; };
 		BD0FD0F82158979700EAE5E0 /* Label.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD0FD0F62158979700EAE5E0 /* Label.storyboard */; };
 		BD0FD10121589BFD00EAE5E0 /* NewLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0FD0FF21589BFD00EAE5E0 /* NewLabelCell.swift */; };
@@ -21,11 +23,16 @@
 		BD1FDFFB215967290064A8D8 /* LabelViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FDFF9215967220064A8D8 /* LabelViewControllerTest.swift */; };
 		BD1FDFFD215968FD0064A8D8 /* AccIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FDFFC215968FD0064A8D8 /* AccIdentifier.swift */; };
 		BD1FDFFE215969A80064A8D8 /* AccIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FDFFC215968FD0064A8D8 /* AccIdentifier.swift */; };
+		BD27CBE8216783EB00C805B4 /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD27CBE7216783EB00C805B4 /* UIView+IBInspectable.swift */; };
+		BD27CBEA216787F200C805B4 /* RedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD27CBE9216787F200C805B4 /* RedButton.swift */; };
+		BD27CBEE2167974600C805B4 /* CGUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD27CBED2167974600C805B4 /* CGUtility.swift */; };
+		BD31584E21680D05006DEDC9 /* AddMemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD31584D21680D05006DEDC9 /* AddMemo.storyboard */; };
+		BD31585021680D17006DEDC9 /* AddMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD31584F21680D17006DEDC9 /* AddMemoViewController.swift */; };
+		BD31585421680EEA006DEDC9 /* AddMemoReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD31585321680EEA006DEDC9 /* AddMemoReactor.swift */; };
 		BD472165215081850015740A /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD472164215081850015740A /* GeneratedMocks.swift */; };
 		BD4723C5214E8FE8002D84D2 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4723C4214E8FE8002D84D2 /* ColorTheme.swift */; };
 		BD4723C7214E90C4002D84D2 /* ColorThemeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4723C6214E90C4002D84D2 /* ColorThemeTest.swift */; };
-		BD4723CF214F2E28002D84D2 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4723CE214F2E28002D84D2 /* UIColor+Hex.swift */; };
-		BD4BBB042158E0D400ED00C3 /* RxListAdapterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BBB032158E0D400ED00C3 /* RxListAdapterDataSource.swift */; };
+		BD4723CF214F2E28002D84D2 /* UIColor+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4723CE214F2E28002D84D2 /* UIColor+String.swift */; };
 		BD4BBB062158E11D00ED00C3 /* UIScrollView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BBB052158E11D00ED00C3 /* UIScrollView+Rx.swift */; };
 		BD4BBB172158F92C00ED00C3 /* NewLabelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4BBB162158F92C00ED00C3 /* NewLabelModel.swift */; };
 		BD4BBB232159050F00ED00C3 /* color.txt in Resources */ = {isa = PBXBuildFile; fileRef = BD4BBB222159050F00ED00C3 /* color.txt */; };
@@ -49,6 +56,11 @@
 		BD81DE38214C903000526054 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DE35214C903000526054 /* Assets.swift */; };
 		BD81DE39214C903000526054 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DE36214C903000526054 /* L10n.swift */; };
 		BD81DE3A214C903000526054 /* MyColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD81DE37214C903000526054 /* MyColor.swift */; };
+		BD88A2662163DD46004AFCBE /* Temp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD88A2642163DD46004AFCBE /* Temp.storyboard */; };
+		BD88A2672163DD46004AFCBE /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD88A2652163DD46004AFCBE /* TempViewController.swift */; };
+		BD88A2712163E868004AFCBE /* PersistenceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD88A2702163E868004AFCBE /* PersistenceError.swift */; };
+		BD88A2782163F43B004AFCBE /* ColorTheme+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD88A2772163F43B004AFCBE /* ColorTheme+DataSource.swift */; };
+		BD88A27A2163FA88004AFCBE /* HasDisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD88A2792163FA88004AFCBE /* HasDisposeBag.swift */; };
 		BDA7F32021637FD8002D9F3B /* DisposeBagAcceptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA7F31F21637FD8002D9F3B /* DisposeBagAcceptable.swift */; };
 		BDA7F32321638400002D9F3B /* AssociatedObjectStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA7F32221638400002D9F3B /* AssociatedObjectStore.swift */; };
 		BDACB9DE21520A6D00AE2C50 /* FakeRealmCollectionValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDACB9DB2152099000AE2C50 /* FakeRealmCollectionValue.swift */; };
@@ -104,6 +116,8 @@
 		3A314C1A929D40263F2969F0 /* Pods-TyperMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TyperMemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TyperMemo/Pods-TyperMemo.debug.xcconfig"; sourceTree = "<group>"; };
 		94A36D3E079F46FF3E7E270E /* Pods-TyperMemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TyperMemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TyperMemoTests/Pods-TyperMemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ABA69393FEE8E1302993682E /* Pods_TyperMemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TyperMemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD05CA802164535E00D9DEE0 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		BD05CA8221645A0700D9DEE0 /* UIColor+HexTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexTest.swift"; sourceTree = "<group>"; };
 		BD0FD0EF2158966C00EAE5E0 /* LabelSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelSectionController.swift; sourceTree = "<group>"; };
 		BD0FD0F72158979700EAE5E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Source/Base.lproj/Label.storyboard; sourceTree = SOURCE_ROOT; };
 		BD0FD0FF21589BFD00EAE5E0 /* NewLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLabelCell.swift; sourceTree = "<group>"; };
@@ -119,11 +133,16 @@
 		BD1FDFF7215966F80064A8D8 /* UITestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestCase.swift; sourceTree = "<group>"; };
 		BD1FDFF9215967220064A8D8 /* LabelViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LabelViewControllerTest.swift; path = TyperMemoUITests/LabelViewControllerTest.swift; sourceTree = SOURCE_ROOT; };
 		BD1FDFFC215968FD0064A8D8 /* AccIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccIdentifier.swift; sourceTree = "<group>"; };
+		BD27CBE7216783EB00C805B4 /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
+		BD27CBE9216787F200C805B4 /* RedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedButton.swift; sourceTree = "<group>"; };
+		BD27CBED2167974600C805B4 /* CGUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGUtility.swift; sourceTree = "<group>"; };
+		BD31584D21680D05006DEDC9 /* AddMemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddMemo.storyboard; sourceTree = "<group>"; };
+		BD31584F21680D17006DEDC9 /* AddMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoViewController.swift; sourceTree = "<group>"; };
+		BD31585321680EEA006DEDC9 /* AddMemoReactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMemoReactor.swift; sourceTree = "<group>"; };
 		BD472164215081850015740A /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		BD4723C4214E8FE8002D84D2 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		BD4723C6214E90C4002D84D2 /* ColorThemeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorThemeTest.swift; sourceTree = "<group>"; };
-		BD4723CE214F2E28002D84D2 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
-		BD4BBB032158E0D400ED00C3 /* RxListAdapterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxListAdapterDataSource.swift; sourceTree = "<group>"; };
+		BD4723CE214F2E28002D84D2 /* UIColor+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+String.swift"; sourceTree = "<group>"; };
 		BD4BBB052158E11D00ED00C3 /* UIScrollView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Rx.swift"; sourceTree = "<group>"; };
 		BD4BBB0F2158E7AB00ED00C3 /* IGListKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IGListKit.framework; path = Carthage/Build/iOS/IGListKit.framework; sourceTree = "<group>"; };
 		BD4BBB112158E7E000ED00C3 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -159,6 +178,11 @@
 		BD81DE35214C903000526054 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		BD81DE36214C903000526054 /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
 		BD81DE37214C903000526054 /* MyColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyColor.swift; sourceTree = "<group>"; };
+		BD88A2642163DD46004AFCBE /* Temp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Temp.storyboard; sourceTree = "<group>"; };
+		BD88A2652163DD46004AFCBE /* TempViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
+		BD88A2702163E868004AFCBE /* PersistenceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceError.swift; sourceTree = "<group>"; };
+		BD88A2772163F43B004AFCBE /* ColorTheme+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ColorTheme+DataSource.swift"; sourceTree = "<group>"; };
+		BD88A2792163FA88004AFCBE /* HasDisposeBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasDisposeBag.swift; sourceTree = "<group>"; };
 		BD9050B9214F580700425C8D /* RealmSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RealmSwift.framework.dSYM; path = Carthage/Build/iOS/RealmSwift.framework.dSYM; sourceTree = "<group>"; };
 		BD9050BB214F581300425C8D /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		BDA7F31F21637FD8002D9F3B /* DisposeBagAcceptable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposeBagAcceptable.swift; sourceTree = "<group>"; };
@@ -256,6 +280,17 @@
 			path = TyperMemoUITests;
 			sourceTree = "<group>";
 		};
+		BD31584C21680CEB006DEDC9 /* AddMemo */ = {
+			isa = PBXGroup;
+			children = (
+				BD31585321680EEA006DEDC9 /* AddMemoReactor.swift */,
+				BD31584D21680D05006DEDC9 /* AddMemo.storyboard */,
+				BD31584F21680D17006DEDC9 /* AddMemoViewController.swift */,
+			);
+			name = AddMemo;
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
 		BD4BBB21215904FD00ED00C3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,22 +330,26 @@
 		BD6606CF215534A90012BC3C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				BD4723CE214F2E28002D84D2 /* UIColor+Hex.swift */,
+				BD27CBE7216783EB00C805B4 /* UIView+IBInspectable.swift */,
+				BD4723CE214F2E28002D84D2 /* UIColor+String.swift */,
+				BD05CA802164535E00D9DEE0 /* String+.swift */,
 				BD4BBB052158E11D00ED00C3 /* UIScrollView+Rx.swift */,
 				BDFCBA0B21566BF2008B935E /* UIViewController+Rx.swift */,
+				BD27CBED2167974600C805B4 /* CGUtility.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		BD780E1E214C9CC000FA9FDF /* DataBase */ = {
+		BD780E1E214C9CC000FA9FDF /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				BD88A2702163E868004AFCBE /* PersistenceError.swift */,
 				BD780E1F214C9CD300FA9FDF /* Memo.swift */,
 				BD780E25214C9F7100FA9FDF /* CheckItem.swift */,
 				BD780E27214CA10200FA9FDF /* Label.swift */,
 				BD4723C4214E8FE8002D84D2 /* ColorTheme.swift */,
 			);
-			path = DataBase;
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 		BD81DDD3214C854000526054 = {
@@ -340,9 +379,11 @@
 		BD81DDDE214C854000526054 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				BD88A2642163DD46004AFCBE /* Temp.storyboard */,
+				BD88A2652163DD46004AFCBE /* TempViewController.swift */,
 				BD4BBB21215904FD00ED00C3 /* Resources */,
 				BDE111D02156ADD80010FBD9 /* Services */,
-				BD780E1E214C9CC000FA9FDF /* DataBase */,
+				BD780E1E214C9CC000FA9FDF /* Persistence */,
 				BD81DE34214C903000526054 /* Generated */,
 				BD81DE10214C857100526054 /* Supporting Files */,
 				BD81DDDF214C854000526054 /* AppDelegate.swift */,
@@ -350,11 +391,12 @@
 				BDC0E9E02153BF1400BE8EE3 /* RealmMigration.swift */,
 				BDE111CC2156A8440010FBD9 /* SwinjectStoryboard+setUp.swift */,
 				BDA7F32121638007002D9F3B /* Common */,
+				BD31584C21680CEB006DEDC9 /* AddMemo */,
 				BDC4D8A7216317A200ED5404 /* Components */,
 				BD5653D621565C9D00F378F0 /* Label */,
 				BD6606CE215534820012BC3C /* Main */,
 				BD6606CF215534A90012BC3C /* Extension */,
-				BD4BBB032158E0D400ED00C3 /* RxListAdapterDataSource.swift */,
+				BD27CBE9216787F200C805B4 /* RedButton.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -365,6 +407,7 @@
 				BD472164215081850015740A /* GeneratedMocks.swift */,
 				BDACB9DB2152099000AE2C50 /* FakeRealmCollectionValue.swift */,
 				BD81DDF9214C854100526054 /* Info.plist */,
+				BD05CA8221645A0700D9DEE0 /* UIColor+HexTest.swift */,
 				BDE111DF2157382B0010FBD9 /* LabelReactorTest.swift */,
 				BD7F9178215B2249001DE5E0 /* LabelReactorWithRealmTest.swift */,
 				BD4723C6214E90C4002D84D2 /* ColorThemeTest.swift */,
@@ -405,6 +448,7 @@
 		BDA7F32121638007002D9F3B /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BD88A2792163FA88004AFCBE /* HasDisposeBag.swift */,
 				BD1FDFBD21594FF70064A8D8 /* StoryboardInitializable.swift */,
 				BDB5514121633B6D001B0138 /* DeallocationView.swift */,
 				BDA7F31F21637FD8002D9F3B /* DisposeBagAcceptable.swift */,
@@ -429,6 +473,7 @@
 				BDC4D8AA216317A200ED5404 /* ColorThemeContainer.swift */,
 				BDC4D8AB216317A200ED5404 /* ColorThemeReactor.swift */,
 				BDC4D8AC216317A200ED5404 /* ColorThemeCollectionCell.swift */,
+				BD88A2772163F43B004AFCBE /* ColorTheme+DataSource.swift */,
 			);
 			path = ColorTheme;
 			sourceTree = "<group>";
@@ -590,7 +635,9 @@
 				BDC0E9DF2153BE5400BE8EE3 /* tyler-v1.realm in Resources */,
 				BDBF37022158D86300953C77 /* Localizable.strings in Resources */,
 				BDF97B8A2158B71C00696102 /* Assets.xcassets in Resources */,
+				BD88A2662163DD46004AFCBE /* Temp.storyboard in Resources */,
 				BD4BBB232159050F00ED00C3 /* color.txt in Resources */,
+				BD31584E21680D05006DEDC9 /* AddMemo.storyboard in Resources */,
 				BD0FD0F82158979700EAE5E0 /* Label.storyboard in Resources */,
 				BD81DDE5214C854000526054 /* Main.storyboard in Resources */,
 			);
@@ -618,6 +665,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
 				"${BUILT_PRODUCTS_DIR}/UICheckbox.Swift/UICheckbox_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/UIColor_Hex_Swift/UIColor_Hex_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -626,6 +674,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICheckbox_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIColor_Hex_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -725,6 +774,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxOptional.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Differentiator.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/DeallocationChecker.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			name = "Copy Carthage Resources";
 			outputPaths = (
@@ -924,9 +974,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD1FDFFE215969A80064A8D8 /* AccIdentifier.swift in Sources */,
+				BD88A27A2163FA88004AFCBE /* HasDisposeBag.swift in Sources */,
 				BDA7F32021637FD8002D9F3B /* DisposeBagAcceptable.swift in Sources */,
 				BDE111CE2156A95D0010FBD9 /* LabelViewController.swift in Sources */,
+				BD31585021680D17006DEDC9 /* AddMemoViewController.swift in Sources */,
+				BD27CBEA216787F200C805B4 /* RedButton.swift in Sources */,
 				BDE111CF2156A95D0010FBD9 /* LabelReactor.swift in Sources */,
+				BD88A2712163E868004AFCBE /* PersistenceError.swift in Sources */,
 				BD780E20214C9CD300FA9FDF /* Memo.swift in Sources */,
 				BD81DDE2214C854000526054 /* MainViewController.swift in Sources */,
 				BD81DDE8214C854000526054 /* TyperMemo.xcdatamodeld in Sources */,
@@ -935,12 +989,12 @@
 				BD4BBB27215907F300ED00C3 /* Dimens.swift in Sources */,
 				BD780E28214CA10200FA9FDF /* Label.swift in Sources */,
 				BD70173B21559FE900093C55 /* MemoSectionController.swift in Sources */,
+				BD05CA812164535E00D9DEE0 /* String+.swift in Sources */,
 				BDC4D8B0216317A200ED5404 /* ColorThemeCollectionCell.swift in Sources */,
 				BDE111D42156AE200010FBD9 /* MemoServiceType.swift in Sources */,
 				BDE111D22156ADE30010FBD9 /* ServiceProvider.swift in Sources */,
 				BD0FD1062158A60800EAE5E0 /* LabelViewModel.swift in Sources */,
 				BDC0E9E12153BF1400BE8EE3 /* RealmMigration.swift in Sources */,
-				BD4BBB042158E0D400ED00C3 /* RxListAdapterDataSource.swift in Sources */,
 				BD7F917D215B2EF1001DE5E0 /* RealmServiceType.swift in Sources */,
 				BD81DE39214C903000526054 /* L10n.swift in Sources */,
 				BDC4D8B2216317B500ED5404 /* ColorThemeType.swift in Sources */,
@@ -950,20 +1004,25 @@
 				BDFCBA0C21566BF2008B935E /* UIViewController+Rx.swift in Sources */,
 				BD5653D521565ABE00F378F0 /* MemoViewModel.swift in Sources */,
 				BDB5514421633B84001B0138 /* AppDelegate+Deallocation.swift in Sources */,
+				BD27CBEE2167974600C805B4 /* CGUtility.swift in Sources */,
 				BDE111DA2156B5560010FBD9 /* Realm+Config.swift in Sources */,
 				BDE111CD2156A8440010FBD9 /* SwinjectStoryboard+setUp.swift in Sources */,
 				BD81DE3A214C903000526054 /* MyColor.swift in Sources */,
 				BDA7F32321638400002D9F3B /* AssociatedObjectStore.swift in Sources */,
 				BD4BBB172158F92C00ED00C3 /* NewLabelModel.swift in Sources */,
-				BD4723CF214F2E28002D84D2 /* UIColor+Hex.swift in Sources */,
+				BD4723CF214F2E28002D84D2 /* UIColor+String.swift in Sources */,
 				BDB5514221633B6D001B0138 /* DeallocationView.swift in Sources */,
 				BDBF37062158DA7F00953C77 /* ExistLabelCell.swift in Sources */,
 				BDC4D8AE216317A200ED5404 /* ColorThemeContainer.swift in Sources */,
+				BD27CBE8216783EB00C805B4 /* UIView+IBInspectable.swift in Sources */,
 				BD1FDFBE21594FF70064A8D8 /* StoryboardInitializable.swift in Sources */,
 				BD4723C5214E8FE8002D84D2 /* ColorTheme.swift in Sources */,
+				BD88A2782163F43B004AFCBE /* ColorTheme+DataSource.swift in Sources */,
 				BDFC8A802155BBCE00A042B5 /* AppSupports.swift in Sources */,
 				BDFC8A7B2155AD5E00A042B5 /* MemoViewCell.swift in Sources */,
 				BD0FD0F02158966C00EAE5E0 /* LabelSectionController.swift in Sources */,
+				BD31585421680EEA006DEDC9 /* AddMemoReactor.swift in Sources */,
+				BD88A2672163DD46004AFCBE /* TempViewController.swift in Sources */,
 				BDE111D82156B3770010FBD9 /* LabelServiceType.swift in Sources */,
 				BD780E26214C9F7100FA9FDF /* CheckItem.swift in Sources */,
 				BDC4D8AD216317A200ED5404 /* ColorThemeModel.swift in Sources */,
@@ -981,6 +1040,7 @@
 				BDACB9DE21520A6D00AE2C50 /* FakeRealmCollectionValue.swift in Sources */,
 				BD81DDF8214C854100526054 /* TyperMemoTests.swift in Sources */,
 				BD7F917F215BA0FA001DE5E0 /* TestError.swift in Sources */,
+				BD05CA8321645A0700D9DEE0 /* UIColor+HexTest.swift in Sources */,
 				BD1C7FB0214E819700C58B67 /* LabelTest.swift in Sources */,
 				BD7F9179215B2249001DE5E0 /* LabelReactorWithRealmTest.swift in Sources */,
 				BD1C7FA8214E68E600C58B67 /* MemoTest.swift in Sources */,

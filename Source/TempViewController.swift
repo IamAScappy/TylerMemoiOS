@@ -9,15 +9,25 @@
 import UIKit
 
 class TempViewController: UIViewController {
+  let colorThemeContainer = ColorThemeContainer()
+  @IBOutlet weak var button: UIButton!
   override func viewDidLoad() {
     super.viewDidLoad()
-    let colorThemeContainer = ColorThemeContainer()
-    colorThemeContainer.reactor = ColorThemeReactor(ColorThemeService())
-    view.addSubview(colorThemeContainer)
-    colorThemeContainer.snp.makeConstraints { make in
-      make.edges.equalToSuperview()
+    colorThemeContainer.do {
+      view.addSubview($0)
+      $0.snp.makeConstraints({ make in
+        make.leading.equalToSuperview()
+        make.top.equalToSuperview().offset(100)
+        make.trailing.equalToSuperview()
+        make.height.equalTo(40)
+      })
     }
+    colorThemeContainer.reactor = ColorThemeReactor(ColorThemeService())
+    button.addTarget(self, action: #selector(aa), for: .touchUpInside)
     // Do any additional setup after loading the view.
+  }
+  @objc func aa() {
+    colorThemeContainer.isHidden = !colorThemeContainer.isHidden
   }
   /*
     // MARK: - Navigation

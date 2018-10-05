@@ -28,5 +28,12 @@ extension SwinjectStoryboard {
     defaultContainer.storyboardInitCompleted(LabelViewController.self) { r, c in
       c.reactor = r.resolve(LabelReactor.self)
     }
+    //    label container
+    // swiftlint:disable:next identifier_name
+    defaultContainer.register(AddMemoReactor.self) { r in AddMemoReactor() }
+    // swiftlint:disable:next identifier_name
+    defaultContainer.storyboardInitCompleted(AddMemoViewController.self) { r, c in
+      c.reactor = r.resolve(AddMemoReactor.self)
+    }
   }
 }

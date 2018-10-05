@@ -17,6 +17,7 @@ class ColorThemeReactor: Reactor {
   init(_ colorThemeService: ColorThemeType) {
     self.colorThemeService = colorThemeService
   }
+  
 
   enum Action {
     case fetchColorThemes
@@ -65,7 +66,7 @@ class ColorThemeReactor: Reactor {
     case .isEmpty(let empty):
       newState.isEmpty = empty
     }
-    log.info("reduece mutation: state.colorThemes[\(newState.colorThemes)]\n")
+    log.info("reduece mutation: state.colorThemes[\(String(describing: newState.colorThemes?.count))]\n")
     return newState
   }
 }

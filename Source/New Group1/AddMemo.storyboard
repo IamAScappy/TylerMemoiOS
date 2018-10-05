@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vlg-CC-Q5U">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Memo View Controller-->
+        <scene sceneID="3Po-09-BAd">
+            <objects>
+                <viewController id="Vlg-CC-Q5U" customClass="AddMemoViewController" customModule="TyperMemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pED-9Z-0cJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7U-5f-7L4">
+                                <rect key="frame" x="173" y="579" width="84" height="30"/>
+                                <state key="normal" title="ColorTheme"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Owm-1f-IZM" firstAttribute="trailing" secondItem="m7U-5f-7L4" secondAttribute="trailing" constant="118" id="Fyp-nR-krn"/>
+                            <constraint firstItem="Owm-1f-IZM" firstAttribute="bottom" secondItem="m7U-5f-7L4" secondAttribute="bottom" constant="58" id="mHd-Y9-0dm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Owm-1f-IZM"/>
+                    </view>
+                    <connections>
+                        <outlet property="colorTheme" destination="m7U-5f-7L4" id="FEX-l5-sE8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I5I-pC-BSO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="524" y="106"/>
+        </scene>
+    </scenes>
+</document>

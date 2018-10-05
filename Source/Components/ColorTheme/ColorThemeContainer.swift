@@ -13,12 +13,13 @@ import RxDataSources
 import RxSwift
 import UIKit
 
-class ColorThemeContainer: UIView {
-  private lazy var collectionViewLayout = UICollectionViewLayout()
+@IBDesignable
+class ColorThemeContainer: UIView, HasDisposeBag {
+  @IBInspectable var spacing: CGFloat = 10
+  private lazy var collectionViewLayout = UICollectionViewFlowLayout()
   private lazy var uiCollectionView: UICollectionView = {
     return UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
   }()
-  var disposeBag = DisposeBag()
 
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
@@ -30,23 +31,23 @@ class ColorThemeContainer: UIView {
   }
   func initView() {
     uiCollectionView.do {
-      addSubview($0)
+      self.addSubview($0)
       $0.snp.makeConstraints { make in
         make.edges.equalToSuperview()
       }
+      $0.backgroundColor = .blue
       $0.register(ColorThemeCollectionCell.self, forCellWithReuseIdentifier: ColorThemeCollectionCell.cellIdentifier)
-      $0.dataSource = ColorThemeContainer.dataSource
+    }
+    collectionViewLayout.do {
+      $0.scrollDirection = .horizontal
+      $0.sectionInset = UIEdgeInsets(top: 0, left: spacing, bottom: 0, right: spacing)
+      $0.minimumLineSpacing = spacing
     }
   }
-}
-extension ColorThemeContainer {
-  static var dataSource = RxCollectionViewSectionedAnimatedDataSource<ColorThemeModel>(
-    configureCell: { dataSource, collectionView, indexPath, row in
-      guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ColorThemeCollectionCell.cellIdentifier, for: indexPath)
-      as? ColorThemeCollectionCell
-        else { fatalError("can't dequeueReusableCell identifier: [\(ColorThemeCollectionCell.cellIdentifier)] index: \(indexPath)") }
-      return cell
-    })
+  override func layoutSubviews() {
+    let minWidth = max(self.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height - spacing, 0)
+    collectionViewLayout.estimatedItemSize = CGSize(minWidth, minWidth)
+  }
 }
 extension ColorThemeContainer: View {
   func bind(reactor: ColorThemeReactor) {
@@ -60,6 +61,7 @@ extension ColorThemeContainer: View {
       .filterNil()
       .asDriver(onErrorJustReturn: NSError())
       .drive(onNext: { error in
+        log.debug("The color themes error \(error)")
         // TODO show error
       })
       .disposed(by: disposeBag)
@@ -69,15 +71,18 @@ extension ColorThemeContainer: View {
       .distinctUntilChanged()
       .filter({ $0 })
       .drive(onNext: { isEmpty in
+        log.debug("The color themes empty")
         // TODO empty view
       })
       .disposed(by: disposeBag)
+
     reactor.state.map { $0.colorThemes }
       .filterNil()
       .distinctUntilChanged()
-      .map({ _ in [ColorThemeModel(header: "asdasd", items: [])] })
       .asDriver(onErrorJustReturn: [])
-      .drive(uiCollectionView.rx.items(dataSource: ColorThemeContainer.dataSource))
+      .drive(uiCollectionView.rx.items(cellIdentifier: ColorThemeCollectionCell.cellIdentifier, cellType: ColorThemeCollectionCell.self)) ({ row, element, cell in
+        cell.configureCell(colorTheme: element)
+      })
       .disposed(by: disposeBag)
   }
 }
