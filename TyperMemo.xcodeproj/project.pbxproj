@@ -29,6 +29,7 @@
 		BD31584E21680D05006DEDC9 /* AddMemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD31584D21680D05006DEDC9 /* AddMemo.storyboard */; };
 		BD31585021680D17006DEDC9 /* AddMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD31584F21680D17006DEDC9 /* AddMemoViewController.swift */; };
 		BD31585421680EEA006DEDC9 /* AddMemoReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD31585321680EEA006DEDC9 /* AddMemoReactor.swift */; };
+		BD3158562168314F006DEDC9 /* AddMemoReactorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3158552168314F006DEDC9 /* AddMemoReactorTest.swift */; };
 		BD472165215081850015740A /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD472164215081850015740A /* GeneratedMocks.swift */; };
 		BD4723C5214E8FE8002D84D2 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4723C4214E8FE8002D84D2 /* ColorTheme.swift */; };
 		BD4723C7214E90C4002D84D2 /* ColorThemeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4723C6214E90C4002D84D2 /* ColorThemeTest.swift */; };
@@ -139,6 +140,7 @@
 		BD31584D21680D05006DEDC9 /* AddMemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddMemo.storyboard; sourceTree = "<group>"; };
 		BD31584F21680D17006DEDC9 /* AddMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoViewController.swift; sourceTree = "<group>"; };
 		BD31585321680EEA006DEDC9 /* AddMemoReactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMemoReactor.swift; sourceTree = "<group>"; };
+		BD3158552168314F006DEDC9 /* AddMemoReactorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoReactorTest.swift; sourceTree = "<group>"; };
 		BD472164215081850015740A /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		BD4723C4214E8FE8002D84D2 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		BD4723C6214E90C4002D84D2 /* ColorThemeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorThemeTest.swift; sourceTree = "<group>"; };
@@ -283,9 +285,9 @@
 		BD31584C21680CEB006DEDC9 /* AddMemo */ = {
 			isa = PBXGroup;
 			children = (
+				BD31584F21680D17006DEDC9 /* AddMemoViewController.swift */,
 				BD31585321680EEA006DEDC9 /* AddMemoReactor.swift */,
 				BD31584D21680D05006DEDC9 /* AddMemo.storyboard */,
-				BD31584F21680D17006DEDC9 /* AddMemoViewController.swift */,
 			);
 			name = AddMemo;
 			path = "New Group1";
@@ -407,6 +409,7 @@
 				BD472164215081850015740A /* GeneratedMocks.swift */,
 				BDACB9DB2152099000AE2C50 /* FakeRealmCollectionValue.swift */,
 				BD81DDF9214C854100526054 /* Info.plist */,
+				BD3158552168314F006DEDC9 /* AddMemoReactorTest.swift */,
 				BD05CA8221645A0700D9DEE0 /* UIColor+HexTest.swift */,
 				BDE111DF2157382B0010FBD9 /* LabelReactorTest.swift */,
 				BD7F9178215B2249001DE5E0 /* LabelReactorWithRealmTest.swift */,
@@ -1035,6 +1038,7 @@
 			files = (
 				BD4723C7214E90C4002D84D2 /* ColorThemeTest.swift in Sources */,
 				BD472165215081850015740A /* GeneratedMocks.swift in Sources */,
+				BD3158562168314F006DEDC9 /* AddMemoReactorTest.swift in Sources */,
 				BD1C7FA6214E661D00C58B67 /* RealmSpec.swift in Sources */,
 				BDE111E02157382B0010FBD9 /* LabelReactorTest.swift in Sources */,
 				BDACB9DE21520A6D00AE2C50 /* FakeRealmCollectionValue.swift in Sources */,

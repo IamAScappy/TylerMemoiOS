@@ -16,6 +16,7 @@ class Memo: Object {
     self.init()
     self.text = text
     self.colorTheme = colorTheme
+    self.attr = attr
   }
   override static func primaryKey() -> String {
     return "memo_id"

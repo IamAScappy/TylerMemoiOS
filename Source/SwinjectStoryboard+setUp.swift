@@ -30,7 +30,7 @@ extension SwinjectStoryboard {
     }
     //    label container
     // swiftlint:disable:next identifier_name
-    defaultContainer.register(AddMemoReactor.self) { r in AddMemoReactor() }
+    defaultContainer.register(AddMemoReactor.self) { r in AddMemoReactor(r.resolve(MemoServiceType.self)!) }
     // swiftlint:disable:next identifier_name
     defaultContainer.storyboardInitCompleted(AddMemoViewController.self) { r, c in
       c.reactor = r.resolve(AddMemoReactor.self)

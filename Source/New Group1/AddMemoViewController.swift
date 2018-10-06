@@ -8,11 +8,11 @@
 
 import ReactorKit
 import UIKit
-import RxCocoa
 import RxSwift
 
 class AddMemoViewController: UIViewController, HasDisposeBag, StoryboardInitializable {
-  @IBOutlet weak var colorTheme: UIButton!
+  @IBOutlet weak private var colorTheme: UIButton!
+  var memo: Memo!
   let colorThemeContainer = ColorThemeContainer()
 
   override func viewDidLoad() {
@@ -31,6 +31,11 @@ class AddMemoViewController: UIViewController, HasDisposeBag, StoryboardInitiali
 }
 extension AddMemoViewController: StoryboardView {
   func bind(reactor: AddMemoReactor) {
+    self.rx.viewDidLoad
+      .map { Reactor.Action.loadedMemoView(memo: self.memo) }
+      .bind(to: reactor.action)
+      .disposed(by: disposeBag)
+    
     colorTheme.rx.tap
       .map { Reactor.Action.toggleColorTheme }
       .bind(to: reactor.action)
@@ -44,5 +49,13 @@ extension AddMemoViewController: StoryboardView {
         self.colorThemeContainer.isHidden = !isShow
       })
       .disposed(by: disposeBag)
+  }
+}
+
+extension AddMemoViewController {
+  class func makeViewController(memo: Memo) -> AddMemoViewController {
+    return AddMemoViewController.initFromStoryboard(name: "AddMemo").then({
+      $0.memo = memo
+    })
   }
 }
