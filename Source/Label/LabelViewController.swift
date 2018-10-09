@@ -65,7 +65,7 @@ extension LabelViewController: ListAdapterDataSource, NewLabelSectionDelegate {
     return nil
   }
 }
-extension LabelViewController: View {
+extension LabelViewController: View, StoryboardView {
   func bind(reactor: LabelReactor) {
 //    In bind
     let searchKeywordChange = searchController.searchBar.rx.text
@@ -104,7 +104,7 @@ extension LabelViewController: View {
       })
       .filterEmpty()
       .drive(onNext: { [weak self] keyword in
-        guard let `self` = self else { return }
+        guard let self = self else { return }
         let newLabel = NewLabelModel(title: keyword)
         self.data.append(newLabel)
         self.adapter.performUpdates(animated: true)

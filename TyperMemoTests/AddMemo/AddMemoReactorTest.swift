@@ -25,7 +25,7 @@ class AddMemoReactorTest: QuickSpec {
       reactor = AddMemoReactor(mockService)
     }
     describe("AddMemoReactorTest") {
-      it("a", closure: {
+      it("load memo", closure: {
         let actions = scheduler.createHotObservable([
           next(50, { AddMemoReactor.Action.loadedMemoView(memo: expectMemo) })
           ])

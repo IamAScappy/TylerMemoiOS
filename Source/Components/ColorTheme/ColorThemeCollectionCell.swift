@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ColorThemeCollectionCell: UICollectionViewCell {
+class ColorThemeCollectionCell: UICollectionViewCell, SwiftNameIdentifier {
   private var color: UIColor = .clear
   private var borderColor: UIColor = ColorName.colorAccent
   
@@ -33,10 +33,7 @@ class ColorThemeCollectionCell: UICollectionViewCell {
     }
   }
 }
-
 extension ColorThemeCollectionCell {
-  static var cellIdentifier: String = String(describing: self)
-
   func configureCell(colorTheme: ColorTheme) {
     color = colorTheme.color.toColor()
   }

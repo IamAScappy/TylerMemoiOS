@@ -8,6 +8,12 @@
 
 import Foundation
 
-enum Dimens: Float, RawRepresentable {
+enum Dimens: Int, RawRepresentable {
   case labelHeight = 40
+  
+  enum CheckList: Int, RawRepresentable {
+    case itemHeight = 50
+    case checkboxWidth = 30
+    case betweenImageTitleSpacing = 15
+  }
 }

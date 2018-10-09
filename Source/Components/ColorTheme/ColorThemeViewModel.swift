@@ -9,19 +9,19 @@
 import Foundation
 import RxDataSources
 
-struct ColorThemeModel {
+struct ColorThemeViewModel {
   var header: String
   var items: [Item]
 }
 
-extension ColorThemeModel: AnimatableSectionModelType {
+extension ColorThemeViewModel: AnimatableSectionModelType {
   typealias Item = ColorTheme
   
   var identity: String {
     return header
   }
 
-  init(original: ColorThemeModel, items: [ColorTheme]) {
+  init(original: ColorThemeViewModel, items: [ColorTheme]) {
     self = original
     self.items = items
   }

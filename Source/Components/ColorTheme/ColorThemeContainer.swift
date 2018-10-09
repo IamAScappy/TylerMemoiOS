@@ -36,7 +36,7 @@ class ColorThemeContainer: UIView, HasDisposeBag {
         make.edges.equalToSuperview()
       }
       $0.backgroundColor = .blue
-      $0.register(ColorThemeCollectionCell.self, forCellWithReuseIdentifier: ColorThemeCollectionCell.cellIdentifier)
+      $0.register(ColorThemeCollectionCell.self, forCellWithReuseIdentifier: ColorThemeCollectionCell.identifier)
     }
     collectionViewLayout.do {
       $0.scrollDirection = .horizontal
@@ -80,7 +80,7 @@ extension ColorThemeContainer: View {
       .filterNil()
       .distinctUntilChanged()
       .asDriver(onErrorJustReturn: [])
-      .drive(uiCollectionView.rx.items(cellIdentifier: ColorThemeCollectionCell.cellIdentifier, cellType: ColorThemeCollectionCell.self)) ({ row, element, cell in
+      .drive(uiCollectionView.rx.items(cellIdentifier: ColorThemeCollectionCell.identifier, cellType: ColorThemeCollectionCell.self)) ({ row, element, cell in
         cell.configureCell(colorTheme: element)
       })
       .disposed(by: disposeBag)

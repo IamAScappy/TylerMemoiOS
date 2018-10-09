@@ -1,4 +1,344 @@
-// MARK: - Mocks generated from file: Source/Services/LabelServiceType.swift at 2018-10-05 20:31:52 +0000
+// MARK: - Mocks generated from file: Source/Services/CheckListType.swift at 2018-10-09 14:30:49 +0000
+
+//
+//  CheckListType.swift
+//  TyperMemo
+//
+//  Created by tskim on 2018. 10. 9..
+//  Copyright © 2018년 tskim. All rights reserved.
+
+import Cuckoo
+@testable import TyperMemo
+
+import Foundation
+import RealmSwift
+import Result
+import RxRealm
+import RxSwift
+
+class MockCheckListType: CheckListType, Cuckoo.ProtocolMock {
+    typealias MocksType = CheckListType
+    typealias Stubbing = __StubbingProxy_CheckListType
+    typealias Verification = __VerificationProxy_CheckListType
+    let cuckoo_manager = Cuckoo.MockManager(hasParent: false)
+
+    
+
+    
+
+    
+    // ["name": "insertCheckItem", "returnSignature": " -> Result<Memo, NSError>", "fullyQualifiedName": "insertCheckItem(memo: Memo, checkItem: CheckItem) -> Result<Memo, NSError>", "parameterSignature": "memo: Memo, checkItem: CheckItem", "parameterSignatureWithoutNames": "memo: Memo, checkItem: CheckItem", "inputTypes": "Memo, CheckItem", "isThrowing": false, "isInit": false, "isOverriding": false, "hasClosureParams": false, "@type": "ProtocolMethod", "accessibility": "", "parameterNames": "memo, checkItem", "call": "memo: memo, checkItem: checkItem", "parameters": [CuckooGeneratorFramework.MethodParameter(label: Optional("memo"), name: "memo", type: "Memo", range: CountableRange(286..<296), nameRange: CountableRange(286..<290)), CuckooGeneratorFramework.MethodParameter(label: Optional("checkItem"), name: "checkItem", type: "CheckItem", range: CountableRange(298..<318), nameRange: CountableRange(298..<307))], "returnType": "Result<Memo, NSError>", "isOptional": false, "stubFunction": "Cuckoo.ProtocolStubFunction"]
+     func insertCheckItem(memo: Memo, checkItem: CheckItem)  -> Result<Memo, NSError> {
+        
+            return cuckoo_manager.call("insertCheckItem(memo: Memo, checkItem: CheckItem) -> Result<Memo, NSError>",
+                parameters: (memo, checkItem),
+                superclassCall:
+                    
+                    Cuckoo.MockManager.crashOnProtocolSuperclassCall()
+                    )
+        
+    }
+    
+
+	struct __StubbingProxy_CheckListType: Cuckoo.StubbingProxy {
+	    private let cuckoo_manager: Cuckoo.MockManager
+	
+	    init(manager: Cuckoo.MockManager) {
+	        self.cuckoo_manager = manager
+	    }
+	    
+	    
+	    func insertCheckItem<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(memo: M1, checkItem: M2) -> Cuckoo.ProtocolStubFunction<(Memo, CheckItem), Result<Memo, NSError>> where M1.MatchedType == Memo, M2.MatchedType == CheckItem {
+	        let matchers: [Cuckoo.ParameterMatcher<(Memo, CheckItem)>] = [wrap(matchable: memo) { $0.0 }, wrap(matchable: checkItem) { $0.1 }]
+	        return .init(stub: cuckoo_manager.createStub(for: MockCheckListType.self, method: "insertCheckItem(memo: Memo, checkItem: CheckItem) -> Result<Memo, NSError>", parameterMatchers: matchers))
+	    }
+	    
+	}
+
+	struct __VerificationProxy_CheckListType: Cuckoo.VerificationProxy {
+	    private let cuckoo_manager: Cuckoo.MockManager
+	    private let callMatcher: Cuckoo.CallMatcher
+	    private let sourceLocation: Cuckoo.SourceLocation
+	
+	    init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
+	        self.cuckoo_manager = manager
+	        self.callMatcher = callMatcher
+	        self.sourceLocation = sourceLocation
+	    }
+	
+	    
+	
+	    
+	    @discardableResult
+	    func insertCheckItem<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(memo: M1, checkItem: M2) -> Cuckoo.__DoNotUse<Result<Memo, NSError>> where M1.MatchedType == Memo, M2.MatchedType == CheckItem {
+	        let matchers: [Cuckoo.ParameterMatcher<(Memo, CheckItem)>] = [wrap(matchable: memo) { $0.0 }, wrap(matchable: checkItem) { $0.1 }]
+	        return cuckoo_manager.verify("insertCheckItem(memo: Memo, checkItem: CheckItem) -> Result<Memo, NSError>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	    }
+	    
+	}
+
+}
+
+ class CheckListTypeStub: CheckListType {
+    
+
+    
+
+    
+     func insertCheckItem(memo: Memo, checkItem: CheckItem)  -> Result<Memo, NSError> {
+        return DefaultValueRegistry.defaultValue(for: Result<Memo, NSError>.self)
+    }
+    
+}
+
+
+class MockCheckListService: CheckListService, Cuckoo.ClassMock {
+    typealias MocksType = CheckListService
+    typealias Stubbing = __StubbingProxy_CheckListService
+    typealias Verification = __VerificationProxy_CheckListService
+    let cuckoo_manager = Cuckoo.MockManager(hasParent: true)
+
+    
+
+    
+
+    
+    // ["name": "insertCheckItem", "returnSignature": " -> Result<Memo, NSError>", "fullyQualifiedName": "insertCheckItem(memo: Memo, checkItem: CheckItem) -> Result<Memo, NSError>", "parameterSignature": "memo: Memo, checkItem: CheckItem", "parameterSignatureWithoutNames": "memo: Memo, checkItem: CheckItem", "inputTypes": "Memo, CheckItem", "isThrowing": false, "isInit": false, "isOverriding": true, "hasClosureParams": false, "@type": "ClassMethod", "accessibility": "", "parameterNames": "memo, checkItem", "call": "memo: memo, checkItem: checkItem", "parameters": [CuckooGeneratorFramework.MethodParameter(label: Optional("memo"), name: "memo", type: "Memo", range: CountableRange(411..<421), nameRange: CountableRange(411..<415)), CuckooGeneratorFramework.MethodParameter(label: Optional("checkItem"), name: "checkItem", type: "CheckItem", range: CountableRange(423..<443), nameRange: CountableRange(423..<432))], "returnType": "Result<Memo, NSError>", "isOptional": false, "stubFunction": "Cuckoo.ClassStubFunction"]
+     override func insertCheckItem(memo: Memo, checkItem: CheckItem)  -> Result<Memo, NSError> {
+        
+            return cuckoo_manager.call("insertCheckItem(memo: Memo, checkItem: CheckItem) -> Result<Memo, NSError>",
+                parameters: (memo, checkItem),
+                superclassCall:
+                    
+                    super.insertCheckItem(memo: memo, checkItem: checkItem)
+                    )
+        
+    }
+    
+
+	struct __StubbingProxy_CheckListService: Cuckoo.StubbingProxy {
+	    private let cuckoo_manager: Cuckoo.MockManager
+	
+	    init(manager: Cuckoo.MockManager) {
+	        self.cuckoo_manager = manager
+	    }
+	    
+	    
+	    func insertCheckItem<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(memo: M1, checkItem: M2) -> Cuckoo.ClassStubFunction<(Memo, CheckItem), Result<Memo, NSError>> where M1.MatchedType == Memo, M2.MatchedType == CheckItem {
+	        let matchers: [Cuckoo.ParameterMatcher<(Memo, CheckItem)>] = [wrap(matchable: memo) { $0.0 }, wrap(matchable: checkItem) { $0.1 }]
+	        return .init(stub: cuckoo_manager.createStub(for: MockCheckListService.self, method: "insertCheckItem(memo: Memo, checkItem: CheckItem) -> Result<Memo, NSError>", parameterMatchers: matchers))
+	    }
+	    
+	}
+
+	struct __VerificationProxy_CheckListService: Cuckoo.VerificationProxy {
+	    private let cuckoo_manager: Cuckoo.MockManager
+	    private let callMatcher: Cuckoo.CallMatcher
+	    private let sourceLocation: Cuckoo.SourceLocation
+	
+	    init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
+	        self.cuckoo_manager = manager
+	        self.callMatcher = callMatcher
+	        self.sourceLocation = sourceLocation
+	    }
+	
+	    
+	
+	    
+	    @discardableResult
+	    func insertCheckItem<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(memo: M1, checkItem: M2) -> Cuckoo.__DoNotUse<Result<Memo, NSError>> where M1.MatchedType == Memo, M2.MatchedType == CheckItem {
+	        let matchers: [Cuckoo.ParameterMatcher<(Memo, CheckItem)>] = [wrap(matchable: memo) { $0.0 }, wrap(matchable: checkItem) { $0.1 }]
+	        return cuckoo_manager.verify("insertCheckItem(memo: Memo, checkItem: CheckItem) -> Result<Memo, NSError>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	    }
+	    
+	}
+
+}
+
+ class CheckListServiceStub: CheckListService {
+    
+
+    
+
+    
+     override func insertCheckItem(memo: Memo, checkItem: CheckItem)  -> Result<Memo, NSError> {
+        return DefaultValueRegistry.defaultValue(for: Result<Memo, NSError>.self)
+    }
+    
+}
+
+
+// MARK: - Mocks generated from file: Source/Services/ColorThemeType.swift at 2018-10-09 14:30:49 +0000
+
+//
+//  ColorThemeType.swift
+//  TyperMemo
+//
+//  Created by tskim on 2018. 9. 30..
+//  Copyright © 2018년 tskim. All rights reserved.
+
+import Cuckoo
+@testable import TyperMemo
+
+import Foundation
+import RealmSwift
+import Result
+import RxRealm
+import RxSwift
+
+class MockColorThemeType: ColorThemeType, Cuckoo.ProtocolMock {
+    typealias MocksType = ColorThemeType
+    typealias Stubbing = __StubbingProxy_ColorThemeType
+    typealias Verification = __VerificationProxy_ColorThemeType
+    let cuckoo_manager = Cuckoo.MockManager(hasParent: false)
+
+    
+
+    
+
+    
+    // ["name": "getAllColorTheme", "returnSignature": " -> Result<Observable<[ColorTheme]>, NSError>", "fullyQualifiedName": "getAllColorTheme() -> Result<Observable<[ColorTheme]>, NSError>", "parameterSignature": "", "parameterSignatureWithoutNames": "", "inputTypes": "", "isThrowing": false, "isInit": false, "isOverriding": false, "hasClosureParams": false, "@type": "ProtocolMethod", "accessibility": "", "parameterNames": "", "call": "", "parameters": [], "returnType": "Result<Observable<[ColorTheme]>, NSError>", "isOptional": false, "stubFunction": "Cuckoo.ProtocolStubFunction"]
+     func getAllColorTheme()  -> Result<Observable<[ColorTheme]>, NSError> {
+        
+            return cuckoo_manager.call("getAllColorTheme() -> Result<Observable<[ColorTheme]>, NSError>",
+                parameters: (),
+                superclassCall:
+                    
+                    Cuckoo.MockManager.crashOnProtocolSuperclassCall()
+                    )
+        
+    }
+    
+
+	struct __StubbingProxy_ColorThemeType: Cuckoo.StubbingProxy {
+	    private let cuckoo_manager: Cuckoo.MockManager
+	
+	    init(manager: Cuckoo.MockManager) {
+	        self.cuckoo_manager = manager
+	    }
+	    
+	    
+	    func getAllColorTheme() -> Cuckoo.ProtocolStubFunction<(), Result<Observable<[ColorTheme]>, NSError>> {
+	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+	        return .init(stub: cuckoo_manager.createStub(for: MockColorThemeType.self, method: "getAllColorTheme() -> Result<Observable<[ColorTheme]>, NSError>", parameterMatchers: matchers))
+	    }
+	    
+	}
+
+	struct __VerificationProxy_ColorThemeType: Cuckoo.VerificationProxy {
+	    private let cuckoo_manager: Cuckoo.MockManager
+	    private let callMatcher: Cuckoo.CallMatcher
+	    private let sourceLocation: Cuckoo.SourceLocation
+	
+	    init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
+	        self.cuckoo_manager = manager
+	        self.callMatcher = callMatcher
+	        self.sourceLocation = sourceLocation
+	    }
+	
+	    
+	
+	    
+	    @discardableResult
+	    func getAllColorTheme() -> Cuckoo.__DoNotUse<Result<Observable<[ColorTheme]>, NSError>> {
+	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+	        return cuckoo_manager.verify("getAllColorTheme() -> Result<Observable<[ColorTheme]>, NSError>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	    }
+	    
+	}
+
+}
+
+ class ColorThemeTypeStub: ColorThemeType {
+    
+
+    
+
+    
+     func getAllColorTheme()  -> Result<Observable<[ColorTheme]>, NSError> {
+        return DefaultValueRegistry.defaultValue(for: Result<Observable<[ColorTheme]>, NSError>.self)
+    }
+    
+}
+
+
+class MockColorThemeService: ColorThemeService, Cuckoo.ClassMock {
+    typealias MocksType = ColorThemeService
+    typealias Stubbing = __StubbingProxy_ColorThemeService
+    typealias Verification = __VerificationProxy_ColorThemeService
+    let cuckoo_manager = Cuckoo.MockManager(hasParent: true)
+
+    
+
+    
+
+    
+    // ["name": "getAllColorTheme", "returnSignature": " -> Result<Observable<[ColorTheme]>, NSError>", "fullyQualifiedName": "getAllColorTheme() -> Result<Observable<[ColorTheme]>, NSError>", "parameterSignature": "", "parameterSignatureWithoutNames": "", "inputTypes": "", "isThrowing": false, "isInit": false, "isOverriding": true, "hasClosureParams": false, "@type": "ClassMethod", "accessibility": "", "parameterNames": "", "call": "", "parameters": [], "returnType": "Result<Observable<[ColorTheme]>, NSError>", "isOptional": false, "stubFunction": "Cuckoo.ClassStubFunction"]
+     override func getAllColorTheme()  -> Result<Observable<[ColorTheme]>, NSError> {
+        
+            return cuckoo_manager.call("getAllColorTheme() -> Result<Observable<[ColorTheme]>, NSError>",
+                parameters: (),
+                superclassCall:
+                    
+                    super.getAllColorTheme()
+                    )
+        
+    }
+    
+
+	struct __StubbingProxy_ColorThemeService: Cuckoo.StubbingProxy {
+	    private let cuckoo_manager: Cuckoo.MockManager
+	
+	    init(manager: Cuckoo.MockManager) {
+	        self.cuckoo_manager = manager
+	    }
+	    
+	    
+	    func getAllColorTheme() -> Cuckoo.ClassStubFunction<(), Result<Observable<[ColorTheme]>, NSError>> {
+	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+	        return .init(stub: cuckoo_manager.createStub(for: MockColorThemeService.self, method: "getAllColorTheme() -> Result<Observable<[ColorTheme]>, NSError>", parameterMatchers: matchers))
+	    }
+	    
+	}
+
+	struct __VerificationProxy_ColorThemeService: Cuckoo.VerificationProxy {
+	    private let cuckoo_manager: Cuckoo.MockManager
+	    private let callMatcher: Cuckoo.CallMatcher
+	    private let sourceLocation: Cuckoo.SourceLocation
+	
+	    init(manager: Cuckoo.MockManager, callMatcher: Cuckoo.CallMatcher, sourceLocation: Cuckoo.SourceLocation) {
+	        self.cuckoo_manager = manager
+	        self.callMatcher = callMatcher
+	        self.sourceLocation = sourceLocation
+	    }
+	
+	    
+	
+	    
+	    @discardableResult
+	    func getAllColorTheme() -> Cuckoo.__DoNotUse<Result<Observable<[ColorTheme]>, NSError>> {
+	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+	        return cuckoo_manager.verify("getAllColorTheme() -> Result<Observable<[ColorTheme]>, NSError>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	    }
+	    
+	}
+
+}
+
+ class ColorThemeServiceStub: ColorThemeService {
+    
+
+    
+
+    
+     override func getAllColorTheme()  -> Result<Observable<[ColorTheme]>, NSError> {
+        return DefaultValueRegistry.defaultValue(for: Result<Observable<[ColorTheme]>, NSError>.self)
+    }
+    
+}
+
+
+// MARK: - Mocks generated from file: Source/Services/LabelServiceType.swift at 2018-10-09 14:30:49 +0000
 
 //
 //  LabelServiceType.swift
@@ -223,7 +563,7 @@ class MockLabelService: LabelService, Cuckoo.ClassMock {
 }
 
 
-// MARK: - Mocks generated from file: Source/Services/MemoServiceType.swift at 2018-10-05 20:31:52 +0000
+// MARK: - Mocks generated from file: Source/Services/MemoServiceType.swift at 2018-10-09 14:30:49 +0000
 
 //
 //  MemoServiceType.swift
@@ -335,7 +675,7 @@ class MockMemoService: MemoService, Cuckoo.ClassMock {
 }
 
 
-// MARK: - Mocks generated from file: Source/Services/ServiceProvider.swift at 2018-10-05 20:31:52 +0000
+// MARK: - Mocks generated from file: Source/Services/ServiceProvider.swift at 2018-10-09 14:30:49 +0000
 
 //
 //  ServiceProvider.swift

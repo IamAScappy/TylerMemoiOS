@@ -13,7 +13,6 @@ import UIKit
 class AddMemoViewController: UIViewController, HasDisposeBag, StoryboardInitializable, DeallocationView {
   var memo: Memo!
   let colorThemeContainer = ColorThemeContainer()
-//  @IBOutlet weak private var colorThemeButton: UIBarButtonItem!
   @IBOutlet weak private var colorThemeBarItem: UIBarButtonItem!
   @IBOutlet weak private var labelBarItem: UIBarButtonItem!
   @IBOutlet weak private var checkListBarItem: UIBarButtonItem!

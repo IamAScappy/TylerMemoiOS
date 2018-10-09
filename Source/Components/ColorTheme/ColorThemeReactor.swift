@@ -37,7 +37,7 @@ class ColorThemeReactor: Reactor {
     switch action {
     case .fetchColorThemes:
       return Observable.deferred({ [weak self] () -> Observable<Mutation> in
-        guard let `self` = self else { return Observable.just(Mutation.isEmpty(true)) }
+        guard let self = self else { return Observable.just(Mutation.isEmpty(true)) }
         let result = self.colorThemeService.getAllColorTheme()
         switch result {
         case .success(let value):
