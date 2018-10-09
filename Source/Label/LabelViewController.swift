@@ -16,9 +16,8 @@ import UIKit
 
 // TODO Test1: navigation 에 searchController 나오는지
 // TODO Test1: Label 검색 결과가 없을 때 Crete Label 이 생기는지 확인
-class LabelViewController: UIViewController, StoryboardInitializable, DeallocationView {
+class LabelViewController: UIViewController, StoryboardInitializable, DeallocationView, HasDisposeBag {
   @IBOutlet weak private var collectionView: UICollectionView!
-  var disposeBag = DisposeBag()
   private var data: [ListDiffable] = []
   let searchController = UISearchController(searchResultsController: nil)
   lazy var adapter: ListAdapter = { return ListAdapter(updater: ListAdapterUpdater(), viewController: self) }()
@@ -116,6 +115,7 @@ extension LabelViewController: View {
 
 extension LabelViewController {
   static func makeLabelViewController() -> LabelViewController {
-    return LabelViewController.initFromStoryboard(name: "Label")
+    return LabelViewController.initFromStoryboard(name: "Label").then({ _ in
+    })
   }
 }

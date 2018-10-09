@@ -13,13 +13,9 @@ import UIKit
 class AddMemoViewController: UIViewController, StoryboardInitializable {
 
   @IBOutlet weak private var button: UIButton!
-  @objc func buttonClick() {
-    
-  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    button.addTarget(self, action: #selector(buttonClick), for: .touchUpInside)
   }
 }
 extension AddMemoViewController {

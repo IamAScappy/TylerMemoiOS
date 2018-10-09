@@ -24,7 +24,6 @@
 		BD1FDFFD215968FD0064A8D8 /* AccIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FDFFC215968FD0064A8D8 /* AccIdentifier.swift */; };
 		BD1FDFFE215969A80064A8D8 /* AccIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FDFFC215968FD0064A8D8 /* AccIdentifier.swift */; };
 		BD27CBE8216783EB00C805B4 /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD27CBE7216783EB00C805B4 /* UIView+IBInspectable.swift */; };
-		BD27CBEA216787F200C805B4 /* RedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD27CBE9216787F200C805B4 /* RedButton.swift */; };
 		BD27CBEE2167974600C805B4 /* CGUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD27CBED2167974600C805B4 /* CGUtility.swift */; };
 		BD31584E21680D05006DEDC9 /* AddMemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD31584D21680D05006DEDC9 /* AddMemo.storyboard */; };
 		BD31585021680D17006DEDC9 /* AddMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD31584F21680D17006DEDC9 /* AddMemoViewController.swift */; };
@@ -85,6 +84,7 @@
 		BDE111DA2156B5560010FBD9 /* Realm+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE111D92156B5560010FBD9 /* Realm+Config.swift */; };
 		BDE111E02157382B0010FBD9 /* LabelReactorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE111DF2157382B0010FBD9 /* LabelReactorTest.swift */; };
 		BDF2C10A215E699500845AD5 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9050BB214F581300425C8D /* RealmSwift.framework */; };
+		BDF67C3221683A3100FAA0B6 /* AddMemoViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF67C3121683A3100FAA0B6 /* AddMemoViewControllerTest.swift */; };
 		BDF97B8A2158B71C00696102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDF97B892158B71C00696102 /* Assets.xcassets */; };
 		BDFC8A7B2155AD5E00A042B5 /* MemoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC8A7A2155AD5E00A042B5 /* MemoViewCell.swift */; };
 		BDFC8A802155BBCE00A042B5 /* AppSupports.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC8A7F2155BBCE00A042B5 /* AppSupports.swift */; };
@@ -135,7 +135,6 @@
 		BD1FDFF9215967220064A8D8 /* LabelViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LabelViewControllerTest.swift; path = TyperMemoUITests/LabelViewControllerTest.swift; sourceTree = SOURCE_ROOT; };
 		BD1FDFFC215968FD0064A8D8 /* AccIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccIdentifier.swift; sourceTree = "<group>"; };
 		BD27CBE7216783EB00C805B4 /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
-		BD27CBE9216787F200C805B4 /* RedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedButton.swift; sourceTree = "<group>"; };
 		BD27CBED2167974600C805B4 /* CGUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGUtility.swift; sourceTree = "<group>"; };
 		BD31584D21680D05006DEDC9 /* AddMemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddMemo.storyboard; sourceTree = "<group>"; };
 		BD31584F21680D17006DEDC9 /* AddMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +208,7 @@
 		BDE111DF2157382B0010FBD9 /* LabelReactorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelReactorTest.swift; sourceTree = "<group>"; };
 		BDF2C0D0215E62C900845AD5 /* ReactorKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReactorKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF2C10D215E6F7900845AD5 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		BDF67C3121683A3100FAA0B6 /* AddMemoViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoViewControllerTest.swift; sourceTree = "<group>"; };
 		BDF97B892158B71C00696102 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDF97B8B2158B9A700696102 /* SVG.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SVG.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BDF97B942158BAB700696102 /* SwiftSVG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftSVG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -398,7 +398,6 @@
 				BD5653D621565C9D00F378F0 /* Label */,
 				BD6606CE215534820012BC3C /* Main */,
 				BD6606CF215534A90012BC3C /* Extension */,
-				BD27CBE9216787F200C805B4 /* RedButton.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -409,7 +408,7 @@
 				BD472164215081850015740A /* GeneratedMocks.swift */,
 				BDACB9DB2152099000AE2C50 /* FakeRealmCollectionValue.swift */,
 				BD81DDF9214C854100526054 /* Info.plist */,
-				BD3158552168314F006DEDC9 /* AddMemoReactorTest.swift */,
+				BDF67C3321683A4700FAA0B6 /* AddMemo */,
 				BD05CA8221645A0700D9DEE0 /* UIColor+HexTest.swift */,
 				BDE111DF2157382B0010FBD9 /* LabelReactorTest.swift */,
 				BD7F9178215B2249001DE5E0 /* LabelReactorWithRealmTest.swift */,
@@ -491,6 +490,15 @@
 				BD7F917C215B2EF1001DE5E0 /* RealmServiceType.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		BDF67C3321683A4700FAA0B6 /* AddMemo */ = {
+			isa = PBXGroup;
+			children = (
+				BD3158552168314F006DEDC9 /* AddMemoReactorTest.swift */,
+				BDF67C3121683A3100FAA0B6 /* AddMemoViewControllerTest.swift */,
+			);
+			path = AddMemo;
 			sourceTree = "<group>";
 		};
 		F2DA7943BD69E1932B60FF88 /* Pods */ = {
@@ -981,7 +989,6 @@
 				BDA7F32021637FD8002D9F3B /* DisposeBagAcceptable.swift in Sources */,
 				BDE111CE2156A95D0010FBD9 /* LabelViewController.swift in Sources */,
 				BD31585021680D17006DEDC9 /* AddMemoViewController.swift in Sources */,
-				BD27CBEA216787F200C805B4 /* RedButton.swift in Sources */,
 				BDE111CF2156A95D0010FBD9 /* LabelReactor.swift in Sources */,
 				BD88A2712163E868004AFCBE /* PersistenceError.swift in Sources */,
 				BD780E20214C9CD300FA9FDF /* Memo.swift in Sources */,
@@ -1041,6 +1048,7 @@
 				BD3158562168314F006DEDC9 /* AddMemoReactorTest.swift in Sources */,
 				BD1C7FA6214E661D00C58B67 /* RealmSpec.swift in Sources */,
 				BDE111E02157382B0010FBD9 /* LabelReactorTest.swift in Sources */,
+				BDF67C3221683A3100FAA0B6 /* AddMemoViewControllerTest.swift in Sources */,
 				BDACB9DE21520A6D00AE2C50 /* FakeRealmCollectionValue.swift in Sources */,
 				BD81DDF8214C854100526054 /* TyperMemoTests.swift in Sources */,
 				BD7F917F215BA0FA001DE5E0 /* TestError.swift in Sources */,

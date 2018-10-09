@@ -10,7 +10,7 @@ import UIKit
 
 class TempViewController: UIViewController {
   let colorThemeContainer = ColorThemeContainer()
-  @IBOutlet weak var button: UIButton!
+  @IBOutlet weak private var button: UIButton!
   override func viewDidLoad() {
     super.viewDidLoad()
     colorThemeContainer.do {

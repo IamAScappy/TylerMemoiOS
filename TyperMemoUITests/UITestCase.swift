@@ -15,13 +15,13 @@
 import XCTest
 
 class UITestCase: XCTestCase {
-  
+  var app = XCUIApplication()
   override func setUp() {
     super.setUp()
     
     continueAfterFailure = false
-    XCUIApplication().launchArguments.append("--uitesting")
-    XCUIApplication().launch()
+    app.launchArguments.append("--uitesting")
+    app.launch()
     
   }
   

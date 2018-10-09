@@ -7,16 +7,22 @@
 //
 
 import ReactorKit
-import UIKit
 import RxSwift
+import UIKit
 
-class AddMemoViewController: UIViewController, HasDisposeBag, StoryboardInitializable {
-  @IBOutlet weak private var colorTheme: UIButton!
+class AddMemoViewController: UIViewController, HasDisposeBag, StoryboardInitializable, DeallocationView {
   var memo: Memo!
   let colorThemeContainer = ColorThemeContainer()
+//  @IBOutlet weak private var colorThemeButton: UIBarButtonItem!
+  @IBOutlet weak private var colorThemeBarItem: UIBarButtonItem!
+  @IBOutlet weak private var labelBarItem: UIBarButtonItem!
+  @IBOutlet weak private var checkListBarItem: UIBarButtonItem!
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    enableMemoryLeakCheck(disposeBag)
+    self.navigationController?.navigationBar.backIndicatorImage = Asset.AddMemo.icBack.image
+    self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     colorThemeContainer.do {
       view.addSubview($0)
       $0.snp.makeConstraints({ make in
@@ -35,10 +41,25 @@ extension AddMemoViewController: StoryboardView {
       .map { Reactor.Action.loadedMemoView(memo: self.memo) }
       .bind(to: reactor.action)
       .disposed(by: disposeBag)
-    
-    colorTheme.rx.tap
+
+    colorThemeBarItem.rx.tap
       .map { Reactor.Action.toggleColorTheme }
       .bind(to: reactor.action)
+      .disposed(by: disposeBag)
+
+    labelBarItem.rx.tap
+      .map { Reactor.Action.viewLabel }
+      .bind(to: reactor.action)
+      .disposed(by: disposeBag)
+
+    reactor.state
+      .map { $0.isShowLabel }
+      .filter({ $0 })
+      .asDriver(onErrorJustReturn: false)
+      .drive(onNext: { [weak self] isShow in
+        guard let self = self else { return }
+        self.show(LabelViewController.makeLabelViewController(), sender: self)
+      })
       .disposed(by: disposeBag)
 
     reactor.state
