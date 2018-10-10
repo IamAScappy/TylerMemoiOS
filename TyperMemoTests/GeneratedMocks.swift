@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: Source/Services/CheckListType.swift at 2018-10-09 14:30:49 +0000
+// MARK: - Mocks generated from file: Source/Services/CheckListType.swift at 2018-10-10 12:27:59 +0000
 
 //
 //  CheckListType.swift
@@ -168,7 +168,7 @@ class MockCheckListService: CheckListService, Cuckoo.ClassMock {
 }
 
 
-// MARK: - Mocks generated from file: Source/Services/ColorThemeType.swift at 2018-10-09 14:30:49 +0000
+// MARK: - Mocks generated from file: Source/Services/ColorThemeType.swift at 2018-10-10 12:27:59 +0000
 
 //
 //  ColorThemeType.swift
@@ -338,7 +338,7 @@ class MockColorThemeService: ColorThemeService, Cuckoo.ClassMock {
 }
 
 
-// MARK: - Mocks generated from file: Source/Services/LabelServiceType.swift at 2018-10-09 14:30:49 +0000
+// MARK: - Mocks generated from file: Source/Services/LabelServiceType.swift at 2018-10-10 12:27:59 +0000
 
 //
 //  LabelServiceType.swift
@@ -563,7 +563,7 @@ class MockLabelService: LabelService, Cuckoo.ClassMock {
 }
 
 
-// MARK: - Mocks generated from file: Source/Services/MemoServiceType.swift at 2018-10-09 14:30:49 +0000
+// MARK: - Mocks generated from file: Source/Services/MemoServiceType.swift at 2018-10-10 12:27:59 +0000
 
 //
 //  MemoServiceType.swift
@@ -675,7 +675,7 @@ class MockMemoService: MemoService, Cuckoo.ClassMock {
 }
 
 
-// MARK: - Mocks generated from file: Source/Services/ServiceProvider.swift at 2018-10-09 14:30:49 +0000
+// MARK: - Mocks generated from file: Source/Services/ServiceProvider.swift at 2018-10-10 12:27:59 +0000
 
 //
 //  ServiceProvider.swift

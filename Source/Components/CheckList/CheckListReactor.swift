@@ -25,12 +25,10 @@ class CheckListReactor: Reactor {
     var memo: Memo?
     var error: Error?
     var checkListViewModels: [CheckListViewModel]?
-    var reloadEmptyView: Bool = false
   }
   enum Mutation {
     case error(Error)
     case setMemo(Memo)
-    case reloadEmptyView(Bool)
   }
   func mutate(action: Action) -> Observable<Mutation> {
     log.debug("mutate action: \(action)")
@@ -41,10 +39,7 @@ class CheckListReactor: Reactor {
       let result = self.service.insertCheckItem(memo: memo, checkItem: CheckItem(name: ""))
       switch result {
       case .success(let memo):
-        return Observable.concat([
-          Observable.just(Mutation.reloadEmptyView(!memo.checkList.isEmpty)),
-          Observable.just(Mutation.setMemo(memo))
-          ])
+        return Observable.just(Mutation.setMemo(memo))
       case .failure(let error):
         return Observable.just(Mutation.error(error))
       }
@@ -59,8 +54,6 @@ class CheckListReactor: Reactor {
       newState.checkListViewModels = [CheckListViewModel(header: "Check Items", items: memo.checkList.toArray())]
     case .error(let error):
       newState.error = error
-    case .reloadEmptyView(let reload):
-      newState.reloadEmptyView = reload
     }
     log.info("reduece [\(String(describing: newState.memo))]\n")
     return newState

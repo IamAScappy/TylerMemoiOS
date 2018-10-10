@@ -25,7 +25,6 @@
 		BD1FDFFE215969A80064A8D8 /* AccIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FDFFC215968FD0064A8D8 /* AccIdentifier.swift */; };
 		BD22ECE7216CCD6500C7A9A3 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD22ECE6216CCD6500C7A9A3 /* EmptyView.swift */; };
 		BD22ECED216CD1CB00C7A9A3 /* CheckListBottomSheetViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD22ECEC216CD1CB00C7A9A3 /* CheckListBottomSheetViewController+UITableView.swift */; };
-		BD22ECEF216CD22800C7A9A3 /* CheckListBottomSheetViewController+EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD22ECEE216CD22800C7A9A3 /* CheckListBottomSheetViewController+EmptyState.swift */; };
 		BD22ECF1216CD83000C7A9A3 /* UIImage+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD22ECF0216CD83000C7A9A3 /* UIImage+GIF.swift */; };
 		BD22ECF7216CE87E00C7A9A3 /* empty_check_list.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD22ECF6216CE87E00C7A9A3 /* empty_check_list.gif */; };
 		BD27CBE8216783EB00C805B4 /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD27CBE7216783EB00C805B4 /* UIView+IBInspectable.swift */; };
@@ -147,7 +146,6 @@
 		BD1FDFFC215968FD0064A8D8 /* AccIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccIdentifier.swift; sourceTree = "<group>"; };
 		BD22ECE6216CCD6500C7A9A3 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		BD22ECEC216CD1CB00C7A9A3 /* CheckListBottomSheetViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckListBottomSheetViewController+UITableView.swift"; sourceTree = "<group>"; };
-		BD22ECEE216CD22800C7A9A3 /* CheckListBottomSheetViewController+EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CheckListBottomSheetViewController+EmptyState.swift"; sourceTree = "<group>"; };
 		BD22ECF0216CD83000C7A9A3 /* UIImage+GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+GIF.swift"; sourceTree = "<group>"; };
 		BD22ECF6216CE87E00C7A9A3 /* empty_check_list.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = empty_check_list.gif; sourceTree = "<group>"; };
 		BD22ECF8216CF8F400C7A9A3 /* tyler-v1.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tyler-v1.realm"; sourceTree = "<group>"; };
@@ -328,12 +326,11 @@
 			isa = PBXGroup;
 			children = (
 				BD449391216C3CFF00C56B2D /* CheckListBottomSheetViewController.swift */,
+				BD449399216C506F00C56B2D /* CheckListReactor.swift */,
 				BD449393216C3DE400C56B2D /* CheckItemTableCell.swift */,
 				BD449397216C471600C56B2D /* CheckListViewModel.swift */,
-				BD449399216C506F00C56B2D /* CheckListReactor.swift */,
 				BD6E2A85216CBC7200F4CA5C /* MakeCheckItemFooterView.swift */,
 				BD22ECEC216CD1CB00C7A9A3 /* CheckListBottomSheetViewController+UITableView.swift */,
-				BD22ECEE216CD22800C7A9A3 /* CheckListBottomSheetViewController+EmptyState.swift */,
 			);
 			path = CheckList;
 			sourceTree = "<group>";
@@ -838,7 +835,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/DeallocationChecker.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/M13Checkbox.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/UIEmptyState.framework",
 			);
 			name = "Copy Carthage Resources";
 			outputPaths = (
@@ -1049,7 +1045,6 @@
 				BD780E20214C9CD300FA9FDF /* Memo.swift in Sources */,
 				BD81DDE2214C854000526054 /* MainViewController.swift in Sources */,
 				BD81DDE8214C854000526054 /* TyperMemo.xcdatamodeld in Sources */,
-				BD22ECEF216CD22800C7A9A3 /* CheckListBottomSheetViewController+EmptyState.swift in Sources */,
 				BD81DE38214C903000526054 /* Assets.swift in Sources */,
 				BD81DDE0214C854000526054 /* AppDelegate.swift in Sources */,
 				BD4BBB27215907F300ED00C3 /* Dimens.swift in Sources */,

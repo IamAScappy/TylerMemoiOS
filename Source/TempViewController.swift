@@ -10,9 +10,10 @@ import UIKit
 class TempViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
-//    let vc = CheckListBottomSheetViewController.makeViewController(memo: Memo(text: "asd"))
-//    addChild(vc)
-//    view.addSubview(vc.view)
-//    vc.didMove(toParent: self)
+    let vc = CheckListBottomSheetViewController.makeViewController(memo: Memo(text: "asd"))
+    vc.reactor = CheckListReactor(CheckListService())
+    addChild(vc)
+    view.addSubview(vc.view)
+    vc.didMove(toParent: self)
   }
 }
