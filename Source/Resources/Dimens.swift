@@ -7,10 +7,10 @@
 //
 
 import Foundation
-
-enum Dimens: Int, RawRepresentable {
+import UIKit
+enum Dimens: CGFloat, RawRepresentable {
   case labelHeight = 40
-  
+  case editAccessoryViewHeight = 50
   enum CheckList: Int, RawRepresentable {
     case itemHeight = 50
     case checkboxWidth = 30

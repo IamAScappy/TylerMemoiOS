@@ -80,6 +80,8 @@
 		BDB5514421633B84001B0138 /* AppDelegate+Deallocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB5514321633B84001B0138 /* AppDelegate+Deallocation.swift */; };
 		BDBF37022158D86300953C77 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDBF37002158D86300953C77 /* Localizable.strings */; };
 		BDBF37062158DA7F00953C77 /* ExistLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF37052158DA7F00953C77 /* ExistLabelCell.swift */; };
+		BDBF6DFF2170EBA300B06BC5 /* EditInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF6DFE2170EBA300B06BC5 /* EditInputAccessoryView.swift */; };
+		BDBF6E012170FC2000B06BC5 /* KeyBoardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF6E002170FC2000B06BC5 /* KeyBoardHandler.swift */; };
 		BDC0E9E12153BF1400BE8EE3 /* RealmMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC0E9E02153BF1400BE8EE3 /* RealmMigration.swift */; };
 		BDC4D8AD216317A200ED5404 /* ColorThemeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4D8A9216317A200ED5404 /* ColorThemeViewModel.swift */; };
 		BDC4D8AE216317A200ED5404 /* ColorThemeContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4D8AA216317A200ED5404 /* ColorThemeContainer.swift */; };
@@ -216,6 +218,8 @@
 		BDB5514321633B84001B0138 /* AppDelegate+Deallocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Deallocation.swift"; sourceTree = "<group>"; };
 		BDBF37012158D86300953C77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BDBF37052158DA7F00953C77 /* ExistLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExistLabelCell.swift; sourceTree = "<group>"; };
+		BDBF6DFE2170EBA300B06BC5 /* EditInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInputAccessoryView.swift; sourceTree = "<group>"; };
+		BDBF6E002170FC2000B06BC5 /* KeyBoardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoardHandler.swift; sourceTree = "<group>"; };
 		BDC0E9E02153BF1400BE8EE3 /* RealmMigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmMigration.swift; sourceTree = "<group>"; };
 		BDC4D8A9216317A200ED5404 /* ColorThemeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorThemeViewModel.swift; sourceTree = "<group>"; };
 		BDC4D8AA216317A200ED5404 /* ColorThemeContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorThemeContainer.swift; sourceTree = "<group>"; };
@@ -317,6 +321,7 @@
 				BD31584F21680D17006DEDC9 /* AddMemoViewController.swift */,
 				BD31585321680EEA006DEDC9 /* AddMemoReactor.swift */,
 				BD31584D21680D05006DEDC9 /* AddMemo.storyboard */,
+				BDBF6DFE2170EBA300B06BC5 /* EditInputAccessoryView.swift */,
 			);
 			name = AddMemo;
 			path = "New Group1";
@@ -501,6 +506,7 @@
 				BDB5514121633B6D001B0138 /* DeallocationView.swift */,
 				BDA7F31F21637FD8002D9F3B /* DisposeBagAcceptable.swift */,
 				BDA7F32221638400002D9F3B /* AssociatedObjectStore.swift */,
+				BDBF6E002170FC2000B06BC5 /* KeyBoardHandler.swift */,
 			);
 			name = Common;
 			path = "New Group";
@@ -1077,6 +1083,7 @@
 				BDA7F32321638400002D9F3B /* AssociatedObjectStore.swift in Sources */,
 				BD4BBB172158F92C00ED00C3 /* NewLabelModel.swift in Sources */,
 				BD6E2A86216CBC7200F4CA5C /* MakeCheckItemFooterView.swift in Sources */,
+				BDBF6DFF2170EBA300B06BC5 /* EditInputAccessoryView.swift in Sources */,
 				BD4723CF214F2E28002D84D2 /* UIColor+String.swift in Sources */,
 				BDB5514221633B6D001B0138 /* DeallocationView.swift in Sources */,
 				BD44939A216C506F00C56B2D /* CheckListReactor.swift in Sources */,
@@ -1095,6 +1102,7 @@
 				BDE111D82156B3770010FBD9 /* LabelServiceType.swift in Sources */,
 				BD780E26214C9F7100FA9FDF /* CheckItem.swift in Sources */,
 				BDC4D8AD216317A200ED5404 /* ColorThemeViewModel.swift in Sources */,
+				BDBF6E012170FC2000B06BC5 /* KeyBoardHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,8 @@ import Foundation
 internal enum L10n {
   /// 체크 목록을 만들어 보세요.
   internal static let checkListEmptyTitle = L10n.tr("Localizable", "checkListEmptyTitle")
+  /// 완료
+  internal static let done = L10n.tr("Localizable", "done")
   /// 목록 만들기
   internal static let makeCheckItemCaption = L10n.tr("Localizable", "makeCheckItemCaption")
   /// '%@'로 만들기

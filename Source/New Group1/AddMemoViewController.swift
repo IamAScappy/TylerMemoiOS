@@ -12,6 +12,7 @@ import UIKit
 
 class AddMemoViewController: UIViewController, HasDisposeBag, StoryboardInitializable, DeallocationView {
   var memo: Memo!
+  @IBOutlet weak var editView: UITextView!
   let colorThemeContainer = ColorThemeContainer()
   @IBOutlet weak private var colorThemeBarItem: UIBarButtonItem!
   @IBOutlet weak private var labelBarItem: UIBarButtonItem!
@@ -20,6 +21,7 @@ class AddMemoViewController: UIViewController, HasDisposeBag, StoryboardInitiali
   override func viewDidLoad() {
     super.viewDidLoad()
     enableMemoryLeakCheck(disposeBag)
+    editView.inputAccessoryView = EditInputAccessoryView(frame: CGRect(0, 0, view.frame.width, Dimens.editAccessoryViewHeight.rawValue))
     self.navigationController?.navigationBar.backIndicatorImage = Asset.AddMemo.icBack.image
     self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     colorThemeContainer.do {
@@ -32,6 +34,18 @@ class AddMemoViewController: UIViewController, HasDisposeBag, StoryboardInitiali
       })
     }
     colorThemeContainer.reactor = ColorThemeReactor(ColorThemeService())
+    
+    editView.keyboardDismissMode = .onDrag
+    let panGesture = UIPanGestureRecognizer()
+    editView.addGestureRecognizer(panGesture)
+    panGesture.rx.event.asDriver().drive(onNext: { [weak self] panGesture in
+      guard let self = self else { return }
+      switch panGesture.state {
+      case .began, .changed:
+        break
+      default: self.view.endEditing(true)
+      }
+    }).disposed(by: disposeBag)
   }
 }
 extension AddMemoViewController: StoryboardView {

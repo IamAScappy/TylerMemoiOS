@@ -8,3 +8,4 @@
 "makeToNewLabelCaption" = "'%@'로 만들기";
 "makeCheckItemCaption" = "목록 만들기";
 "checkListEmptyTitle" = "체크 목록을 만들어 보세요.";
+"done" = "완료";

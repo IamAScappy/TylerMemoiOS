@@ -43,8 +43,10 @@ internal extension ColorName {
   static let checkListEmptyBg = #colorLiteral(red: 0.764706, green: 0.788235, blue: 0.776471, alpha: 1.0)
   /// 0x9b9b9bff (r: 155, g: 155, b: 155, a: 255)
   static let checkListFooterTint = #colorLiteral(red: 0.607843, green: 0.607843, blue: 0.607843, alpha: 1.0)
-  /// 0x9e9e9eff (r: 158, g: 158, b: 158, a: 255)
-  static let colorAccent = #colorLiteral(red: 0.619608, green: 0.619608, blue: 0.619608, alpha: 1.0)
+  /// 0xd81b60ff (r: 216, g: 27, b: 96, a: 255)
+  static let colorAccent = #colorLiteral(red: 0.847059, green: 0.105882, blue: 0.376471, alpha: 1.0)
+  /// 0x008577ff (r: 0, g: 133, b: 119, a: 255)
+  static let colorPrimary = #colorLiteral(red: 0.0, green: 0.521569, blue: 0.466667, alpha: 1.0)
   /// 0x000000ff (r: 0, g: 0, b: 0, a: 255)
   static let white = #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
 }

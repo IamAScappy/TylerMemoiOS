@@ -50,6 +50,7 @@
                     <connections>
                         <outlet property="checkListBarItem" destination="3JB-iw-Yff" id="ZtP-t6-Fme"/>
                         <outlet property="colorThemeBarItem" destination="I5W-ei-102" id="M5O-yn-mwx"/>
+                        <outlet property="editView" destination="USS-Fb-gaS" id="XOp-U7-lGu"/>
                         <outlet property="labelBarItem" destination="Dtu-gU-8ma" id="fLU-3H-5Tn"/>
                     </connections>
                 </viewController>
