@@ -75,23 +75,25 @@ extension AddMemoViewController: StoryboardView {
       .asDriver(onErrorJustReturn: false)
       .drive(onNext: { [weak self] isShow in
         guard let self = self else { return }
+        let position = CGPoint(x: self.view.frame.width, y: self.toolbar.frame.origin.y - self.toolbar.frame.height)
         if isShow {
-          func prepareShowAnimation() {
-            self.colorThemeContainer.alpha = 0
-            self.colorThemeContainer.transform = CGAffineTransform(translationX: 0, y: self.view.frame.height)
-          }
           self.colorThemeContainer.do {
             self.view.addSubview($0)
             $0.reactor = ColorThemeReactor(ColorThemeService())
-            $0.transform = CGAffineTransform(translationX: 0, y: 100)
+            self.colorThemeContainer.alpha = 0
+            self.colorThemeContainer.transform = CGAffineTransform(translationX: position.x, y: position.y)
           }
-          prepareShowAnimation()
           UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
-            self.colorThemeContainer.transform = CGAffineTransform(translationX: 0, y: self.toolbar.frame.origin.y - self.toolbar.frame.height)
+            self.colorThemeContainer.transform = CGAffineTransform(translationX: 0, y: position.y)
             self.colorThemeContainer.alpha = 1
           })
         } else {
-          self.colorThemeContainer.removeFromSuperview()
+          UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+            self.colorThemeContainer.transform = CGAffineTransform(translationX: -self.view.frame.width, y: position.y)
+            self.colorThemeContainer.alpha = 0
+          }, completion: { _ in
+            self.colorThemeContainer.removeFromSuperview()
+          })
         }
       })
       .disposed(by: disposeBag)
