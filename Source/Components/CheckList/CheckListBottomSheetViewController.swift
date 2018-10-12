@@ -14,6 +14,7 @@ import UIKit
 
 class CheckListBottomSheetViewController: UIViewController, HasDisposeBag {
   var memo: Memo = Memo(text: "test")
+  
   private let tableView = UITableView()
   private let makeCheckItemFooterView = MakeCheckItemFooterView()
   
@@ -71,7 +72,7 @@ extension CheckListBottomSheetViewController: UITableViewDelegate {
     }
   }
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return CGFloat(Dimens.CheckList.itemHeight.rawValue)
+    return Dimens.CheckList.itemHeight.rawValue
   }
   func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
     return makeCheckItemFooterView

@@ -52,6 +52,7 @@
                         <outlet property="colorThemeBarItem" destination="I5W-ei-102" id="M5O-yn-mwx"/>
                         <outlet property="editView" destination="USS-Fb-gaS" id="XOp-U7-lGu"/>
                         <outlet property="labelBarItem" destination="Dtu-gU-8ma" id="fLU-3H-5Tn"/>
+                        <outlet property="toolbar" destination="XQt-nx-LGE" id="dyY-ya-ElH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9HZ-vG-xU5" userLabel="First Responder" sceneMemberID="firstResponder"/>

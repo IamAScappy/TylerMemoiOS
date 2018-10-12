@@ -82,6 +82,7 @@
 		BDBF37062158DA7F00953C77 /* ExistLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF37052158DA7F00953C77 /* ExistLabelCell.swift */; };
 		BDBF6DFF2170EBA300B06BC5 /* EditInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF6DFE2170EBA300B06BC5 /* EditInputAccessoryView.swift */; };
 		BDBF6E012170FC2000B06BC5 /* KeyBoardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF6E002170FC2000B06BC5 /* KeyBoardHandler.swift */; };
+		BDBF6E042170FF6000B06BC5 /* ColorThemeContrainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF6E032170FF6000B06BC5 /* ColorThemeContrainer.swift */; };
 		BDC0E9E12153BF1400BE8EE3 /* RealmMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC0E9E02153BF1400BE8EE3 /* RealmMigration.swift */; };
 		BDC4D8AD216317A200ED5404 /* ColorThemeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4D8A9216317A200ED5404 /* ColorThemeViewModel.swift */; };
 		BDC4D8AE216317A200ED5404 /* ColorThemeContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4D8AA216317A200ED5404 /* ColorThemeContainer.swift */; };
@@ -220,6 +221,7 @@
 		BDBF37052158DA7F00953C77 /* ExistLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExistLabelCell.swift; sourceTree = "<group>"; };
 		BDBF6DFE2170EBA300B06BC5 /* EditInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInputAccessoryView.swift; sourceTree = "<group>"; };
 		BDBF6E002170FC2000B06BC5 /* KeyBoardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoardHandler.swift; sourceTree = "<group>"; };
+		BDBF6E032170FF6000B06BC5 /* ColorThemeContrainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorThemeContrainer.swift; sourceTree = "<group>"; };
 		BDC0E9E02153BF1400BE8EE3 /* RealmMigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmMigration.swift; sourceTree = "<group>"; };
 		BDC4D8A9216317A200ED5404 /* ColorThemeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorThemeViewModel.swift; sourceTree = "<group>"; };
 		BDC4D8AA216317A200ED5404 /* ColorThemeContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorThemeContainer.swift; sourceTree = "<group>"; };
@@ -437,10 +439,10 @@
 				BD780E1E214C9CC000FA9FDF /* Persistence */,
 				BD81DE34214C903000526054 /* Generated */,
 				BD81DE10214C857100526054 /* Supporting Files */,
+				BDBF6E022170FF4A00B06BC5 /* Inject */,
 				BD81DDDF214C854000526054 /* AppDelegate.swift */,
 				BDB5514321633B84001B0138 /* AppDelegate+Deallocation.swift */,
 				BDC0E9E02153BF1400BE8EE3 /* RealmMigration.swift */,
-				BDE111CC2156A8440010FBD9 /* SwinjectStoryboard+setUp.swift */,
 				BDA7F32121638007002D9F3B /* Common */,
 				BD31584C21680CEB006DEDC9 /* AddMemo */,
 				BDC4D8A7216317A200ED5404 /* Components */,
@@ -510,6 +512,15 @@
 			);
 			name = Common;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		BDBF6E022170FF4A00B06BC5 /* Inject */ = {
+			isa = PBXGroup;
+			children = (
+				BDE111CC2156A8440010FBD9 /* SwinjectStoryboard+setUp.swift */,
+				BDBF6E032170FF6000B06BC5 /* ColorThemeContrainer.swift */,
+			);
+			path = Inject;
 			sourceTree = "<group>";
 		};
 		BDC4D8A7216317A200ED5404 /* Components */ = {
@@ -1070,6 +1081,7 @@
 				BDC4D8AF216317A200ED5404 /* ColorThemeReactor.swift in Sources */,
 				BD4BBB062158E11D00ED00C3 /* UIScrollView+Rx.swift in Sources */,
 				BD0FD10121589BFD00EAE5E0 /* NewLabelCell.swift in Sources */,
+				BDBF6E042170FF6000B06BC5 /* ColorThemeContrainer.swift in Sources */,
 				BDFCBA0C21566BF2008B935E /* UIViewController+Rx.swift in Sources */,
 				BD5653D521565ABE00F378F0 /* MemoViewModel.swift in Sources */,
 				BDB5514421633B84001B0138 /* AppDelegate+Deallocation.swift in Sources */,

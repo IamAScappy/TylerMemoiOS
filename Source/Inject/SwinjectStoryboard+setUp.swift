@@ -18,6 +18,7 @@ extension SwinjectStoryboard {
     defaultContainer.register(MemoServiceType.self) { _ in MemoService() }
     defaultContainer.register(LabelServiceType.self) { _ in LabelService() }
     defaultContainer.register(CheckListType.self) { _ in CheckListService() }
+    defaultContainer.register(ColorThemeType.self) { _ in ColorThemeService() }
 //    label container
     // swiftlint:disable:next identifier_name
     defaultContainer.register(LabelReactor.self) { r in LabelReactor(labelService: r.resolve(LabelServiceType.self)!) }
@@ -31,6 +32,7 @@ extension SwinjectStoryboard {
     // swiftlint:disable:next identifier_name
     defaultContainer.storyboardInitCompleted(AddMemoViewController.self) { r, c in
       c.reactor = r.resolve(AddMemoReactor.self)
+      c.colorThemeService = r.resolve(ColorThemeType.self)
     }
     //    checklist container
     // swiftlint:disable:next identifier_name
