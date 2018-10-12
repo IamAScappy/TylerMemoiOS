@@ -19,10 +19,9 @@ class RealmMigration {
       let v1URL = Bundle.main.url(forResource: "tyler-v1", withExtension: "realm") {
       
       do {
-//        try FileManager.default.removeItem(at: defaultURL)
         try FileManager.default.copyItem(at: v1URL, to: tylerURL)
       } catch let error {
-        print("error copying seeds: \(error)")
+        log.error("error copying seeds: \(error)")
       }
       let migrationBlock: MigrationBlock = { migration, oldSchemaVersion in }
       Realm.Configuration.defaultConfiguration = Realm.Configuration(fileURL: tylerURL, schemaVersion: 1, migrationBlock: migrationBlock)

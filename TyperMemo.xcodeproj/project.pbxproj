@@ -82,6 +82,7 @@
 		BDBF37062158DA7F00953C77 /* ExistLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF37052158DA7F00953C77 /* ExistLabelCell.swift */; };
 		BDBF6DFF2170EBA300B06BC5 /* EditInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF6DFE2170EBA300B06BC5 /* EditInputAccessoryView.swift */; };
 		BDBF6E012170FC2000B06BC5 /* KeyBoardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF6E002170FC2000B06BC5 /* KeyBoardHandler.swift */; };
+		BDBF6E062171194C00B06BC5 /* tyler-v1.realm in Resources */ = {isa = PBXBuildFile; fileRef = BD22ECF8216CF8F400C7A9A3 /* tyler-v1.realm */; };
 		BDC0E9E12153BF1400BE8EE3 /* RealmMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC0E9E02153BF1400BE8EE3 /* RealmMigration.swift */; };
 		BDC4D8AD216317A200ED5404 /* ColorThemeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4D8A9216317A200ED5404 /* ColorThemeViewModel.swift */; };
 		BDC4D8AE216317A200ED5404 /* ColorThemeContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4D8AA216317A200ED5404 /* ColorThemeContainer.swift */; };
@@ -704,6 +705,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDBF6E062171194C00B06BC5 /* tyler-v1.realm in Resources */,
 				BD81DDED214C854100526054 /* LaunchScreen.storyboard in Resources */,
 				BDBF37022158D86300953C77 /* Localizable.strings in Resources */,
 				BDF97B8A2158B71C00696102 /* Assets.xcassets in Resources */,
