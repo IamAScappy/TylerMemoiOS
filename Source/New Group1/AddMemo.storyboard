@@ -31,6 +31,8 @@
                                     <barButtonItem title="Item" image="ic_color_theme" id="I5W-ei-102"/>
                                     <barButtonItem title="Item" image="ic_label" id="Dtu-gU-8ma"/>
                                     <barButtonItem title="Item" image="ic_check_list" id="3JB-iw-Yff"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9bA-Pl-lSE"/>
+                                    <barButtonItem title="Item" image="ic_close_panel" id="8Hm-Xu-9Yy"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -49,6 +51,7 @@
                     <navigationItem key="navigationItem" id="0td-GH-GZT"/>
                     <connections>
                         <outlet property="checkListBarItem" destination="3JB-iw-Yff" id="ZtP-t6-Fme"/>
+                        <outlet property="closePanel" destination="8Hm-Xu-9Yy" id="Z5l-dT-RYc"/>
                         <outlet property="colorThemeBarItem" destination="I5W-ei-102" id="M5O-yn-mwx"/>
                         <outlet property="editView" destination="USS-Fb-gaS" id="XOp-U7-lGu"/>
                         <outlet property="labelBarItem" destination="Dtu-gU-8ma" id="fLU-3H-5Tn"/>
@@ -80,6 +83,7 @@
     </scenes>
     <resources>
         <image name="ic_check_list" width="48" height="48"/>
+        <image name="ic_close_panel" width="48" height="48"/>
         <image name="ic_color_theme" width="48" height="48"/>
         <image name="ic_label" width="48" height="48"/>
     </resources>

@@ -26,29 +26,12 @@ internal class EditInputAccessoryView: UIView, HasDisposeBag {
   }
   func initView() {
     self.backgroundColor = .clear
-    
-    let blurEffect = UIBlurEffect(style: .extraLight)
-    let blurView = UIVisualEffectView(effect: blurEffect)
-    blurView.alpha = 0.8
-    blurView.translatesAutoresizingMaskIntoConstraints = false
-    self.insertSubview(blurView, at: 0)
-    blurView.snp.makeConstraints { make in
-      make.edges.equalToSuperview()
-    }
-
-    let vibrancyEffect = UIVibrancyEffect(blurEffect: blurEffect)
-    let vibrancyView = UIVisualEffectView(effect: vibrancyEffect)
-    vibrancyView.translatesAutoresizingMaskIntoConstraints = false
-    vibrancyView.contentView.addSubview(doneButton)
-    blurView.contentView.addSubview(vibrancyView)
-    
-    vibrancyView.snp.makeConstraints { make in
-      make.edges.equalTo(blurView.contentView)
-    }
-    
-    doneButton.snp.makeConstraints { make in
-      make.trailing.equalTo(vibrancyView.contentView).inset(15)
-      make.centerY.equalTo(vibrancyView.snp.centerY)
+    self.addVibrancyEffectView { vibrancyView in
+      vibrancyView.addSubview(doneButton)
+      doneButton.snp.makeConstraints { make in
+        make.trailing.equalTo(vibrancyView).inset(15)
+        make.centerY.equalTo(vibrancyView.snp.centerY)
+      }
     }
     doneButton.rx.tap.asDriver().drive(onNext: { _ in
       KeyBoardHandler.dismissKeyboard()

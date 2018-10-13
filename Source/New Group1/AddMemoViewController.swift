@@ -9,6 +9,7 @@
 import ReactorKit
 import RxSwift
 import UIKit
+import RxCocoa
 
 class AddMemoViewController: UIViewController, HasDisposeBag, StoryboardInitializable, DeallocationView {
   var colorThemeService: ColorThemeType!
@@ -20,6 +21,7 @@ class AddMemoViewController: UIViewController, HasDisposeBag, StoryboardInitiali
     container.frame = CGRect(0, 0, self.view.frame.width, Dimens.AddMemo.colorThemeContainerHeight.rawValue)
     return container
   }()
+  @IBOutlet weak private var closePanel: UIBarButtonItem!
   @IBOutlet weak private var colorThemeBarItem: UIBarButtonItem!
   @IBOutlet weak private var labelBarItem: UIBarButtonItem!
   @IBOutlet weak private var checkListBarItem: UIBarButtonItem!
@@ -55,11 +57,21 @@ extension AddMemoViewController: StoryboardView {
       .bind(to: reactor.action)
       .disposed(by: disposeBag)
 
+    closePanel.rx.tap
+      .map { Reactor.Action.allClosePanel }
+      .bind(to: reactor.action)
+      .disposed(by: disposeBag)
     labelBarItem.rx.tap
       .map { Reactor.Action.viewLabel }
       .bind(to: reactor.action)
       .disposed(by: disposeBag)
 
+    reactor.state
+      .map { $0.isAllClosePanel }
+      .asDriver(onErrorJustReturn: false)
+      .filter { $0 }
+      .drive()
+      .disposed(by: disposeBag)
     reactor.state
       .map { $0.isShowLabel }
       .filter({ $0 })
@@ -75,7 +87,7 @@ extension AddMemoViewController: StoryboardView {
       .asDriver(onErrorJustReturn: false)
       .drive(onNext: { [weak self] isShow in
         guard let self = self else { return }
-        let position = CGPoint(x: self.view.frame.width, y: self.toolbar.frame.origin.y - self.toolbar.frame.height)
+        let position = CGPoint(x: self.view.frame.width, y: self.toolbar.frame.origin.y - Dimens.AddMemo.colorThemeContainerHeight.rawValue)
         if isShow {
           self.colorThemeContainer.do {
             self.view.addSubview($0)
@@ -88,12 +100,7 @@ extension AddMemoViewController: StoryboardView {
             self.colorThemeContainer.alpha = 1
           })
         } else {
-          UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
-            self.colorThemeContainer.transform = CGAffineTransform(translationX: -self.view.frame.width, y: position.y)
-            self.colorThemeContainer.alpha = 0
-          }, completion: { _ in
-            self.colorThemeContainer.removeFromSuperview()
-          })
+          self.colorThemeContainer.animateLeftOut(endPosition: CGPoint(x: -self.view.frame.width, y: position.y))
         }
       })
       .disposed(by: disposeBag)
@@ -104,6 +111,18 @@ extension AddMemoViewController {
   class func makeViewController(memo: Memo) -> AddMemoViewController {
     return AddMemoViewController.initFromStoryboard(name: "AddMemo").then({
       $0.memo = memo
+    })
+  }
+}
+
+// TODO Layer 기반으로 애니메이션 객체를 생성하는 식으로 변경 필요
+private extension ColorThemeContainer {
+  func animateLeftOut(endPosition: CGPoint) {
+    UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+      self.transform = CGAffineTransform(translationX: endPosition.x, y: endPosition.y)
+      self.alpha = 0
+    }, completion: { _ in
+      self.removeFromSuperview()
     })
   }
 }

@@ -19,16 +19,19 @@ class AddMemoReactor: Reactor {
   enum Action {
     case toggleColorTheme
     case viewLabel
+    case allClosePanel
     case loadedMemoView(memo: Memo)
   }
   struct State {
     var memo: Memo?
     var isShowColorTheme: Bool = false
     var isShowLabel: Bool = false
+    var isAllClosePanel: Bool = false
   }
   enum Mutation {
     case saveMemo(memo: Memo)
     case toggleColorTheme
+    case allClosePanel
     case viewLabel
   }
   func mutate(action: Action) -> Observable<Mutation> {
@@ -40,11 +43,14 @@ class AddMemoReactor: Reactor {
       return Observable.just(Mutation.toggleColorTheme)
     case .viewLabel:
       return Observable.just(Mutation.viewLabel)
+    case .allClosePanel:
+      return Observable.just(Mutation.allClosePanel)
     }
   }
   func reduce(state: State, mutation: Mutation) -> State {
     var newState = state
     newState.isShowLabel = false
+    newState.isShowColorTheme = false
     switch mutation {
     case .saveMemo(let memo):
       newState.memo = memo
@@ -52,8 +58,9 @@ class AddMemoReactor: Reactor {
       newState.isShowColorTheme = !state.isShowColorTheme
     case .viewLabel:
       newState.isShowLabel = true
-      newState.isShowColorTheme = false
+    case .allClosePanel: break
     }
     return newState
   }
 }
+

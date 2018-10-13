@@ -1,6 +1,6 @@
 # RGBA
-white: 000000
-black: ffffff
+white: ffffff
+black: 000000
 ThemeRed: F44336
 ThemePink: E91E63
 ThemePurple: 673AB7

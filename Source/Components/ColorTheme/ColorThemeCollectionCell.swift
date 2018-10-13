@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ColorThemeCollectionCell: UICollectionViewCell, SwiftNameIdentifier {
+class ColorThemeCollectionCell: UICollectionViewCell, SwiftNameIdentifier, HasDisposeBag {
   private var color: UIColor = .clear
   private var borderColor: UIColor = ColorName.colorAccent
   
@@ -27,7 +27,7 @@ class ColorThemeCollectionCell: UICollectionViewCell, SwiftNameIdentifier {
       con.addEllipse(in: rect)
       con.setFillColor(borderColor.cgColor)
       con.fillPath()
-      con.addEllipse(in: rect.insetBy(dx: 3, dy: 3))
+      con.addEllipse(in: rect.insetBy(dx: 2, dy: 2))
       con.setFillColor(color.cgColor)
       con.fillPath()
     }
@@ -36,5 +36,6 @@ class ColorThemeCollectionCell: UICollectionViewCell, SwiftNameIdentifier {
 extension ColorThemeCollectionCell {
   func configureCell(colorTheme: ColorTheme) {
     color = colorTheme.color.toColor()
+    setNeedsDisplay()
   }
 }

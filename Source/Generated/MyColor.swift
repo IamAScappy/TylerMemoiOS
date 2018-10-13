@@ -37,8 +37,8 @@ internal extension ColorName {
   static let themeTeal = #colorLiteral(red: 0.0, green: 0.588235, blue: 0.533333, alpha: 1.0)
   /// 0xffeb3bff (r: 255, g: 235, b: 59, a: 255)
   static let themeYellow = #colorLiteral(red: 1.0, green: 0.921569, blue: 0.231373, alpha: 1.0)
-  /// 0xffffffff (r: 255, g: 255, b: 255, a: 255)
-  static let black = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+  /// 0x000000ff (r: 0, g: 0, b: 0, a: 255)
+  static let black = #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
   /// 0xc3c9c6ff (r: 195, g: 201, b: 198, a: 255)
   static let checkListEmptyBg = #colorLiteral(red: 0.764706, green: 0.788235, blue: 0.776471, alpha: 1.0)
   /// 0x9b9b9bff (r: 155, g: 155, b: 155, a: 255)
@@ -47,7 +47,7 @@ internal extension ColorName {
   static let colorAccent = #colorLiteral(red: 0.847059, green: 0.105882, blue: 0.376471, alpha: 1.0)
   /// 0x008577ff (r: 0, g: 133, b: 119, a: 255)
   static let colorPrimary = #colorLiteral(red: 0.0, green: 0.521569, blue: 0.466667, alpha: 1.0)
-  /// 0x000000ff (r: 0, g: 0, b: 0, a: 255)
-  static let white = #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
+  /// 0xffffffff (r: 255, g: 255, b: 255, a: 255)
+  static let white = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
 }
 // swiftlint:enable identifier_name line_length type_body_length

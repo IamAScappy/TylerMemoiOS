@@ -51,6 +51,8 @@ internal enum Asset {
     internal static let icLabel = ImageAsset(name: "ic_label")
   }
   internal static let icAdd = ImageAsset(name: "ic_add")
+  internal static let icClose = ImageAsset(name: "ic_close")
+  internal static let icClosePanel = ImageAsset(name: "ic_close_panel")
   internal static let icEditView = ImageAsset(name: "ic_edit_view")
 
   // swiftlint:disable trailing_comma
@@ -62,6 +64,8 @@ internal enum Asset {
     AddMemo.icColorTheme,
     AddMemo.icLabel,
     icAdd,
+    icClose,
+    icClosePanel,
     icEditView,
   ]
   // swiftlint:enable trailing_comma

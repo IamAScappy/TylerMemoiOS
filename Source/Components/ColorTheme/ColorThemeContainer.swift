@@ -15,10 +15,18 @@ import UIKit
 
 @IBDesignable
 class ColorThemeContainer: UIView, HasDisposeBag {
-  @IBInspectable var spacing: CGFloat = 10
+  @IBInspectable var spacing: CGFloat = 15
   private lazy var collectionViewLayout = UICollectionViewFlowLayout()
   private lazy var uiCollectionView: UICollectionView = {
     return UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
+  }()
+  
+  private let closeButton: UIButton = {
+    let button = UIButton()
+    let image = Asset.icClose.image.withRenderingMode(.alwaysTemplate)
+    button.setImage(Asset.icClose.image, for: .normal)
+    button.tintColor = ColorName.themeGray
+    return button
   }()
 
   required init?(coder aDecoder: NSCoder) {
@@ -35,7 +43,7 @@ class ColorThemeContainer: UIView, HasDisposeBag {
       $0.snp.makeConstraints { make in
         make.edges.equalToSuperview()
       }
-      $0.backgroundColor = .blue
+      $0.backgroundColor = ColorName.white
       $0.register(ColorThemeCollectionCell.self, forCellWithReuseIdentifier: ColorThemeCollectionCell.identifier)
     }
     collectionViewLayout.do {
@@ -43,6 +51,9 @@ class ColorThemeContainer: UIView, HasDisposeBag {
       $0.sectionInset = UIEdgeInsets(top: 0, left: spacing, bottom: 0, right: spacing)
       $0.minimumLineSpacing = spacing
     }
+  }
+  func changedColorTheme(_ colorTheme: ColorTheme) {
+    log.debug("changedColorTheme \(colorTheme)")
   }
   override func layoutSubviews() {
     let minWidth = max(self.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height - spacing, 0)
@@ -82,6 +93,14 @@ extension ColorThemeContainer: View {
       .asDriver(onErrorJustReturn: [])
       .drive(uiCollectionView.rx.items(cellIdentifier: ColorThemeCollectionCell.identifier, cellType: ColorThemeCollectionCell.self)) ({ row, element, cell in
         cell.configureCell(colorTheme: element)
+        let tapGesture = UITapGestureRecognizer()
+        cell.addGestureRecognizer(tapGesture)
+        tapGesture.rx.event
+          .asDriver()
+          .drive(onNext: { [weak self] _ in
+          guard let self = self else { return }
+          self.changedColorTheme(element)
+        }).disposed(by: cell.disposeBag)
       })
       .disposed(by: disposeBag)
   }

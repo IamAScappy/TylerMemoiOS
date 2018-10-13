@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 enum Dimens: CGFloat, RawRepresentable {
   case labelHeight = 40
+  case endOfMargin = 15
   case editAccessoryViewHeight = 50
   enum CheckList: CGFloat, RawRepresentable {
     case itemHeight = 50
@@ -17,6 +18,6 @@ enum Dimens: CGFloat, RawRepresentable {
     case betweenImageTitleSpacing = 15
   }
   enum AddMemo: CGFloat, RawRepresentable {
-    case colorThemeContainerHeight = 50
+    case colorThemeContainerHeight = 70
   }
 }

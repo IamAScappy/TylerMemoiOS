@@ -83,6 +83,7 @@
 		BDBF6DFF2170EBA300B06BC5 /* EditInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF6DFE2170EBA300B06BC5 /* EditInputAccessoryView.swift */; };
 		BDBF6E012170FC2000B06BC5 /* KeyBoardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF6E002170FC2000B06BC5 /* KeyBoardHandler.swift */; };
 		BDBF6E062171194C00B06BC5 /* tyler-v1.realm in Resources */ = {isa = PBXBuildFile; fileRef = BD22ECF8216CF8F400C7A9A3 /* tyler-v1.realm */; };
+		BDBF6E0821711EF800B06BC5 /* UIView+Blur+Vibrancy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBF6E0721711EF800B06BC5 /* UIView+Blur+Vibrancy.swift */; };
 		BDC0E9E12153BF1400BE8EE3 /* RealmMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC0E9E02153BF1400BE8EE3 /* RealmMigration.swift */; };
 		BDC4D8AD216317A200ED5404 /* ColorThemeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4D8A9216317A200ED5404 /* ColorThemeViewModel.swift */; };
 		BDC4D8AE216317A200ED5404 /* ColorThemeContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4D8AA216317A200ED5404 /* ColorThemeContainer.swift */; };
@@ -221,6 +222,7 @@
 		BDBF37052158DA7F00953C77 /* ExistLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExistLabelCell.swift; sourceTree = "<group>"; };
 		BDBF6DFE2170EBA300B06BC5 /* EditInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInputAccessoryView.swift; sourceTree = "<group>"; };
 		BDBF6E002170FC2000B06BC5 /* KeyBoardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoardHandler.swift; sourceTree = "<group>"; };
+		BDBF6E0721711EF800B06BC5 /* UIView+Blur+Vibrancy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Blur+Vibrancy.swift"; sourceTree = "<group>"; };
 		BDC0E9E02153BF1400BE8EE3 /* RealmMigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmMigration.swift; sourceTree = "<group>"; };
 		BDC4D8A9216317A200ED5404 /* ColorThemeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorThemeViewModel.swift; sourceTree = "<group>"; };
 		BDC4D8AA216317A200ED5404 /* ColorThemeContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorThemeContainer.swift; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 				BDFCBA0B21566BF2008B935E /* UIViewController+Rx.swift */,
 				BD27CBED2167974600C805B4 /* CGUtility.swift */,
 				BD22ECF0216CD83000C7A9A3 /* UIImage+GIF.swift */,
+				BDBF6E0721711EF800B06BC5 /* UIView+Blur+Vibrancy.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1080,6 +1083,7 @@
 				BDC4D8AF216317A200ED5404 /* ColorThemeReactor.swift in Sources */,
 				BD4BBB062158E11D00ED00C3 /* UIScrollView+Rx.swift in Sources */,
 				BD0FD10121589BFD00EAE5E0 /* NewLabelCell.swift in Sources */,
+				BDBF6E0821711EF800B06BC5 /* UIView+Blur+Vibrancy.swift in Sources */,
 				BDFCBA0C21566BF2008B935E /* UIViewController+Rx.swift in Sources */,
 				BD5653D521565ABE00F378F0 /* MemoViewModel.swift in Sources */,
 				BDB5514421633B84001B0138 /* AppDelegate+Deallocation.swift in Sources */,
