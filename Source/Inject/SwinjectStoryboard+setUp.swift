@@ -34,12 +34,5 @@ extension SwinjectStoryboard {
       c.reactor = r.resolve(AddMemoReactor.self)
       c.colorThemeService = r.resolve(ColorThemeType.self)
     }
-    //    checklist container
-    // swiftlint:disable:next identifier_name
-    defaultContainer.register(CheckListReactor.self) { r in CheckListReactor(r.resolve(CheckListType.self)!) }
-    // swiftlint:disable:next identifier_name
-    defaultContainer.storyboardInitCompleted(CheckListBottomSheetViewController.self) { r, c in
-      c.reactor = r.resolve(CheckListReactor.self)
-    }
   }
 }

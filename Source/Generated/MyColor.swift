@@ -47,6 +47,8 @@ internal extension ColorName {
   static let colorAccent = #colorLiteral(red: 0.847059, green: 0.105882, blue: 0.376471, alpha: 1.0)
   /// 0x008577ff (r: 0, g: 133, b: 119, a: 255)
   static let colorPrimary = #colorLiteral(red: 0.0, green: 0.521569, blue: 0.466667, alpha: 1.0)
+  /// 0x6200eeff (r: 98, g: 0, b: 238, a: 255)
+  static let tagBg = #colorLiteral(red: 0.384314, green: 0.0, blue: 0.933333, alpha: 1.0)
   /// 0xffffffff (r: 255, g: 255, b: 255, a: 255)
   static let white = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
 }

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import RxDataSources
 
-extension CheckListBottomSheetViewController {
+extension CheckListView {
   var configureCell: (TableViewSectionedDataSource<CheckListViewModel>, UITableView, IndexPath, CheckListViewModel.Item) -> UITableViewCell {
     return { dataSource, tableView, indexPath, item in
       guard let cell = tableView.dequeueReusableCell(withIdentifier: CheckItemTableCell.identifier, for: indexPath)

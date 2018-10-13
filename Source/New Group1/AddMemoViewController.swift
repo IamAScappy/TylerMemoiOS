@@ -7,15 +7,15 @@
 //
 
 import ReactorKit
+import RxCocoa
 import RxSwift
 import UIKit
-import RxCocoa
 
 class AddMemoViewController: UIViewController, HasDisposeBag, StoryboardInitializable, DeallocationView {
   var colorThemeService: ColorThemeType!
   var memo: Memo!
-  @IBOutlet weak var toolbar: UIToolbar!
-  @IBOutlet weak var editView: UITextView!
+  @IBOutlet weak private var toolbar: UIToolbar!
+  @IBOutlet weak private var editView: UITextView!
   private lazy var colorThemeContainer: ColorThemeContainer = {
     let container = ColorThemeContainer()
     container.frame = CGRect(0, 0, self.view.frame.width, Dimens.AddMemo.colorThemeContainerHeight.rawValue)
@@ -32,17 +32,6 @@ class AddMemoViewController: UIViewController, HasDisposeBag, StoryboardInitiali
     editView.inputAccessoryView = EditInputAccessoryView(frame: CGRect(0, 0, view.frame.width, Dimens.editAccessoryViewHeight.rawValue))
     self.navigationController?.navigationBar.backIndicatorImage = Asset.AddMemo.icBack.image
     self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-    editView.keyboardDismissMode = .onDrag
-    let panGesture = UIPanGestureRecognizer()
-    editView.addGestureRecognizer(panGesture)
-    panGesture.rx.event.asDriver().drive(onNext: { [weak self] panGesture in
-      guard let self = self else { return }
-      switch panGesture.state {
-      case .began, .changed:
-        break
-      default: self.view.endEditing(true)
-      }
-    }).disposed(by: disposeBag)
   }
 }
 extension AddMemoViewController: StoryboardView {

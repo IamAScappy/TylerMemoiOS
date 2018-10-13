@@ -12,16 +12,24 @@ import RxDataSources
 import RxSwift
 import UIKit
 
-class CheckListBottomSheetViewController: UIViewController, HasDisposeBag {
+class CheckListView: UIView, HasDisposeBag {
   var memo: Memo = Memo(text: "test")
-  
+
   private let tableView = UITableView()
   private let makeCheckItemFooterView = MakeCheckItemFooterView()
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
+
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    initView()
+  }
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+    initView()
+  }
+
+  func initView() {
     tableView.do {
-      self.view.addSubview($0)
+      self.addSubview($0)
       $0.snp.makeConstraints({ make in
         make.edges.equalToSuperview()
       })
@@ -33,7 +41,7 @@ class CheckListBottomSheetViewController: UIViewController, HasDisposeBag {
   }
 }
 
-extension CheckListBottomSheetViewController: View, StoryboardView {
+extension CheckListView: View, StoryboardView {
   func bind(reactor: CheckListReactor) {
     Observable.just(true)
       .map { _ in Reactor.Action.fetchMemo(memo: self.memo) }
@@ -56,9 +64,9 @@ extension CheckListBottomSheetViewController: View, StoryboardView {
   }
 }
 
-extension CheckListBottomSheetViewController: UITableViewDelegate {
-  class func makeViewController(memo: Memo) -> CheckListBottomSheetViewController {
-    return CheckListBottomSheetViewController().then({
+extension CheckListView: UITableViewDelegate {
+  class func makeViewController(memo: Memo) -> CheckListView {
+    return CheckListView().then({
       $0.memo = memo
     })
   }

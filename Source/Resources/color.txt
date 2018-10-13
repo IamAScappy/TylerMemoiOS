@@ -17,3 +17,4 @@ colorAccent: D81B60
 colorPrimary: 008577
 checkListFooterTint: 9b9b9b
 checkListEmptyBg: c3c9c6
+tagBg: 6200EE
