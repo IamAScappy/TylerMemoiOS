@@ -36,7 +36,7 @@ extension Label: ListDiffable {
   }
   func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
     guard self !== object else { return true }
-    guard let object = object as? Memo else { return false }
+    guard let object = object as? Label else { return false }
     return self == object
   }
 }

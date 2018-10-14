@@ -15,7 +15,7 @@ enum PersistenceError: Error {
   case outOfMemory                //user's memory is at capacity
   case notAuthorized              //app is in background with encryption / phone not unlocked
   case unknown                    //any error not meeting the above conditions
-  
+
   var description: String {
     switch self {
     case .persistenceIntialization:

@@ -34,5 +34,9 @@ extension SwinjectStoryboard {
       c.reactor = r.resolve(AddMemoReactor.self)
       c.colorThemeService = r.resolve(ColorThemeType.self)
     }
+    defaultContainer.register(MemoAttrReactor.self) { r in MemoAttrReactor(r.resolve(MemoServiceType.self)!) }
+    defaultContainer.storyboardInitCompleted(MemoAttrViewController.self) { r, c in
+      c.reactor = r.resolve(MemoAttrReactor.self)
+    }
   }
 }

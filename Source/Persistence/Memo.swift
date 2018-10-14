@@ -21,6 +21,9 @@ class Memo: Object {
   override static func primaryKey() -> String {
     return "memo_id"
   }
+  class func empty() -> Memo {
+    return Memo(text: "")
+  }
 }
 
 class MemoAttribute: Object {

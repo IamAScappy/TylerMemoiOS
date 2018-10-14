@@ -15,9 +15,11 @@ enum Dimens: CGFloat, RawRepresentable {
   enum CheckList: CGFloat, RawRepresentable {
     case itemHeight = 50
     case checkboxWidth = 30
+    case checkCellHeight = 35
     case betweenImageTitleSpacing = 15
   }
   enum AddMemo: CGFloat, RawRepresentable {
     case colorThemeContainerHeight = 70
+    case documentOfMargine = 15
   }
 }

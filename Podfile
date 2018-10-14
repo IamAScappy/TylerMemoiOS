@@ -7,14 +7,13 @@ target 'TyperMemo' do
   use_frameworks!
   # Pods for TyperMemo
   pod 'SwiftLint'
-  pod 'SwiftGen'
+  pod 'SwiftGen', '~> 5.3.0'
   pod 'ReactorKit'
   pod 'Then'
   pod 'Result', '~> 4.0.0'
-  pod 'UICheckbox.Swift'
   post_install do |installer|
     installer.pods_project.targets.each do |target|
-      if ['UICheckbox.Swift'].include? target.name
+      if [].include? target.name
         target.build_configurations.each do |config|
           config.build_settings['SWIFT_VERSION'] = '4'
         end

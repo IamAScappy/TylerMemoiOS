@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: Source/Services/CheckListType.swift at 2018-10-13 02:07:22 +0000
+// MARK: - Mocks generated from file: Source/Services/CheckListType.swift at 2018-10-14 11:39:39 +0000
 
 //
 //  CheckListType.swift
@@ -168,7 +168,7 @@ class MockCheckListService: CheckListService, Cuckoo.ClassMock {
 }
 
 
-// MARK: - Mocks generated from file: Source/Services/ColorThemeType.swift at 2018-10-13 02:07:22 +0000
+// MARK: - Mocks generated from file: Source/Services/ColorThemeType.swift at 2018-10-14 11:39:39 +0000
 
 //
 //  ColorThemeType.swift
@@ -338,7 +338,7 @@ class MockColorThemeService: ColorThemeService, Cuckoo.ClassMock {
 }
 
 
-// MARK: - Mocks generated from file: Source/Services/LabelServiceType.swift at 2018-10-13 02:07:22 +0000
+// MARK: - Mocks generated from file: Source/Services/LabelServiceType.swift at 2018-10-14 11:39:39 +0000
 
 //
 //  LabelServiceType.swift
@@ -563,7 +563,7 @@ class MockLabelService: LabelService, Cuckoo.ClassMock {
 }
 
 
-// MARK: - Mocks generated from file: Source/Services/MemoServiceType.swift at 2018-10-13 02:07:22 +0000
+// MARK: - Mocks generated from file: Source/Services/MemoServiceType.swift at 2018-10-14 11:39:39 +0000
 
 //
 //  MemoServiceType.swift
@@ -576,6 +576,9 @@ import Cuckoo
 @testable import TyperMemo
 
 import Foundation
+import RealmSwift
+import Result
+import RxSwift
 
 class MockMemoServiceType: MemoServiceType, Cuckoo.ProtocolMock {
     typealias MocksType = MemoServiceType
@@ -588,6 +591,18 @@ class MockMemoServiceType: MemoServiceType, Cuckoo.ProtocolMock {
     
 
     
+    // ["name": "getMemoOrDefault", "returnSignature": " -> Result<Observable<Memo>, NSError>", "fullyQualifiedName": "getMemoOrDefault(_: Memo) -> Result<Observable<Memo>, NSError>", "parameterSignature": "_ defaultMemo: Memo", "parameterSignatureWithoutNames": "defaultMemo: Memo", "inputTypes": "Memo", "isThrowing": false, "isInit": false, "isOverriding": false, "hasClosureParams": false, "@type": "ProtocolMethod", "accessibility": "", "parameterNames": "defaultMemo", "call": "defaultMemo", "parameters": [CuckooGeneratorFramework.MethodParameter(label: nil, name: "defaultMemo", type: "Memo", range: CountableRange(276..<295), nameRange: CountableRange(0..<0))], "returnType": "Result<Observable<Memo>, NSError>", "isOptional": false, "stubFunction": "Cuckoo.ProtocolStubFunction"]
+     func getMemoOrDefault(_ defaultMemo: Memo)  -> Result<Observable<Memo>, NSError> {
+        
+            return cuckoo_manager.call("getMemoOrDefault(_: Memo) -> Result<Observable<Memo>, NSError>",
+                parameters: (defaultMemo),
+                superclassCall:
+                    
+                    Cuckoo.MockManager.crashOnProtocolSuperclassCall()
+                    )
+        
+    }
+    
 
 	struct __StubbingProxy_MemoServiceType: Cuckoo.StubbingProxy {
 	    private let cuckoo_manager: Cuckoo.MockManager
@@ -596,6 +611,11 @@ class MockMemoServiceType: MemoServiceType, Cuckoo.ProtocolMock {
 	        self.cuckoo_manager = manager
 	    }
 	    
+	    
+	    func getMemoOrDefault<M1: Cuckoo.Matchable>(_ defaultMemo: M1) -> Cuckoo.ProtocolStubFunction<(Memo), Result<Observable<Memo>, NSError>> where M1.MatchedType == Memo {
+	        let matchers: [Cuckoo.ParameterMatcher<(Memo)>] = [wrap(matchable: defaultMemo) { $0 }]
+	        return .init(stub: cuckoo_manager.createStub(for: MockMemoServiceType.self, method: "getMemoOrDefault(_: Memo) -> Result<Observable<Memo>, NSError>", parameterMatchers: matchers))
+	    }
 	    
 	}
 
@@ -613,6 +633,12 @@ class MockMemoServiceType: MemoServiceType, Cuckoo.ProtocolMock {
 	    
 	
 	    
+	    @discardableResult
+	    func getMemoOrDefault<M1: Cuckoo.Matchable>(_ defaultMemo: M1) -> Cuckoo.__DoNotUse<Result<Observable<Memo>, NSError>> where M1.MatchedType == Memo {
+	        let matchers: [Cuckoo.ParameterMatcher<(Memo)>] = [wrap(matchable: defaultMemo) { $0 }]
+	        return cuckoo_manager.verify("getMemoOrDefault(_: Memo) -> Result<Observable<Memo>, NSError>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	    }
+	    
 	}
 
 }
@@ -622,6 +648,10 @@ class MockMemoServiceType: MemoServiceType, Cuckoo.ProtocolMock {
 
     
 
+    
+     func getMemoOrDefault(_ defaultMemo: Memo)  -> Result<Observable<Memo>, NSError> {
+        return DefaultValueRegistry.defaultValue(for: Result<Observable<Memo>, NSError>.self)
+    }
     
 }
 
@@ -637,6 +667,18 @@ class MockMemoService: MemoService, Cuckoo.ClassMock {
     
 
     
+    // ["name": "getMemoOrDefault", "returnSignature": " -> Result<Observable<Memo>, NSError>", "fullyQualifiedName": "getMemoOrDefault(_: Memo) -> Result<Observable<Memo>, NSError>", "parameterSignature": "_ defaultMemo: Memo", "parameterSignatureWithoutNames": "defaultMemo: Memo", "inputTypes": "Memo", "isThrowing": false, "isInit": false, "isOverriding": true, "hasClosureParams": false, "@type": "ClassMethod", "accessibility": "", "parameterNames": "defaultMemo", "call": "defaultMemo", "parameters": [CuckooGeneratorFramework.MethodParameter(label: nil, name: "defaultMemo", type: "Memo", range: CountableRange(398..<417), nameRange: CountableRange(0..<0))], "returnType": "Result<Observable<Memo>, NSError>", "isOptional": false, "stubFunction": "Cuckoo.ClassStubFunction"]
+     override func getMemoOrDefault(_ defaultMemo: Memo)  -> Result<Observable<Memo>, NSError> {
+        
+            return cuckoo_manager.call("getMemoOrDefault(_: Memo) -> Result<Observable<Memo>, NSError>",
+                parameters: (defaultMemo),
+                superclassCall:
+                    
+                    super.getMemoOrDefault(defaultMemo)
+                    )
+        
+    }
+    
 
 	struct __StubbingProxy_MemoService: Cuckoo.StubbingProxy {
 	    private let cuckoo_manager: Cuckoo.MockManager
@@ -645,6 +687,11 @@ class MockMemoService: MemoService, Cuckoo.ClassMock {
 	        self.cuckoo_manager = manager
 	    }
 	    
+	    
+	    func getMemoOrDefault<M1: Cuckoo.Matchable>(_ defaultMemo: M1) -> Cuckoo.ClassStubFunction<(Memo), Result<Observable<Memo>, NSError>> where M1.MatchedType == Memo {
+	        let matchers: [Cuckoo.ParameterMatcher<(Memo)>] = [wrap(matchable: defaultMemo) { $0 }]
+	        return .init(stub: cuckoo_manager.createStub(for: MockMemoService.self, method: "getMemoOrDefault(_: Memo) -> Result<Observable<Memo>, NSError>", parameterMatchers: matchers))
+	    }
 	    
 	}
 
@@ -662,6 +709,12 @@ class MockMemoService: MemoService, Cuckoo.ClassMock {
 	    
 	
 	    
+	    @discardableResult
+	    func getMemoOrDefault<M1: Cuckoo.Matchable>(_ defaultMemo: M1) -> Cuckoo.__DoNotUse<Result<Observable<Memo>, NSError>> where M1.MatchedType == Memo {
+	        let matchers: [Cuckoo.ParameterMatcher<(Memo)>] = [wrap(matchable: defaultMemo) { $0 }]
+	        return cuckoo_manager.verify("getMemoOrDefault(_: Memo) -> Result<Observable<Memo>, NSError>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	    }
+	    
 	}
 
 }
@@ -672,10 +725,14 @@ class MockMemoService: MemoService, Cuckoo.ClassMock {
     
 
     
+     override func getMemoOrDefault(_ defaultMemo: Memo)  -> Result<Observable<Memo>, NSError> {
+        return DefaultValueRegistry.defaultValue(for: Result<Observable<Memo>, NSError>.self)
+    }
+    
 }
 
 
-// MARK: - Mocks generated from file: Source/Services/ServiceProvider.swift at 2018-10-13 02:07:22 +0000
+// MARK: - Mocks generated from file: Source/Services/ServiceProvider.swift at 2018-10-14 11:39:39 +0000
 
 //
 //  ServiceProvider.swift

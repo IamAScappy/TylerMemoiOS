@@ -17,7 +17,11 @@ import UIKit
 // TODO Test1: navigation 에 searchController 나오는지
 // TODO Test1: Label 검색 결과가 없을 때 Crete Label 이 생기는지 확인
 class LabelViewController: UIViewController, StoryboardInitializable, DeallocationView, HasDisposeBag {
-  @IBOutlet weak private var collectionView: UICollectionView!
+  private lazy var collectionViewLayout = UICollectionViewFlowLayout()
+  private lazy var uiCollectionView: UICollectionView = {
+    collectionViewLayout.estimatedItemSize = CGSize(width: 100, height: 40)
+    return UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
+  }()
   private var data: [ListDiffable] = []
   let searchController = UISearchController(searchResultsController: nil)
   lazy var adapter: ListAdapter = { return ListAdapter(updater: ListAdapterUpdater(), viewController: self) }()
@@ -33,19 +37,15 @@ class LabelViewController: UIViewController, StoryboardInitializable, Deallocati
     self.searchController.do {
       $0.dimsBackgroundDuringPresentation = false
     }
-    collectionView.do {
-      $0.collectionViewLayout = UICollectionViewFlowLayout().then({
-        $0.estimatedItemSize = CGSize(width: 100, height: 40)
-      })
-    }
+    self.view.addSubview(uiCollectionView)
     adapter.do {
-      $0.collectionView = collectionView
+      $0.collectionView = uiCollectionView
       $0.dataSource = self
     }
   }
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
-    collectionView.frame = view.bounds
+    uiCollectionView.frame = view.bounds
   }
 }
 
@@ -74,7 +74,7 @@ extension LabelViewController: View, StoryboardView {
     self.rx.viewDidLoad
       .map { Reactor.Action.searchQuery(memoId: "", "") }
       .bind(to: reactor.action)
-      .disposed(by: self.disposeBag)
+      .disposed(by: disposeBag)
     searchKeywordChange
       .map { Reactor.Action.searchQuery(memoId: "", $0) }
       .bind(to: reactor.action)

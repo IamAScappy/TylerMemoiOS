@@ -7,6 +7,7 @@
 
 import Foundation
 import RealmSwift
+import IGListKit
 
 class CheckItem: Object {
   // swiftlint:disable:next identifier_name
@@ -17,5 +18,16 @@ class CheckItem: Object {
     self.init()
     self.name = name
     self.done = done
+  }
+}
+
+extension CheckItem: ListDiffable {
+  func diffIdentifier() -> NSObjectProtocol {
+    return self as NSObjectProtocol
+  }
+  func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
+    guard self !== object else { return true }
+    guard let object = object as? CheckItem else { return false }
+    return self == object
   }
 }

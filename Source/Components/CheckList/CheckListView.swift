@@ -36,7 +36,7 @@ class CheckListView: UIView, HasDisposeBag {
       $0.separatorStyle = .none
       $0.contentInset = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
       $0.rx.setDelegate(self).disposed(by: disposeBag)
-      $0.register(CheckItemTableCell.self, forCellReuseIdentifier: CheckItemTableCell.identifier)
+      $0.register(CheckItemCell.self, forCellReuseIdentifier: CheckItemCell.identifier)
     }
   }
 }
@@ -53,14 +53,14 @@ extension CheckListView: View, StoryboardView {
       .bind(to: reactor.action)
       .disposed(by: disposeBag)
 
-    let dataSource = RxTableViewSectionedAnimatedDataSource<CheckListViewModel>(
-      configureCell: configureCell
-    )
-    reactor.state.map { $0.checkListViewModels }
-      .asDriver(onErrorJustReturn: [])
-      .filterNil()
-      .drive(tableView.rx.items(dataSource: dataSource))
-      .disposed(by: disposeBag)
+//    let dataSource = RxTableViewSectionedAnimatedDataSource<CheckListViewModel>(
+//      configureCell: configureCell
+//    )
+//    reactor.state.map { $0.checkListViewModels }
+//      .asDriver(onErrorJustReturn: [])
+//      .filterNil()
+//      .drive(tableView.rx.items(dataSource: dataSource))
+//      .disposed(by: disposeBag)
   }
 }
 

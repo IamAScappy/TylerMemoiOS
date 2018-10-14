@@ -15,20 +15,12 @@ import UIKit
 
 @IBDesignable
 class ColorThemeContainer: UIView, HasDisposeBag {
-  @IBInspectable var spacing: CGFloat = 15
+  @IBInspectable open dynamic var spacing: CGFloat = 15
   private lazy var collectionViewLayout = UICollectionViewFlowLayout()
   private lazy var uiCollectionView: UICollectionView = {
     return UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
   }()
   
-  private let closeButton: UIButton = {
-    let button = UIButton()
-    let image = Asset.icClose.image.withRenderingMode(.alwaysTemplate)
-    button.setImage(Asset.icClose.image, for: .normal)
-    button.tintColor = ColorName.themeGray
-    return button
-  }()
-
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     initView()
