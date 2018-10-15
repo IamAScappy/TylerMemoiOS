@@ -45,11 +45,11 @@ class LabelReactorTest: QuickSpec {
     }
     describe("LabelReactor") {
       beforeEach {
-        stub(mockLabelService, block: { (mock) in
-          when(mock.searchLabels(keyword: any())).thenReturn(Result.success(Observable.just(expectLabels)))
-          when(mock.searchLabels(keyword: "error")).thenReturn(Result.failure(TestError()))
-          when(mock.insertLabel(label: any())).thenReturn(Result.success("test id"))
-        })
+//        stub(mockLabelService, block: { (mock) in
+//          when(mock.searchLabels(keyword: any())).thenReturn(Result.success(Observable.just(expectLabels)))
+//          when(mock.searchLabels(keyword: "error")).thenReturn(Result.failure(TestError()))
+//          when(mock.insertLabel(label: any())).thenReturn(Result.success("test id"))
+//        })
       }
 
       it("fetch labels when calling viewDidLoad ", closure: {

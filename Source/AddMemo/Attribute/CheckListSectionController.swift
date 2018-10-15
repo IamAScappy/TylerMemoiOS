@@ -67,8 +67,8 @@ extension CheckListSectionController: ListSupplementaryViewSource {
       guard let cell = collectionContext?.dequeueReusableSupplementaryView(
         ofKind: UICollectionView.elementKindSectionFooter,
         for: self,
-        class: MakeCheckItemFooterView2.self,
-        at: index) as? MakeCheckItemFooterView2 else { fatalError() }
+        class: MakeCheckItemFooterCell.self,
+        at: index) as? MakeCheckItemFooterCell else { fatalError() }
       cell.viewTapsGesture.addTarget(self, action: #selector(tappedMakeNewCheckItem))
       return cell
     default: fatalError()

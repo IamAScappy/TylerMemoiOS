@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MakeCheckItemFooterView2: UICollectionViewCell {
+class MakeCheckItemFooterCell: UICollectionViewCell {
   private let imageView = UIImageView()
   private let title = UILabel()
   let viewTapsGesture = UITapGestureRecognizer()

@@ -11,8 +11,8 @@ import IGListKit
 import SnapKit
 import UIKit
 
-class MemoViewCell: UICollectionViewCell {
-  let preview: UILabel = {
+class MemoPreviewCell: UICollectionViewCell {
+  let text: UILabel = {
     let label = UILabel()
     label.numberOfLines = 1
     return label
@@ -20,7 +20,7 @@ class MemoViewCell: UICollectionViewCell {
 
   override init(frame: CGRect) {
     super.init(frame: frame)
-    preview.do {
+    text.do {
       contentView.addSubview($0)
       $0.snp.makeConstraints { make in
         make.edges.equalToSuperview()
@@ -39,5 +39,11 @@ class MemoViewCell: UICollectionViewCell {
     newFrame.size.height = ceil(size.height)
     layoutAttributes.frame = newFrame
     return layoutAttributes
+  }
+}
+
+extension MemoPreviewCell {
+  func configCell(_ viewModel: MemoViewModel) {
+    text.text = viewModel.text
   }
 }

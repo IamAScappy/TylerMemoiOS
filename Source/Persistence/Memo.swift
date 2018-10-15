@@ -7,15 +7,14 @@ class Memo: Object {
   @objc dynamic var memo_id: String = UUID().uuidString
   @objc dynamic var text: String = ""
   @objc dynamic var attr: MemoAttribute?
-  @objc dynamic var colorTheme: ColorTheme?
+  @objc dynamic var color_theme_id: ColorTheme?
   @objc dynamic var createAt: Date = Date()
   let labels = List<Label>()
   let checkList = List<CheckItem>()
   
-  convenience init(text: String, attr: MemoAttribute = MemoAttribute(), colorTheme: ColorTheme = ColorThemeTemplate.white) {
+  convenience init(text: String, attr: MemoAttribute = MemoAttribute()) {
     self.init()
     self.text = text
-    self.colorTheme = colorTheme
     self.attr = attr
   }
   override static func primaryKey() -> String {

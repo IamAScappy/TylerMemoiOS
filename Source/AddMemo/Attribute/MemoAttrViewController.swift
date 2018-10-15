@@ -31,6 +31,7 @@ class MemoAttrViewController: UIViewController, HasDisposeBag, DeallocationView 
   private let createNewCheckItemPublisher = PublishSubject<Bool>()
 
   override func awakeFromNib() {
+    //    viewDidLoad Bug
     self.rx.viewDidLoad.subscribe(onNext: { _ in }).disposed(by: disposeBag)
   }
   override func viewDidLoad() {

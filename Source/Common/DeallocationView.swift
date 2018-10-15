@@ -10,7 +10,7 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-private let  keyDeallocationDisposeBag = "deallocationDisposeBag"
+private let keyDeallocationDisposeBag = "deallocationDisposeBag"
 
 protocol DeallocationView: class {
 }

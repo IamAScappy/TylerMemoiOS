@@ -35,16 +35,15 @@ class MemoAttrReactor: Reactor {
     log.debug("mutate action: \(action)")
     switch action {
     case .loadedMemo(let memo):
-      return Observable.just(Mutation.setMemo(memo))
-//      return Observable.deferred({ () -> Observable<Mutation> in
-//        let result = self.memoService.getMemoOrDefault(memo)
-//        switch result {
-//        case .success(let value):
-//          return value.map { Mutation.setMemo($0) }
-//        case .failure(let error):
-//          return Observable.just(Mutation.error(error))
-//        }
-//      })
+      return Observable.deferred({ () -> Observable<Mutation> in
+        let result = self.memoService.getMemoOrDefault(memo)
+        switch result {
+        case .success(let value):
+          return value.map { Mutation.setMemo($0) }
+        case .failure(let error):
+          return Observable.just(Mutation.error(error))
+        }
+      })
     case .makeCheckItem:
       return Observable.just(Mutation.appendCheckItem())
     case .aaaa:

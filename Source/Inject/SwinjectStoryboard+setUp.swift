@@ -38,5 +38,9 @@ extension SwinjectStoryboard {
     defaultContainer.storyboardInitCompleted(MemoAttrViewController.self) { r, c in
       c.reactor = r.resolve(MemoAttrReactor.self)
     }
+    defaultContainer.register(MemoListReactor.self) { r in MemoListReactor(r.resolve(MemoServiceType.self)!) }
+    defaultContainer.storyboardInitCompleted(MainViewController.self) { r, c in
+      c.reactor = r.resolve(MemoListReactor.self)
+    }
   }
 }

@@ -49,7 +49,7 @@ class LabelReactorWithRealmTest: RealmSpec {
         
         switch result {
         case .completed(let labels):
-          expect(labels.count) == 2
+          expect(labels.count) == 1
           expect(labels.last) == expectLabels
         default: break
         }

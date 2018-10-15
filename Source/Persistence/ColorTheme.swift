@@ -27,8 +27,8 @@ class ColorTheme: Object {
 
 struct ColorThemeTemplate: OptionSet {
   let rawValue: Int
-  static let white = ColorTheme(title: "WHITE", color: ColorName.white.toHexString())
-  static let red = ColorTheme(title: "RED", color: ColorName.themeRed.toHexString())
+  static let white = ColorTheme(title: "white", color: ColorName.white.toHexString())
+  static let red = ColorTheme(title: "red", color: ColorName.themeRed.toHexString())
   static let purple = ColorTheme(title: "purple", color: ColorName.themePurple.toHexString())
   static let indigo = ColorTheme(title: "indigo", color: ColorName.themeIndigo.toHexString())
   static let pink = ColorTheme(title: "pink", color: ColorName.themePink.toHexString())

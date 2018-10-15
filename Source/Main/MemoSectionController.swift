@@ -11,7 +11,7 @@ import IGListKit
 import UIKit
 
 class MemoSectionController: ListSectionController {
-  private var model: MemoViewModel!
+  private var model: [MemoViewModel]?
 
   override init() {
     super.init()
@@ -21,7 +21,7 @@ class MemoSectionController: ListSectionController {
   }
 
   override func numberOfItems() -> Int {
-    return model.memos.count
+    return model?.count ?? 0
   }
 
   override func sizeForItem(at index: Int) -> CGSize {
@@ -29,14 +29,15 @@ class MemoSectionController: ListSectionController {
   }
 
   override func cellForItem(at index: Int) -> UICollectionViewCell {
-    guard let cell = collectionContext?.dequeueReusableCell(of: MemoViewCell.self, for: self, at: index) as? MemoViewCell else {
+    guard let cell = collectionContext?.dequeueReusableCell(of: MemoPreviewCell.self, for: self, at: index) as? MemoPreviewCell else {
       fatalError()
     }
-    let memo = model.memos[index]
-    cell.preview.text = memo.text
+    
+    guard let viewModel = model?[index] else { return cell }
+    cell.configCell(viewModel)
     return cell
   }
   override func didUpdate(to object: Any) {
-    self.model = object as? MemoViewModel
+    self.model = object as? [MemoViewModel]
   }
 }

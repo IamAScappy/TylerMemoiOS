@@ -16,7 +16,7 @@ class CheckListView: UIView, HasDisposeBag {
   var memo: Memo = Memo(text: "test")
 
   private let tableView = UITableView()
-  private let makeCheckItemFooterView = MakeCheckItemFooterView()
+  private let makeCheckItemFooterView = MakeCheckItemFooterCell()
 
   override init(frame: CGRect) {
     super.init(frame: frame)

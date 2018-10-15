@@ -39,28 +39,7 @@ class LabelReactor: Reactor {
   }
   func mutate(action: Action) -> Observable<Mutation> {
     log.debug("mutate action: \(action)")
-    switch action {
-    case let .searchQuery(_, keyword):
-      return Observable.concat([
-        Observable.just(Mutation.updateQuery(keyword)),
-        Observable.deferred({ () -> Observable<Mutation> in
-          let result = self.labelService.searchLabels(keyword: keyword)
-          switch result {
-          case .success(let value):
-            return value.map { Mutation.setSections($0) }
-          case .failure(let error):
-            return Observable.just(Mutation.error(error))
-          } })
-        ])
-    case .createLabel(let newLabel):
-      let result = self.labelService.insertLabel(label: newLabel)
-      switch result {
-      case .success(let labelId):
-        return Observable.just(Mutation.createdLabel(labelId))
-      case .failure(let error):
-        return Observable.just(Mutation.error(error))
-      }
-    }
+    return .empty()
   }
   func reduce(state: State, mutation: Mutation) -> State {
     log.info("reduece mutation: \(state)\n")

@@ -9,24 +9,23 @@
 import Foundation
 import IGListKit
 
-enum MemoViewModelType: Int {
-  case none
-}
-
 class MemoViewModel: NSObject {
-  let memos: [Memo]
-  let type: MemoViewModelType
-  
-  public init(memos: [Memo], type: MemoViewModelType = .none) {
-    self.memos = memos
-    self.type = type
+  let text: String
+  let labels: [Label]
+  let checkItems: [CheckItem]
+
+  public init(text: String, labels: [Label], checkItems: [CheckItem]) {
+    self.text = text
+    self.labels = labels
+    self.checkItems = checkItems
   }
+
 }
 extension MemoViewModel: ListDiffable {
   func diffIdentifier() -> NSObjectProtocol {
     return self
   }
   func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
-    return isEqual(object)
+    return self === object ? true : self.isEqual(object)
   }
 }

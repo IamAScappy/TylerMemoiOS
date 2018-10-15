@@ -11,7 +11,6 @@ import RealmSwift
 
 class Label: Object {
   // swiftlint:disable:next identifier_name
-  @objc dynamic var label_id: String = UUID().uuidString
   @objc dynamic var title: String = ""
   let ownerMemos = LinkingObjects(fromType: Memo.self, property: "labels")
   
@@ -19,20 +18,17 @@ class Label: Object {
     self.init()
     self.title = title
   }
-  override static func primaryKey() -> String {
-    return "label_id"
-  }
 }
 
 extension Label {
-  func isLinkingMemo(memoId: String) -> Bool {
-    return ownerMemos.contains { $0.memo_id == memoId }
+  func isLinkingMemo(memo_id: String) -> Bool {
+    return ownerMemos.contains { $0.memo_id == memo_id }
   }
 }
 
 extension Label: ListDiffable {
   func diffIdentifier() -> NSObjectProtocol {
-    return label_id as NSObjectProtocol
+    return self
   }
   func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
     guard self !== object else { return true }

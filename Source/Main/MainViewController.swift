@@ -9,19 +9,33 @@ import RxSwift
 import SnapKit
 import Then
 import UIKit
-
-class MainViewController: UIViewController, DeallocationView {
-  var data = [ListDiffable]()
+import ReactorKit
+import Result
+class MainViewController: UIViewController, DeallocationView, HasDisposeBag {
+  var data = [MemoViewModel]()
   var disposeBag = DisposeBag()
   @IBOutlet weak private var addMemoView: UIButton!
   @IBOutlet weak private var collectionView: UICollectionView!
   lazy var adapter: ListAdapter = { return ListAdapter(updater: ListAdapterUpdater(), viewController: self) }()
-  
+
+  override func awakeFromNib() {
+//    viewDidLoad Bug
+    self.rx.viewDidLoad.subscribe(onNext: { _ in }).disposed(by: disposeBag)
+  }
   override func viewDidLoad() {
     super.viewDidLoad()
+//    TODO Remove test code
+//    let service = MemoService()
+//    let memo1 = Memo(text: "az")
+//    memo1.checkList.append(CheckItem(name: "c1 \(Date())"))
+//    memo1.checkList.append(CheckItem(name: "c2 \(Date())"))
+//    memo1.labels.append(Label(title: "l1 \(Date())"))
+//    memo1.labels.append(Label(title: "l2 \(Date())"))
+//    service.insertMemos([
+//      memo1
+//      ])
+
     enableMemoryLeakCheck(disposeBag)
-    view.accessibilityIdentifier = "main"
-    data.append(MemoViewModel(memos: [Memo(text: "abc"), Memo(text: "ddd"), Memo(text: "zzz")]))
     collectionView.do {
       $0.collectionViewLayout = UICollectionViewFlowLayout().then({
         $0.estimatedItemSize = CGSize(width: 100, height: 40)
@@ -43,12 +57,40 @@ class MainViewController: UIViewController, DeallocationView {
     super.viewDidLayoutSubviews()
     collectionView.frame = view.bounds
   }
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
 }
 
+extension MainViewController: View, StoryboardView {
+  func bind(reactor: MemoListReactor) {
+    self.rx.viewDidLoad
+      .map { Reactor.Action.searchMemos(keyword: "") }
+      .bind(to: reactor.action)
+      .disposed(by: disposeBag)
+
+    reactor.state.map { $0.error }
+      .asDriver(onErrorJustReturn: nil)
+      .filterNil()
+      .drive(onNext: { error in
+        // TODO Handle error
+        log.error(error)
+      })
+      .disposed(by: disposeBag)
+    
+    reactor.state.map { $0.memos }
+      .filterNil()
+      .map({ memos in
+        memos.toMemoViewModel()
+      })
+      .asDriver(onErrorJustReturn: nil)
+      .filterNil()
+      .drive(onNext: { [weak self] memos in
+        guard let self = self else { return }
+        log.info("drive \(memos)")
+        self.data = memos
+        self.adapter.performUpdates(animated: true)
+      })
+      .disposed(by: disposeBag)
+  }
+}
 extension MainViewController: ListAdapterDataSource {
   func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
     return data
@@ -58,5 +100,13 @@ extension MainViewController: ListAdapterDataSource {
   }
   func emptyView(for listAdapter: ListAdapter) -> UIView? {
     return nil
+  }
+}
+
+private extension Array where Element: Memo {
+  func toMemoViewModel() -> [MemoViewModel] {
+    return self.map { memo in
+      MemoViewModel(text: memo.text, labels: memo.labels.toArray(), checkItems: memo.checkList.toArray())
+    }
   }
 }
