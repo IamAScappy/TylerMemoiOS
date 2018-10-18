@@ -3,11 +3,13 @@ import IGListKit
 
 final class CheckItemModel: NSObject {
   let collapsed: Bool
+  let checkBoxWidth: CGFloat
   var items: [CheckItem] = []
-
-  public init(collapsed: Bool = false, items: [CheckItem] = []) {
+  
+  public init(items: [CheckItem], checkBoxWidth: CGFloat, collapsed: Bool = false) {
     self.collapsed = collapsed
     self.items = items
+    self.checkBoxWidth = checkBoxWidth
   }
 }
 extension CheckItemModel: ListDiffable {
@@ -26,13 +28,14 @@ protocol CheckListSectionControllerDelegate: class {
 class CheckListSectionController: ListSectionController {
   private var object: CheckItemModel?
   weak var delegate: CheckListSectionControllerDelegate?
-
-  override init() {
+  init(enableMakeCheckItemFooter: Bool) {
     super.init()
-    inset = UIEdgeInsets(top: 0, left: Dimens.AddMemo.documentOfMargine.rawValue, bottom: 5, right: Dimens.AddMemo.documentOfMargine.rawValue)
-    minimumLineSpacing = 4
-    minimumInteritemSpacing = 4
-    supplementaryViewSource = self
+//    inset = UIEdgeInsets(top: 0, left: Dimens.AddMemo.documentOfMargine.rawValue, bottom: 5, right: Dimens.AddMemo.documentOfMargine.rawValue)
+//    minimumLineSpacing = 4
+//    minimumInteritemSpacing = 4
+    if enableMakeCheckItemFooter {
+        supplementaryViewSource = self
+    }
   }
   override func numberOfItems() -> Int {
     return object?.items.count ?? 0
@@ -45,7 +48,8 @@ class CheckListSectionController: ListSectionController {
       fatalError()
     }
     guard let item = object?.items[index] else { return cell }
-    cell.configCell(item)
+    let checkSquareSize = object?.checkBoxWidth ?? Dimens.CheckList.checkSquareSize.rawValue
+    cell.configCell(item, checkSquareSize: checkSquareSize)
     return cell
   }
   override func didUpdate(to object: Any) {

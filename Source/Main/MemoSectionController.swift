@@ -5,39 +5,43 @@
 //  Created by tskim on 2018. 9. 22..
 //  Copyright © 2018년 tskim. All rights reserved.
 //
-
-import Foundation
-import IGListKit
-import UIKit
-
-class MemoSectionController: ListSectionController {
-  private var model: [MemoViewModel]?
-
-  override init() {
-    super.init()
-    inset = UIEdgeInsets(top: 0, left: 0, bottom: 40, right: 0)
-    minimumLineSpacing = 4
-    minimumInteritemSpacing = 4
-  }
-
-  override func numberOfItems() -> Int {
-    return model?.count ?? 0
-  }
-
-  override func sizeForItem(at index: Int) -> CGSize {
-    return CGSize(width: collectionContext!.containerSize.width, height: 55)
-  }
-
-  override func cellForItem(at index: Int) -> UICollectionViewCell {
-    guard let cell = collectionContext?.dequeueReusableCell(of: MemoPreviewCell.self, for: self, at: index) as? MemoPreviewCell else {
-      fatalError()
-    }
-    
-    guard let viewModel = model?[index] else { return cell }
-    cell.configCell(viewModel)
-    return cell
-  }
-  override func didUpdate(to object: Any) {
-    self.model = object as? [MemoViewModel]
-  }
-}
+//
+//import Foundation
+//import IGListKit
+//import UIKit
+//
+//class MemoSectionController: ListSectionController {
+//  private var model: MemoViewModel?
+//
+//  override init() {
+//    super.init()
+//    inset = UIEdgeInsets(top: 0, left: 0, bottom: 40, right: 0)
+//    minimumLineSpacing = 4
+//    minimumInteritemSpacing = 4
+//  }
+//
+//  override func numberOfItems() -> Int {
+//    return model?.memoPreviews.count ?? 0
+//  }
+//
+//  override func sizeForItem(at index: Int) -> CGSize {
+//    return CGSize(width: collectionContext!.containerSize.width / 2, height: 55)
+//  }
+//
+//  override func cellForItem(at index: Int) -> UICollectionViewCell {
+////    guard let cell = collectionContext?.dequeueReusableCell(of: MemoPreviewCell.self, for: self, at: index) as? MemoPreviewCell else {
+////            fatalError()
+////          }
+//    guard let cell = collectionContext?.dequeueReusableCell(withNibName: "MemoPreviewCell", bundle: nil, for: self, at: index) as? MemoPreviewCell2 else {
+//      fatalError()
+//    }
+//    
+//    
+//    guard let viewModel = model?.memoPreviews[index] else { return cell }
+//    cell.configCell(viewModel)
+//    return cell
+//  }
+//  override func didUpdate(to object: Any) {
+//    self.model = object as? MemoViewModel
+//  }
+//}

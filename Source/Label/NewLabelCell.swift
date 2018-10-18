@@ -28,7 +28,7 @@ class NewLabelCell: UICollectionViewCell {
       self.addSubview(imageView)
       imageView.contentMode = .scaleAspectFit
       imageView.snp.makeConstraints({ make in
-        let width = Dimens.labelHeight.rawValue - 2
+        let width = Dimens.Common.labelHeight.rawValue - 2
         let ratio = 1
         make.leading.equalTo(self)
         make.centerY.equalTo(self)

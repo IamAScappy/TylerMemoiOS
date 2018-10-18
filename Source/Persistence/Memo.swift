@@ -8,14 +8,12 @@ class Memo: Object {
   @objc dynamic var text: String = ""
   @objc dynamic var attr: MemoAttribute?
   @objc dynamic var color_theme_id: ColorTheme?
-  @objc dynamic var createAt: Date = Date()
   let labels = List<Label>()
   let checkList = List<CheckItem>()
   
-  convenience init(text: String, attr: MemoAttribute = MemoAttribute()) {
+  convenience init(text: String) {
     self.init()
     self.text = text
-    self.attr = attr
   }
   override static func primaryKey() -> String {
     return "memo_id"
@@ -27,6 +25,8 @@ class Memo: Object {
 
 class MemoAttribute: Object {
   @objc dynamic var isPin: Bool = false
+  @objc dynamic var fontFamily: String = MemoFontFamilies.system.rawValue
+  @objc dynamic var createAt: Date = Date()
 }
 
 extension Memo: ListDiffable {

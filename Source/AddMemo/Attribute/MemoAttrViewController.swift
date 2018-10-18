@@ -13,21 +13,17 @@ import ReactorKit
 import RxSwift
 
 class MemoAttrViewController: UIViewController, HasDisposeBag, DeallocationView {
-  var memo: Memo? = Memo(text: "asddas").then {
-    $0.checkList.append(CheckItem(name: "asdasd"))
-    $0.labels.append(Label(title: "asdasddas"))
-  }
+  @objc dynamic var memo: Memo?
+  var enableMakeCheckItemFooter = true
+  var checkSquareSize = Dimens.CheckList.checkSquareSize.rawValue
+  
   private lazy var collectionViewLayout = UICollectionViewFlowLayout()
   private lazy var uiCollectionView: UICollectionView = {
     collectionViewLayout.estimatedItemSize = CGSize(width: 100, height: 40)
     return UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
   }()
   lazy var adapter: ListAdapter = { return ListAdapter(updater: ListAdapterUpdater(), viewController: self) }()
-  private var data: [ListDiffable]? {
-    didSet {
-      self.adapter.performUpdates(animated: true, completion: nil)
-    }
-  }
+  private var data: [ListDiffable]?
   private let createNewCheckItemPublisher = PublishSubject<Bool>()
 
   override func awakeFromNib() {
@@ -59,8 +55,9 @@ class MemoAttrViewController: UIViewController, HasDisposeBag, DeallocationView 
 
 extension MemoAttrViewController: View, StoryboardView {
   func bind(reactor: MemoAttrReactor) {
-    self.rx.viewDidLoad
-      .map { Reactor.Action.loadedMemo(self.memo ?? Memo.empty()) }
+    self.rx.observe(Memo.self, #keyPath(memo))
+      .filterNil()
+      .map { Reactor.Action.loadedMemo($0) }
       .bind(to: reactor.action)
       .disposed(by: disposeBag)
 
@@ -80,11 +77,12 @@ extension MemoAttrViewController: View, StoryboardView {
     
     reactor.state.map { $0.memo }
       .asDriver(onErrorJustReturn: nil)
+      .filterNil()
       .drive(onNext: { [weak self] memo in
         guard let self = self else { return }
-        log.debug("\(memo)")
-        self.memo = memo
-        self.data = memo?.toListViewModel()
+        log.debug("\(String(describing: memo))")
+        self.data = memo.toListViewModel(checkBoxWidth: self.checkSquareSize)
+        self.adapter.performUpdates(animated: true, completion: nil)
       })
       .disposed(by: disposeBag)
   }
@@ -102,7 +100,9 @@ extension MemoAttrViewController: ListAdapterDataSource, CheckListSectionControl
   func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
     switch object {
     case is LabelViewItem: return LabelListSectionController()
-    case is CheckItemModel: return CheckListSectionController().then({ $0.delegate = self })
+    case is CheckItemModel: return CheckListSectionController(enableMakeCheckItemFooter: self.enableMakeCheckItemFooter).then({
+      $0.delegate = self
+    })
     default: fatalError()
     }
   }
@@ -113,10 +113,10 @@ extension MemoAttrViewController: ListAdapterDataSource, CheckListSectionControl
 }
 
 private extension Memo {
-  func toListViewModel() -> [ListDiffable] {
+  func toListViewModel(checkBoxWidth: CGFloat) -> [ListDiffable] {
     return [
       LabelViewItem(items: self.labels.toArray()),
-      CheckItemModel(collapsed: false, items: self.checkList.toArray())
+      CheckItemModel(items: self.checkList.toArray(), checkBoxWidth: checkBoxWidth)
     ]
   }
 }

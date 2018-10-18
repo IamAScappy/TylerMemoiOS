@@ -18,12 +18,11 @@ class MemoAttrReactor: Reactor {
     self.memoService = memoService
   }
   enum Action {
-    case aaaa
     case loadedMemo(Memo)
     case makeCheckItem
   }
   struct State {
-    var memo: Memo = Memo.empty()
+    var memo: Memo?
     var error: Error?
   }
   enum Mutation {
@@ -46,8 +45,6 @@ class MemoAttrReactor: Reactor {
       })
     case .makeCheckItem:
       return Observable.just(Mutation.appendCheckItem())
-    case .aaaa:
-      return Observable.just(Mutation.appendCheckItem())
     }
   }
   func reduce(state: State, mutation: Mutation) -> State {
@@ -58,7 +55,7 @@ class MemoAttrReactor: Reactor {
     case .error(let error):
       newState.error = error
     case .appendCheckItem:
-      state.memo.checkList.append(CheckItem(name: ""))
+      state.memo?.checkList.append(CheckItem(name: ""))
       newState.memo = state.memo
     }
     return newState

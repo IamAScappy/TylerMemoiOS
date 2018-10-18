@@ -46,11 +46,12 @@ internal struct ColorAsset {
 internal enum Asset {
   internal enum AddMemo {
     internal static let icBack = ImageAsset(name: "ic_back")
-    internal static let icCheckList = ImageAsset(name: "ic_check_list")
+    internal static let icChecked = ImageAsset(name: "ic_checked")
     internal static let icColorTheme = ImageAsset(name: "ic_color_theme")
     internal static let icLabel = ImageAsset(name: "ic_label")
   }
   internal static let icAdd = ImageAsset(name: "ic_add")
+  internal static let icCheckNote = ImageAsset(name: "ic_check_note")
   internal static let icClose = ImageAsset(name: "ic_close")
   internal static let icClosePanel = ImageAsset(name: "ic_close_panel")
   internal static let icEditView = ImageAsset(name: "ic_edit_view")
@@ -60,10 +61,11 @@ internal enum Asset {
   ]
   internal static let allImages: [ImageAsset] = [
     AddMemo.icBack,
-    AddMemo.icCheckList,
+    AddMemo.icChecked,
     AddMemo.icColorTheme,
     AddMemo.icLabel,
     icAdd,
+    icCheckNote,
     icClose,
     icClosePanel,
     icEditView,

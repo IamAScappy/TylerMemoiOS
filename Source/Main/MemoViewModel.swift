@@ -7,25 +7,58 @@
 //
 
 import Foundation
+import RxDataSources
 import IGListKit
-
-class MemoViewModel: NSObject {
-  let text: String
-  let labels: [Label]
-  let checkItems: [CheckItem]
-
-  public init(text: String, labels: [Label], checkItems: [CheckItem]) {
-    self.text = text
-    self.labels = labels
-    self.checkItems = checkItems
-  }
-
+//class MemoViewModel: NSObject {
+//  let memoPreviews: [MemoPreviewModel]
+//
+//  public init(memoPreviews: [MemoPreviewModel]) {
+//    self.memoPreviews = memoPreviews
+//  }
+//}
+//extension MemoViewModel: ListDiffable {
+//  func diffIdentifier() -> NSObjectProtocol {
+//    return self
+//  }
+//  func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
+//    return self === object ? true : self.isEqual(object)
+//  }
+//}
+struct MemoViewModel {
+  var header: String
+  var items: [Item]
 }
-extension MemoViewModel: ListDiffable {
-  func diffIdentifier() -> NSObjectProtocol {
-    return self
+
+extension MemoViewModel: AnimatableSectionModelType {
+  typealias Item = MemoPreviewModel
+
+  var identity: String {
+    return header
   }
-  func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
-    return self === object ? true : self.isEqual(object)
+
+  init(original: MemoViewModel, items: [Item]) {
+    self = original
+    self.items = items
   }
 }
+
+extension MemoPreviewModel: IdentifiableType, Equatable {
+
+  var identity: String {
+    return ""
+  }
+  static func == (lhs: MemoPreviewModel, rhs: MemoPreviewModel) -> Bool {
+    return true
+  }
+  
+  
+}
+//
+//extension MemoViewModel: ListDiffable {
+//  func diffIdentifier() -> NSObjectProtocol {
+//    return self
+//  }
+//  func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
+//    return self === object ? true : self.isEqual(object)
+//  }
+//}

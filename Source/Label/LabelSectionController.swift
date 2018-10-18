@@ -66,7 +66,7 @@ class LabelSectionController: ListBindingSectionController<Label>, ListBindingSe
     guard let width = collectionContext?.containerSize.width else { return .zero }
     guard let height = collectionContext?.containerSize.height else { return .zero }
     switch viewModel {
-    case is LabelViewModel, is NewLabelModel: return CGSize(width: width - (inset.left + inset.right), height: CGFloat(Dimens.labelHeight.rawValue))
+    case is LabelViewModel, is NewLabelModel: return CGSize(width: width - (inset.left + inset.right), height: CGFloat(Dimens.Common.labelHeight.rawValue))
     default: return CGSize(width: width, height: height)
     }
   }

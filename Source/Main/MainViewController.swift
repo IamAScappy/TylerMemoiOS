@@ -11,12 +11,22 @@ import Then
 import UIKit
 import ReactorKit
 import Result
+import RxDataSources
+import PinterestLayout
+
 class MainViewController: UIViewController, DeallocationView, HasDisposeBag {
-  var data = [MemoViewModel]()
+  var data = [MemoPreviewModel]()
   var disposeBag = DisposeBag()
-  @IBOutlet weak private var addMemoView: UIButton!
-  @IBOutlet weak private var collectionView: UICollectionView!
-  lazy var adapter: ListAdapter = { return ListAdapter(updater: ListAdapterUpdater(), viewController: self) }()
+//  @IBOutlet weak private var addMemoView: UIButton!
+  private lazy var collectionViewLayout = PinterestLayout()
+  private lazy var uiCollectionView: UICollectionView = {
+    collectionViewLayout.delegate = self
+    collectionViewLayout.cellPadding = 5
+    collectionViewLayout.numberOfColumns = 2
+    return UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
+  }()
+//  @IBOutlet weak private var collectionView: UICollectionView!
+//  lazy var adapter: ListAdapter = { return ListAdapter(updater: ListAdapterUpdater(), viewController: self) }()
 
   override func awakeFromNib() {
 //    viewDidLoad Bug
@@ -24,41 +34,40 @@ class MainViewController: UIViewController, DeallocationView, HasDisposeBag {
   }
   override func viewDidLoad() {
     super.viewDidLoad()
+//    var realm = try? Realm()
+//    try? realm?.write {
+//      realm?.add(ColorThemeTemplate.all)
+//    }
 //    TODO Remove test code
 //    let service = MemoService()
+//    
 //    let memo1 = Memo(text: "az")
-//    memo1.checkList.append(CheckItem(name: "c1 \(Date())"))
-//    memo1.checkList.append(CheckItem(name: "c2 \(Date())"))
-//    memo1.labels.append(Label(title: "l1 \(Date())"))
-//    memo1.labels.append(Label(title: "l2 \(Date())"))
+//    memo1.checkList.append(CheckItem(name: "c1 \(Int.random(in: 0..<6))"))
+//    memo1.checkList.append(CheckItem(name: "c2 \(Int.random(in: 0..<6))"))
+//    memo1.labels.append(Label(title: "l1 \(Int.random(in: 0..<6))"))
+//    memo1.labels.append(Label(title: "l2 \(Int.random(in: 0..<6))"))
 //    service.insertMemos([
 //      memo1
 //      ])
 
     enableMemoryLeakCheck(disposeBag)
-    collectionView.do {
-      $0.collectionViewLayout = UICollectionViewFlowLayout().then({
-        $0.estimatedItemSize = CGSize(width: 100, height: 40)
+    uiCollectionView.do {
+      view.addSubview($0)
+      $0.snp.makeConstraints({ make in
+        make.edges.equalToSuperview()
       })
-    }
-    addMemoView.do { view in
-      view.setImage(Asset.icEditView.image, for: .normal)
-      view.accessibilityIdentifier = AccIdentifier.addMemoButton.rawValue
-      view.rx.tap.asDriver().drive(onNext: { [weak self] _ in
-        self?.show(LabelViewController.makeLabelViewController(), sender: self)
-      }).disposed(by: disposeBag)
-    }
-    adapter.do {
+      $0.backgroundColor = UIColor.clear
+      $0.register(MemoPreviewCell.self, forCellWithReuseIdentifier: MemoPreviewCell.identifier)
       $0.dataSource = self
-      $0.collectionView = collectionView
+      $0.contentInset = UIEdgeInsets(top: 23, left: 10, bottom: 10, right: 10)
     }
+    collectionViewLayout.delegate = self
   }
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
-    collectionView.frame = view.bounds
+    uiCollectionView.frame = view.bounds
   }
 }
-
 extension MainViewController: View, StoryboardView {
   func bind(reactor: MemoListReactor) {
     self.rx.viewDidLoad
@@ -74,39 +83,53 @@ extension MainViewController: View, StoryboardView {
         log.error(error)
       })
       .disposed(by: disposeBag)
-    
     reactor.state.map { $0.memos }
       .filterNil()
-      .map({ memos in
-        memos.toMemoViewModel()
+      .map({
+        $0.toMemoViewModel()
       })
-      .asDriver(onErrorJustReturn: nil)
-      .filterNil()
-      .drive(onNext: { [weak self] memos in
-        guard let self = self else { return }
-        log.info("drive \(memos)")
-        self.data = memos
-        self.adapter.performUpdates(animated: true)
+      .asDriver(onErrorJustReturn: [])
+      .drive(onNext: { memoPreviews in
+        self.data = memoPreviews
       })
       .disposed(by: disposeBag)
   }
 }
-extension MainViewController: ListAdapterDataSource {
-  func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
-    return data
+extension MainViewController: UICollectionViewDelegate {
+  
+}
+extension MainViewController: PinterestLayoutDelegate, UICollectionViewDataSource {
+  func collectionView(collectionView: UICollectionView, heightForImageAtIndexPath indexPath: IndexPath, withWidth: CGFloat) -> CGFloat {
+    let memo = data[indexPath.row].memo
+    let memoAttr = memo.attr ?? MemoAttribute()
+    let memoFontType = MemoFontFamilies(rawValue: memoAttr.fontFamily) ?? .system
+    let memoFont = memoFontType.font(fontSize: Dimens.Common.memoFontSize.rawValue)
+    var height = memo.text.heightForWidth(width: withWidth, font: memoFont)
+    height += Asset.icCheckNote.image.height(forWidth: withWidth)
+    print("!!!!!!! \(Asset.icCheckNote.image.height(forWidth: withWidth))")
+    return height
   }
-  func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
-    return MemoSectionController()
+  
+  func collectionView(collectionView: UICollectionView, heightForAnnotationAtIndexPath indexPath: IndexPath, withWidth: CGFloat) -> CGFloat {
+    return 0
   }
-  func emptyView(for listAdapter: ListAdapter) -> UIView? {
-    return nil
+  
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return data.count
+  }
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MemoPreviewCell.identifier, for: indexPath) as? MemoPreviewCell else {
+      fatalError()
+    }
+    cell.configCell(data[indexPath.row])
+    return cell
   }
 }
 
 private extension Array where Element: Memo {
-  func toMemoViewModel() -> [MemoViewModel] {
+  func toMemoViewModel() -> [MemoPreviewModel] {
     return self.map { memo in
-      MemoViewModel(text: memo.text, labels: memo.labels.toArray(), checkItems: memo.checkList.toArray())
+      MemoPreviewModel(memo: memo)
     }
   }
 }

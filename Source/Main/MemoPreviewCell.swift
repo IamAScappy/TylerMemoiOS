@@ -8,42 +8,74 @@
 
 import Foundation
 import IGListKit
+import PinterestLayout
 import SnapKit
 import UIKit
 
-class MemoPreviewCell: UICollectionViewCell {
-  let text: UILabel = {
-    let label = UILabel()
-    label.numberOfLines = 1
-    return label
-  }()
-
+class MemoPreviewCell: UICollectionViewCell, SwiftNameIdentifier {
+  private let memoText = UILabel()
+  private let memoAttrViewController = MemoAttrViewController()
+  
   override init(frame: CGRect) {
     super.init(frame: frame)
-    text.do {
+    memoText.do {
       contentView.addSubview($0)
-      $0.snp.makeConstraints { make in
-        make.edges.equalToSuperview()
-      }
+      $0.snp.makeConstraints({ make in
+        make.leading.equalToSuperview()
+        make.top.equalToSuperview()
+      })
+    }
+    memoAttrViewController.do {
+      contentView.addSubview($0.view)
+      $0.view.snp.makeConstraints({ maker in
+        maker.top.equalTo(memoText.snp.bottom)
+        maker.bottom.equalToSuperview()
+        maker.leading.equalToSuperview()
+        maker.trailing.equalToSuperview()
+      })
+      $0.enableMakeCheckItemFooter = false
+      $0.checkSquareSize = Dimens.Main.checkSquereSize.rawValue
+      $0.reactor = MemoAttrReactor(MemoService())
     }
   }
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-  override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-    setNeedsLayout()
-    layoutIfNeeded()
-    let size = contentView.systemLayoutSizeFitting(layoutAttributes.size)
-    var newFrame = layoutAttributes.frame
-    newFrame.size.width = ceil(size.width)
-    newFrame.size.height = ceil(size.height)
-    layoutAttributes.frame = newFrame
-    return layoutAttributes
+  override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
+    super.apply(layoutAttributes)
+    if let attributes = layoutAttributes as? PinterestLayoutAttributes {
+      //change image view height by changing its constraint
+      //      imageViewHeightLayoutConstraint.constant = attributes.imageHeight
+    }
   }
 }
-
 extension MemoPreviewCell {
-  func configCell(_ viewModel: MemoViewModel) {
-    text.text = viewModel.text
+  func configCell(_ viewModel: MemoPreviewModel) {
+    let memo = viewModel.memo
+    memoText.text = memo.text
+    memoAttrViewController.memo = memo
   }
 }
+//class MemoPreviewCell: UICollectionViewCell, SwiftNameIdentifier, NibWithSwiftName {
+//  @IBOutlet weak var memoText: UILabel!
+//  override init(frame: CGRect) {
+//    super.init(frame: frame)
+//  }
+//  required init?(coder aDecoder: NSCoder) {
+//    super.init(coder: aDecoder)
+//  }
+//  override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
+//    super.apply(layoutAttributes)
+//    if let attributes = layoutAttributes as? PinterestLayoutAttributes {
+//      //change image view height by changing its constraint
+//      print("!!!!!!!!!! \(attributes.imageHeight)")
+////      imageViewHeightLayoutConstraint.constant = attributes.imageHeight
+//    }
+//  }
+//}
+//
+//extension MemoPreviewCell {
+//  func configCell(_ viewModel: MemoPreviewModel) {
+//    memoText.text = viewModel.text
+//  }
+//}

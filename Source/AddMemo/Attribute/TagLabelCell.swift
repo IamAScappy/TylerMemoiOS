@@ -27,10 +27,7 @@ class TagLabelCell: UICollectionViewCell {
       $0.snp.makeConstraints({ make in
         make.edges.equalToSuperview()
       })
-      $0.topInset = 7
-      $0.bottomInset = 7
-      $0.leftInset = 10
-      $0.rightInset = 10
+      $0.font = $0.font.withSize(Dimens.Common.labelFontSize.rawValue)
       $0.numberOfLines = 1
       $0.backgroundColor = tagColor
       $0.layer.cornerRadius = cornerRadius

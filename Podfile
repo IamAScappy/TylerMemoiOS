@@ -11,11 +11,12 @@ target 'TyperMemo' do
   pod 'ReactorKit'
   pod 'Then'
   pod 'Result', '~> 4.0.0'
+  pod 'PinterestLayout'
   post_install do |installer|
     installer.pods_project.targets.each do |target|
-      if [].include? target.name
+      if ['PinterestLayout'].include? target.name
         target.build_configurations.each do |config|
-          config.build_settings['SWIFT_VERSION'] = '4'
+          config.build_settings['SWIFT_VERSION'] = '3.0'
         end
       end
     end

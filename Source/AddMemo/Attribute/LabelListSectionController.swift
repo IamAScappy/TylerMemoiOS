@@ -41,9 +41,9 @@ class LabelListSectionController: ListSectionController {
   
   override init() {
     super.init()
-    inset = UIEdgeInsets(top: 0, left: Dimens.AddMemo.documentOfMargine.rawValue, bottom: 10, right: Dimens.AddMemo.documentOfMargine.rawValue)
-    minimumLineSpacing = 4
-    minimumInteritemSpacing = 4
+//    inset = UIEdgeInsets(top: 0, left: Dimens.AddMemo.documentOfMargine.rawValue, bottom: 10, right: Dimens.AddMemo.documentOfMargine.rawValue)
+//    minimumLineSpacing = 4
+//    minimumInteritemSpacing = 4
   }
   override func numberOfItems() -> Int {
     return object?.items.count ?? 0

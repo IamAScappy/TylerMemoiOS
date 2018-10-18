@@ -24,12 +24,11 @@ class AddMemoViewController: UIViewController, HasDisposeBag, StoryboardInitiali
   @IBOutlet weak private var closePanel: UIBarButtonItem!
   @IBOutlet weak private var colorThemeBarItem: UIBarButtonItem!
   @IBOutlet weak private var labelBarItem: UIBarButtonItem!
-  @IBOutlet weak private var checkListBarItem: UIBarButtonItem!
 
   override func viewDidLoad() {
     super.viewDidLoad()
     enableMemoryLeakCheck(disposeBag)
-    editView.inputAccessoryView = EditInputAccessoryView(frame: CGRect(0, 0, view.frame.width, Dimens.editAccessoryViewHeight.rawValue))
+    editView.inputAccessoryView = EditInputAccessoryView(frame: CGRect(0, 0, view.frame.width, Dimens.Common.editAccessoryViewHeight.rawValue))
     self.navigationController?.navigationBar.backIndicatorImage = Asset.AddMemo.icBack.image
     self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
   }

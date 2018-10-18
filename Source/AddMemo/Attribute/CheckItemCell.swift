@@ -29,7 +29,7 @@ class CheckItemCell: UICollectionViewCell, SwiftNameIdentifier, HasDisposeBag {
       $0.boxType = .square
       $0.stateChangeAnimation = .flat(.stroke)
       $0.snp.makeConstraints({ make in
-        let width = Dimens.CheckList.checkboxWidth.rawValue
+        let width = Dimens.CheckList.checkSquareSize.rawValue
         make.leading.equalToSuperview()
         make.top.equalToSuperview()
         make.width.equalTo(width)
@@ -38,15 +38,23 @@ class CheckItemCell: UICollectionViewCell, SwiftNameIdentifier, HasDisposeBag {
     }
     checkTitle.do {
       contentView.addSubview($0)
+      $0.font = $0.font.withSize(Dimens.Common.checkItemFontSize.rawValue)
       $0.snp.makeConstraints({ make in
-        make.leading.equalTo(checkBox.snp.trailing).offset(15)
+        make.leading.equalTo(checkBox.snp.trailing)
         make.centerY.equalTo(checkBox.snp.centerY)
       })
     }
   }
 }
 extension CheckItemCell {
-  func configCell(_ item: CheckItem) {
+  func configCell(_ item: CheckItem, checkSquareSize: CGFloat) {
     self.checkTitle.text = item.name
+    checkBox.do {
+      $0.snp.updateConstraints({ maker in
+        let width = checkSquareSize
+        maker.width.equalTo(width)
+        maker.height.equalTo(width).multipliedBy(1)
+      })
+    }
   }
 }

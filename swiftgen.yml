@@ -16,3 +16,7 @@ colors:
   templateName: literals-swift4
   output: MyColor.swift
 
+fonts:
+  paths: Fonts
+  templateName: swift4
+  output: Fonts.swift

@@ -37,7 +37,7 @@ class MemoService: MemoServiceType {
   }
   func getMemoOrDefault(_ defaultMemo: Memo) -> Result<Observable<Memo>, NSError> {
     let results = catchRealmBlock { realm -> Result<Results<Memo>, NSError> in
-      let results = realm.objects(Memo.self).filter("\(Memo.primaryKey()) == \(defaultMemo.memo_id)")
+      let results = realm.objects(Memo.self).filter("\(Memo.primaryKey()) == '\(defaultMemo.memo_id)'")
       return Result.success(results)
     }
     switch results {

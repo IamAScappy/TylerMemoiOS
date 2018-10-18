@@ -29,7 +29,7 @@ class MakeCheckItemFooterCell: UICollectionViewCell {
       $0.tintColor = tintColor
       contentView.addSubview($0)
       $0.snp.makeConstraints({ make in
-        let width = Dimens.CheckList.checkboxWidth.rawValue
+        let width = Dimens.CheckList.checkSquareSize.rawValue
         make.leading.equalToSuperview().offset(20)
         make.centerY.equalToSuperview()
         make.width.equalTo(width)
