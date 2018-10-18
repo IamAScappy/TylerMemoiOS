@@ -594,7 +594,6 @@
 				BDC4D8A8216317A200ED5404 /* ColorTheme */,
 				BD8D19EA21719C1F00D1CB0A /* Tag */,
 				BDEE41E02172521C0074C0A1 /* PaddingLabel.swift */,
-				BDC829BF2177849400E94E2D /* MemoAttr */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -622,13 +621,6 @@
 				BDC8299E21770BC800E94E2D /* NanumBarunGothic.otf */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		BDC829BF2177849400E94E2D /* MemoAttr */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MemoAttr;
 			sourceTree = "<group>";
 		};
 		BDE111D02156ADD80010FBD9 /* Services */ = {
@@ -955,6 +947,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/DeallocationChecker.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/M13Checkbox.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftRichString.framework",
 			);
 			name = "Copy Carthage Resources";
 			outputPaths = (

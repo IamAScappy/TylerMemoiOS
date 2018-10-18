@@ -40,12 +40,11 @@ class MainViewController: UIViewController, DeallocationView, HasDisposeBag {
 //    }
 //    TODO Remove test code
 //    let service = MemoService()
-//    
 //    let memo1 = Memo(text: "az")
-//    memo1.checkList.append(CheckItem(name: "c1 \(Int.random(in: 0..<6))"))
-//    memo1.checkList.append(CheckItem(name: "c2 \(Int.random(in: 0..<6))"))
-//    memo1.labels.append(Label(title: "l1 \(Int.random(in: 0..<6))"))
-//    memo1.labels.append(Label(title: "l2 \(Int.random(in: 0..<6))"))
+//    memo1.checkList.append(CheckItem(name: "asdzxcxzc \(Int.random(in: 0..<6))"))
+//    memo1.checkList.append(CheckItem(name: "adadzxczxczxczc \(Int.random(in: 0..<6))"))
+//    memo1.labels.append(Label(title: "asdasdasdasdasd \(Int.random(in: 0..<6))"))
+//    memo1.labels.append(Label(title: "asdadadsasdasdsadasdasdasdasdasdads \(Int.random(in: 0..<6))"))
 //    service.insertMemos([
 //      memo1
 //      ])

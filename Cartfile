@@ -16,3 +16,4 @@ github "mchoe/SwiftSVG" ~> 2.0
 github "fastred/DeallocationChecker"
 github "onevcat/Kingfisher" ~> 4.0
 github "Marxon13/M13Checkbox"
+github "malcommac/SwiftRichString"

@@ -115,8 +115,8 @@ extension MemoAttrViewController: ListAdapterDataSource, CheckListSectionControl
 private extension Memo {
   func toListViewModel(checkBoxWidth: CGFloat) -> [ListDiffable] {
     return [
-      LabelViewItem(items: self.labels.toArray()),
-      CheckItemModel(items: self.checkList.toArray(), checkBoxWidth: checkBoxWidth)
+      CheckItemModel(items: self.checkList.toArray(), checkBoxWidth: checkBoxWidth),
+      LabelViewItem(items: self.labels.toArray())
     ]
   }
 }

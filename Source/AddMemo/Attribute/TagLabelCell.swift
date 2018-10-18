@@ -41,14 +41,14 @@ extension TagLabelCell {
   func configCell(_ label: Label) {
     tagLabel.text = label.title
   }
-  override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-    setNeedsLayout()
-    layoutIfNeeded()
-    let size = contentView.systemLayoutSizeFitting(layoutAttributes.size)
-    var newFrame = layoutAttributes.frame
-    newFrame.size.width = ceil(size.width)
-    newFrame.size.height = ceil(size.height)
-    layoutAttributes.frame = newFrame
-    return layoutAttributes
-  }
+//  override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+//    setNeedsLayout()
+//    layoutIfNeeded()
+//    let size = contentView.systemLayoutSizeFitting(layoutAttributes.size)
+//    var newFrame = layoutAttributes.frame
+//    newFrame.size.width = ceil(size.width)
+//    newFrame.size.height = ceil(size.height)
+//    layoutAttributes.frame = newFrame
+//    return layoutAttributes
+//  }
 }
